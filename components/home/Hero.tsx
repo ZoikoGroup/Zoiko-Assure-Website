@@ -411,7 +411,7 @@ export default function Hero() {
               className="
                 absolute
                 left-1/2
-                top-[-18px]
+                top-[-25px]
                 z-30
                 w-[230px]
                 -translate-x-1/2
@@ -491,13 +491,13 @@ export default function Hero() {
 
             {/* ===================================================
                 5 — EVIDENCE
-                MOVED DOWN TO CLEAR CTA
+                BELOW THE 6 NUMBER
             =================================================== */}
             <div
               className="
                 absolute
-                left-[-185px]
-                top-[475px]
+                left-[-95px]
+                top-[500px]
                 z-30
                 w-[210px]
                 text-center
@@ -520,13 +520,13 @@ export default function Hero() {
 
             {/* ===================================================
                 3 — OBLIGATION
-                MOVED FARTHER RIGHT TO CLEAR IMAGE
+                BELOW THE 3 NUMBER
             =================================================== */}
             <div
               className="
                 absolute
-                right-[-165px]
-                top-[397px]
+                right-[-87px]
+                top-[490px]
                 z-30
                 w-[205px]
                 text-center
