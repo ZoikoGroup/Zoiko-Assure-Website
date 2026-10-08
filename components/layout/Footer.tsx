@@ -1,163 +1,492 @@
 import Image from "next/image";
 import Link from "next/link";
 
+type FooterItem = {
+  label: string;
+  href: string;
+};
+
 type FooterColumnProps = {
   title: string;
-  items: string[];
+  items: FooterItem[];
 };
 
 /* =========================================================
    FOOTER DATA
 ========================================================= */
 
-const platformItems = [
-  "Platform Overview",
-  "Applicability Engine",
-  "Obligation & Control Mapping",
-  "Continuous Assurance",
-  "Evidence & Provenance",
-  "Governed AI",
-  "Integrations",
-  "How ZoikoAssure Works →",
+const platformItems: FooterItem[] = [
+  {
+    label: "Platform Overview",
+    href: "/platform",
+  },
+  {
+    label: "Applicability Engine",
+    href: "/platform/applicability-engine",
+  },
+  {
+    label: "Obligation & Control Mapping",
+    href: "/platform/obligation-control-mapping",
+  },
+  {
+    label: "Continuous Assurance",
+    href: "/platform/continuous-assurance",
+  },
+  {
+    label: "Evidence & Provenance",
+    href: "/platform/evidence-provenance",
+  },
+  {
+    label: "Governed AI",
+    href: "/platform/governed-ai",
+  },
+  {
+    label: "Integrations",
+    href: "/integrations",
+  },
+  {
+    label: "How ZoikoAssure Works →",
+    href: "/how-zoikoassure-works",
+  },
 ];
 
-const assuranceItems = [
-  "Regulatory Applicability",
-  "Obligation Management",
-  "Control Management",
-  "Evidence Management",
-  "Evidence Provenance",
-  "Assurance Monitoring",
-  "Exceptions & Risk Acceptance",
-  "Audit Readiness",
+const assuranceItems: FooterItem[] = [
+  {
+    label: "Regulatory Applicability",
+    href: "/assurance/regulatory-applicability",
+  },
+  {
+    label: "Obligation Management",
+    href: "/assurance/obligation-management",
+  },
+  {
+    label: "Control Management",
+    href: "/assurance/control-management",
+  },
+  {
+    label: "Evidence Management",
+    href: "/assurance/evidence-management",
+  },
+  {
+    label: "Evidence Provenance",
+    href: "/assurance/evidence-provenance",
+  },
+  {
+    label: "Assurance Monitoring",
+    href: "/assurance/assurance-monitoring",
+  },
+  {
+    label: "Exceptions & Risk Acceptance",
+    href: "/assurance/exceptions-risk-acceptance",
+  },
+  {
+    label: "Audit Readiness",
+    href: "/assurance/audit-readiness",
+  },
 ];
 
-const solutionsItems = [
-  "Regulatory Change",
-  "New Market & Jurisdiction",
-  "AI Governance",
-  "Regulatory Examination",
-  "M&A & Transformation",
-  "Continuous Compliance",
-  "View All Solutions →",
+const solutionsItems: FooterItem[] = [
+  {
+    label: "Regulatory Change",
+    href: "/solutions/regulatory-change",
+  },
+  {
+    label: "New Market & Jurisdiction",
+    href: "/solutions/new-market-jurisdiction",
+  },
+  {
+    label: "AI Governance",
+    href: "/solutions/ai-governance",
+  },
+  {
+    label: "Regulatory Examination",
+    href: "/solutions/regulatory-examination",
+  },
+  {
+    label: "M&A & Transformation",
+    href: "/solutions/ma-transformation",
+  },
+  {
+    label: "Continuous Compliance",
+    href: "/solutions/continuous-compliance",
+  },
+  {
+    label: "View All Solutions →",
+    href: "/solutions",
+  },
 ];
 
-const roleItems = [
-  "Chief Risk Officer",
-  "General Counsel",
-  "Chief Compliance Officer",
-  "CFO",
-  "Audit & Risk Committee",
-  "Internal Audit",
-  "Compliance Operations",
-  "Risk & Governance Teams",
+const roleItems: FooterItem[] = [
+  {
+    label: "Chief Risk Officer",
+    href: "/roles/chief-risk-officer",
+  },
+  {
+    label: "General Counsel",
+    href: "/roles/general-counsel",
+  },
+  {
+    label: "Chief Compliance Officer",
+    href: "/roles/chief-compliance-officer",
+  },
+  {
+    label: "CFO",
+    href: "/roles/cfo",
+  },
+  {
+    label: "Audit & Risk Committee",
+    href: "/roles/audit-risk-committee",
+  },
+  {
+    label: "Internal Audit",
+    href: "/roles/internal-audit",
+  },
+  {
+    label: "Compliance Operations",
+    href: "/roles/compliance-operations",
+  },
+  {
+    label: "Risk & Governance Teams",
+    href: "/roles/risk-governance-teams",
+  },
 ];
 
-const regulatoryIntelligenceItems = [
-  "Regulatory Changes",
-  "Obligations",
-  "Enforcement & Guidance",
-  "Regulatory Sources",
-  "Regulatory Library",
-  "Methodology",
-  "Explore Regulatory Intelligence →",
+const regulatoryIntelligenceItems: FooterItem[] = [
+  {
+    label: "Regulatory Changes",
+    href: "/regulatory-intelligence/regulatory-changes",
+  },
+  {
+    label: "Obligations",
+    href: "/regulatory-intelligence/obligations",
+  },
+  {
+    label: "Enforcement & Guidance",
+    href: "/regulatory-intelligence/enforcement-guidance",
+  },
+  {
+    label: "Regulatory Sources",
+    href: "/regulatory-intelligence/regulatory-sources",
+  },
+  {
+    label: "Regulatory Library",
+    href: "/regulatory-intelligence/regulatory-library",
+  },
+  {
+    label: "Methodology",
+    href: "/regulatory-intelligence/methodology",
+  },
+  {
+    label: "Explore Regulatory Intelligence →",
+    href: "/regulatory-intelligence",
+  },
 ];
 
-const jurisdictionItems = [
-  "United States",
-  "European Union",
-  "United Kingdom",
-  "Canada",
-  "Australia",
-  "Singapore",
-  "Middle East",
-  "Explore All Jurisdictions →",
+const jurisdictionItems: FooterItem[] = [
+  {
+    label: "United States",
+    href: "/jurisdictions/united-states",
+  },
+  {
+    label: "European Union",
+    href: "/jurisdictions/european-union",
+  },
+  {
+    label: "United Kingdom",
+    href: "/jurisdictions/united-kingdom",
+  },
+  {
+    label: "Canada",
+    href: "/jurisdictions/canada",
+  },
+  {
+    label: "Australia",
+    href: "/jurisdictions/australia",
+  },
+  {
+    label: "Singapore",
+    href: "/jurisdictions/singapore",
+  },
+  {
+    label: "Middle East",
+    href: "/jurisdictions/middle-east",
+  },
+  {
+    label: "Explore All Jurisdictions →",
+    href: "/jurisdictions",
+  },
 ];
 
-const frameworkItems = [
-  "AI Governance",
-  "Data Protection",
-  "Cybersecurity",
-  "Operational Resilience",
-  "Financial Regulation",
-  "Enterprise Risk",
-  "Compliance Management",
-  "View All Frameworks →",
+const frameworkItems: FooterItem[] = [
+  {
+    label: "AI Governance",
+    href: "/frameworks/ai-governance",
+  },
+  {
+    label: "Data Protection",
+    href: "/frameworks/data-protection",
+  },
+  {
+    label: "Cybersecurity",
+    href: "/frameworks/cybersecurity",
+  },
+  {
+    label: "Operational Resilience",
+    href: "/frameworks/operational-resilience",
+  },
+  {
+    label: "Financial Regulation",
+    href: "/frameworks/financial-regulation",
+  },
+  {
+    label: "Enterprise Risk",
+    href: "/frameworks/enterprise-risk",
+  },
+  {
+    label: "Compliance Management",
+    href: "/frameworks/compliance-management",
+  },
+  {
+    label: "View All Frameworks →",
+    href: "/frameworks",
+  },
 ];
 
-const trustCenterItems = [
-  "Trust Center Overview",
-  "Security",
-  "Privacy",
-  "Accessibility",
-  "Deployment & Residency",
-  "Reliability",
-  "Responsible Disclosure",
+const trustCenterItems: FooterItem[] = [
+  {
+    label: "Trust Center Overview",
+    href: "/trust-center",
+  },
+  {
+    label: "Security",
+    href: "/trust-center/security",
+  },
+  {
+    label: "Privacy",
+    href: "/privacy-notice",
+  },
+  {
+    label: "Accessibility",
+    href: "/trust-center/accessibility",
+  },
+  {
+    label: "Deployment & Residency",
+    href: "/trust-center/deployment-residency",
+  },
+  {
+    label: "Reliability",
+    href: "/trust-center/reliability",
+  },
+  {
+    label: "Responsible Disclosure",
+    href: "/responsible-disclosure",
+  },
 ];
 
-const aiGovernanceItems = [
-  "Responsible AI",
-  "Governed AI",
-  "AI Decision Provenance",
-  "Human Oversight",
-  "Data Governance",
-  "Data Residency",
-  "AI Governance Methodology",
+const aiGovernanceItems: FooterItem[] = [
+  {
+    label: "Responsible AI",
+    href: "/ai-governance/responsible-ai",
+  },
+  {
+    label: "Governed AI",
+    href: "/ai-governance/governed-ai",
+  },
+  {
+    label: "AI Decision Provenance",
+    href: "/ai-governance/ai-decision-provenance",
+  },
+  {
+    label: "Human Oversight",
+    href: "/ai-governance/human-oversight",
+  },
+  {
+    label: "Data Governance",
+    href: "/ai-governance/data-governance",
+  },
+  {
+    label: "Data Residency",
+    href: "/ai-governance/data-residency",
+  },
+  {
+    label: "AI Governance Methodology",
+    href: "/ai-governance/methodology",
+  },
 ];
 
-const resourcesItems = [
-  "Regulatory Guides",
-  "Framework Guides",
-  "Regulatory Glossary",
-  "Executive Briefings",
-  "Insights",
-  "Research",
-  "FAQs",
-  "Documentation",
-  "Explore Resources →",
+const resourcesItems: FooterItem[] = [
+  {
+    label: "Regulatory Guides",
+    href: "/resources/regulatory-guides",
+  },
+  {
+    label: "Framework Guides",
+    href: "/resources/framework-guides",
+  },
+  {
+    label: "Regulatory Glossary",
+    href: "/resources/regulatory-glossary",
+  },
+  {
+    label: "Executive Briefings",
+    href: "/resources/executive-briefings",
+  },
+  {
+    label: "Insights",
+    href: "/resources/insights",
+  },
+  {
+    label: "Research",
+    href: "/resources/research",
+  },
+  {
+    label: "FAQs",
+    href: "/resources/faqs",
+  },
+  {
+    label: "Documentation",
+    href: "/documentation",
+  },
+  {
+    label: "Explore Resources →",
+    href: "/resources",
+  },
 ];
 
-const developerItems = [
-  "Integrations",
-  "Integration Directory",
-  "Developer Documentation",
-  "API Documentation",
-  "Webhooks",
-  "Integration Security",
+const developerItems: FooterItem[] = [
+  {
+    label: "Integrations",
+    href: "/integrations",
+  },
+  {
+    label: "Integration Directory",
+    href: "/integrations/directory",
+  },
+  {
+    label: "Developer Documentation",
+    href: "/developers",
+  },
+  {
+    label: "API Documentation",
+    href: "/developers/api",
+  },
+  {
+    label: "Webhooks",
+    href: "/developers/webhooks",
+  },
+  {
+    label: "Integration Security",
+    href: "/developers/security",
+  },
 ];
 
-const companyItems = [
-  "About ZoikoAssure",
-  "Leadership",
-  "Press & Media",
-  "Careers",
-  "Contact",
-  "Zoiko Tech",
-  "ZoikoAssure",
-  "Zoiko Group",
+const companyItems: FooterItem[] = [
+  {
+    label: "About ZoikoAssure",
+    href: "/about-us",
+  },
+  {
+    label: "Leadership",
+    href: "/company/leadership",
+  },
+  {
+    label: "Press & Media",
+    href: "/company/press-media",
+  },
+  {
+    label: "Careers",
+    href: "/company/careers",
+  },
+  {
+    label: "Contact",
+    href: "/contact",
+  },
+  {
+    label: "Zoiko Tech",
+    href: "/company/zoiko-tech",
+  },
+  {
+    label: "ZoikoAssure",
+    href: "/",
+  },
+  {
+    label: "Zoiko Group",
+    href: "/company/zoiko-group",
+  },
 ];
 
-const supportItems = [
-  "Help Center",
-  "Documentation",
-  "Contact Support",
-  "Accessibility Support",
-  "Security Contact",
-  "Customer Portal",
+const supportItems: FooterItem[] = [
+  {
+    label: "Help Center",
+    href: "/support/help-center",
+  },
+  {
+    label: "Documentation",
+    href: "/documentation",
+  },
+  {
+    label: "Contact Support",
+    href: "/support/contact",
+  },
+  {
+    label: "Accessibility Support",
+    href: "/support/accessibility",
+  },
+  {
+    label: "Security Contact",
+    href: "/support/security",
+  },
+  {
+    label: "Customer Portal",
+    href: "/customer-portal",
+  },
 ];
 
-const legalItems = [
-  "Privacy Policy",
-  "Terms of Use",
-  "Cookie Policy",
-  "Cookie Settings",
-  "Acceptable Use Policy",
-  "Data Processing Addendum",
-  "Subprocessors",
-  "Responsible Disclosure",
-  "Accessibility Statement",
-  "Legal Notices",
-  "Modern Slavery Statement",
+const legalItems: FooterItem[] = [
+  {
+    label: "Privacy Policy",
+    href: "/privacy-notice",
+  },
+  {
+    label: "Terms of Use",
+    href: "/terms-of-use",
+  },
+  {
+    label: "Cookie Policy",
+    href: "/cookie-notice",
+  },
+  {
+    label: "Cookie Settings",
+    href: "/cookie-settings",
+  },
+  {
+    label: "Acceptable Use Policy",
+    href: "/acceptable-use-policy",
+  },
+  {
+    label: "Data Processing Addendum",
+    href: "/data-processing-addendum",
+  },
+  {
+    label: "Subprocessors",
+    href: "/subprocessor-list",
+  },
+  {
+    label: "Responsible Disclosure",
+    href: "/responsible-disclosure",
+  },
+  {
+    label: "Accessibility Statement",
+    href: "/accessibility-statement",
+  },
+  {
+    label: "Legal Notices",
+    href: "/legal-notices",
+  },
+  {
+    label: "Modern Slavery Statement",
+    href: "/modern-slavery-statement",
+  },
 ];
 
 /* =========================================================
@@ -286,11 +615,11 @@ function FooterColumn({
       <div className="flex flex-col gap-2.5">
         {items.map((item) => (
           <Link
-            key={item}
-            href="#"
+            key={item.label}
+            href={item.href}
             className="text-sm font-normal leading-5 text-slate-300 transition-colors duration-200 hover:text-white"
           >
-            {item}
+            {item.label}
           </Link>
         ))}
       </div>
@@ -305,13 +634,15 @@ function FooterColumn({
 function SocialIcon({
   children,
   label,
+  href,
 }: {
   children: React.ReactNode;
   label: string;
+  href: string;
 }) {
   return (
     <Link
-      href="#"
+      href={href}
       aria-label={label}
       className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#0B3158] text-white transition-colors duration-200 hover:bg-[#123D68]"
     >
@@ -340,7 +671,6 @@ export default function Footer() {
       >
         <div className="mx-auto flex w-full max-w-[1440px] flex-col justify-between gap-8 px-6 py-12 sm:px-8 md:px-12 lg:flex-row lg:items-center lg:gap-16 lg:px-20 lg:py-14">
 
-          {/* Left */}
           <div className="w-full max-w-[690px]">
             <h2 className="text-3xl font-semibold leading-10 text-white sm:text-4xl">
               Make Compliance Defensible Before You Need to Defend It.
@@ -353,37 +683,34 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Right */}
           <div className="flex w-full flex-col gap-6 lg:flex-1">
 
-            {/* Buttons */}
             <div className="flex flex-wrap gap-3">
               <Link
-                href="#"
+                href="/request-demo"
                 className="flex h-12 items-center justify-center rounded-lg bg-amber-600 px-5 text-sm font-semibold text-white outline outline-1 outline-amber-600 transition-colors duration-200 hover:bg-amber-500"
               >
                 Request a Demo
               </Link>
 
               <Link
-                href="#"
+                href="/regulatory-exposure"
                 className="flex h-12 items-center justify-center rounded-lg bg-[#071C33] px-5 text-sm font-semibold text-white outline outline-1 outline-slate-400 transition-colors duration-200 hover:bg-white/5"
               >
                 Assess Your Regulatory Exposure
               </Link>
             </div>
 
-            {/* Secondary links */}
             <div className="flex flex-wrap gap-x-8 gap-y-3">
               <Link
-                href="#"
+                href="/platform"
                 className="text-sm font-normal text-slate-300 transition-colors hover:text-white"
               >
                 Explore the Platform →
               </Link>
 
               <Link
-                href="#"
+                href="/trust-center"
                 className="text-sm font-normal text-slate-300 transition-colors hover:text-white"
               >
                 Visit the Trust Center →
@@ -400,12 +727,10 @@ export default function Footer() {
       <section className="mx-auto w-full max-w-[1440px] px-6 pt-10 sm:px-8 md:px-12 lg:px-20 lg:pb-8">
         <div className="flex flex-col justify-between gap-8 border-b border-neutral-700 pb-10 lg:flex-row lg:items-center">
 
-          {/* Brand */}
           <div className="flex w-full max-w-[740px] flex-col gap-6">
 
             <div className="flex flex-col items-start gap-6 sm:flex-row sm:items-center sm:gap-8">
 
-              {/* Logo */}
               <div className="flex h-[50px] shrink-0 items-center rounded-lg bg-white px-3 py-2.5">
                 <Image
                   src="/logos/logo.png"
@@ -417,7 +742,6 @@ export default function Footer() {
                 />
               </div>
 
-              {/* Brand text */}
               <div className="flex min-w-0 flex-1 flex-col gap-2">
                 <p className="text-base font-semibold text-white">
                   Global Regulatory Intelligence &amp; Continuous Compliance
@@ -431,7 +755,6 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Assurance chain */}
             <p className="text-xs font-medium text-slate-300">
               Source&nbsp;&nbsp; → &nbsp;&nbsp;Applicability&nbsp;&nbsp; →
               &nbsp;&nbsp;Obligation&nbsp;&nbsp; → &nbsp;&nbsp;Control&nbsp;&nbsp;
@@ -439,32 +762,48 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Social */}
           <div className="w-full lg:w-72">
             <p className="text-xs font-bold uppercase leading-5 tracking-wide text-white">
               Follow us
             </p>
 
             <div className="mt-4 flex items-center gap-3">
-              <SocialIcon label="LinkedIn">
+
+              <SocialIcon
+                label="LinkedIn"
+                href="https://www.linkedin.com/"
+              >
                 <LinkedInIcon />
               </SocialIcon>
 
-              <SocialIcon label="X">
+              <SocialIcon
+                label="X"
+                href="https://x.com/"
+              >
                 <XIcon />
               </SocialIcon>
 
-              <SocialIcon label="YouTube">
+              <SocialIcon
+                label="YouTube"
+                href="https://www.youtube.com/"
+              >
                 <YouTubeIcon />
               </SocialIcon>
 
-              <SocialIcon label="Instagram">
+              <SocialIcon
+                label="Instagram"
+                href="https://www.instagram.com/"
+              >
                 <InstagramIcon />
               </SocialIcon>
 
-              <SocialIcon label="Facebook">
+              <SocialIcon
+                label="Facebook"
+                href="https://www.facebook.com/"
+              >
                 <FacebookIcon />
               </SocialIcon>
+
             </div>
           </div>
         </div>
@@ -515,7 +854,6 @@ export default function Footer() {
 
         </div>
 
-        {/* Divider */}
         <div className="my-10 h-px bg-white/10" />
 
         {/* ===================================================
@@ -554,7 +892,10 @@ export default function Footer() {
             items={supportItems}
           />
 
-          {/* Legal */}
+          {/* =================================================
+              LEGAL
+          ================================================= */}
+
           <div className="flex min-w-0 flex-col gap-4">
 
             <h3 className="h-10 text-xs font-semibold leading-5 text-white">
@@ -565,18 +906,17 @@ export default function Footer() {
 
               {legalItems.map((item) => (
                 <Link
-                  key={item}
-                  href="#"
+                  key={item.label}
+                  href={item.href}
                   className="text-sm font-normal leading-5 text-slate-300 transition-colors duration-200 hover:text-white"
                 >
-                  {item}
+                  {item.label}
                 </Link>
               ))}
 
-              {/* Gated access */}
               <div className="pt-1.5">
                 <Link
-                  href="#"
+                  href="/gated-access"
                   className="flex items-center gap-[5px] text-xs font-normal text-slate-300 transition-colors hover:text-white"
                 >
                   <svg
@@ -606,8 +946,10 @@ export default function Footer() {
                   <span>Gated access</span>
                 </Link>
               </div>
+
             </div>
           </div>
+
         </div>
       </section>
 
@@ -623,16 +965,13 @@ export default function Footer() {
       >
         <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-10 px-6 py-10 sm:px-8 md:grid-cols-2 md:px-12 lg:grid-cols-4 lg:px-20">
 
-          {/* Global presence */}
           <div>
             <h3 className="text-xl font-medium text-white">
               Global presence
             </h3>
           </div>
 
-          {/* Global Headquarters */}
           <div className="flex flex-col items-start gap-4">
-
             <h4 className="text-xs font-semibold text-white">
               Global Headquarters
             </h4>
@@ -646,16 +985,14 @@ export default function Footer() {
             </p>
 
             <Link
-              href="#"
+              href="/contact"
               className="text-sm font-medium text-white transition-colors hover:text-slate-300"
             >
               Contact →
             </Link>
           </div>
 
-          {/* European Headquarters */}
           <div className="flex flex-col items-start gap-4">
-
             <h4 className="text-xs font-semibold text-white">
               European Headquarters
             </h4>
@@ -673,27 +1010,26 @@ export default function Footer() {
             </p>
 
             <Link
-              href="#"
+              href="/contact"
               className="text-sm font-medium text-white transition-colors hover:text-slate-300"
             >
               Contact →
             </Link>
           </div>
 
-          {/* Connect */}
           <div className="flex w-full max-w-60 flex-col items-start gap-4">
-
             <h4 className="text-xs font-semibold leading-5 text-white">
               Connect with ZoikoAssure
             </h4>
 
             <Link
-              href="#"
+              href="/contact"
               className="text-sm font-normal text-white transition-colors hover:text-slate-300"
             >
               Contact →
             </Link>
           </div>
+
         </div>
       </section>
 
@@ -726,10 +1062,8 @@ export default function Footer() {
 
           </div>
 
-          {/* Divider */}
           <div className="my-6 h-px bg-white/10" />
 
-          {/* Copyright */}
           <div className="flex flex-col justify-between gap-3 sm:flex-row sm:items-start">
 
             <p className="text-xs font-normal leading-5 text-slate-300">
