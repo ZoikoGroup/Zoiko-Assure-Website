@@ -19,7 +19,7 @@ import {
 
 export default function AboutUsPage() {
   return (
-    <main className="w-full overflow-hidden">
+    <div className="w-full overflow-x-clip">
       <Hero />
 
       <FragmentedComplianceSection />
@@ -51,6 +51,6 @@ export default function AboutUsPage() {
       <SystemsThinkingSection />
 
       <AssuranceEngineeredSection />
-    </main>
+    </div>
   );
 }

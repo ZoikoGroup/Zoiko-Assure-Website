@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function SystemsThinkingSection() {
   return (
     <section className="w-full overflow-hidden bg-neutral-50">
@@ -8,15 +10,18 @@ export default function SystemsThinkingSection() {
           w-full
           max-w-[1440px]
           flex-col
-          items-end
+          items-start
           justify-center
-          gap-10
-          px-6
-          py-16
-          sm:px-8
-          sm:py-20
-          lg:px-20
-          lg:py-20
+          gap-8
+          px-4
+          py-10
+          sm:gap-10
+          sm:px-6
+          sm:py-14
+          lg:px-8
+          lg:py-16
+          xl:px-20
+          xl:py-20
         "
       >
         {/* =====================================================
@@ -24,15 +29,14 @@ export default function SystemsThinkingSection() {
         ====================================================== */}
         <div
           className="
-            flex
+            grid
             w-full
-            flex-col
+            grid-cols-1
             items-center
-            justify-start
             gap-8
-            lg:flex-row
-            lg:items-center
-            lg:gap-12
+            lg:grid-cols-2
+            lg:gap-10
+            xl:gap-14
           "
         >
           {/* ===================================================
@@ -45,8 +49,6 @@ export default function SystemsThinkingSection() {
               flex-col
               items-start
               gap-6
-              lg:w-[616px]
-              lg:shrink-0
             "
           >
             {/* Heading */}
@@ -55,12 +57,14 @@ export default function SystemsThinkingSection() {
                 className="
                   m-0
                   w-full
-                  text-3xl
+                  text-2xl
                   font-bold
-                  leading-9
+                  leading-8
                   text-sky-900
-                  sm:text-4xl
-                  sm:leading-10
+                  sm:text-3xl
+                  sm:leading-9
+                  lg:text-4xl
+                  lg:leading-10
                 "
               >
                 Systems thinking. Institutional judgment.
@@ -127,24 +131,23 @@ export default function SystemsThinkingSection() {
           ==================================================== */}
           <div
             className="
+              relative
               w-full
+              aspect-[4/3]
+              sm:aspect-[16/10]
+              lg:aspect-auto
+              lg:h-[480px]
+              xl:h-[520px]
               overflow-hidden
               rounded-xl
-              lg:h-[520px]
-              lg:w-[616px]
-              lg:shrink-0
             "
           >
-            <img
+            <Image
               src="/images/about-us/image3.png"
               alt="Zoiko Assure team collaborating on institutional assurance"
-              className="
-                block
-                h-auto
-                w-full
-                object-cover
-                lg:h-full
-              "
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover"
             />
           </div>
         </div>

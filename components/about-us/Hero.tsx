@@ -18,12 +18,15 @@ export default function Hero() {
           mx-auto
           w-full
           max-w-[1280px]
-          px-6
-          py-16
-          sm:px-8
-          sm:py-20
-          lg:px-0
-          lg:py-[92px]
+          px-4
+          py-12
+          sm:px-6
+          sm:py-16
+          md:px-8
+          lg:px-8
+          xl:px-0
+          lg:py-20
+          xl:py-[92px]
         "
       >
         <div
@@ -32,10 +35,11 @@ export default function Hero() {
             w-full
             flex-col
             items-center
-            gap-12
+            gap-10
             lg:flex-row
             lg:items-center
-            lg:gap-12
+            lg:gap-8
+            xl:gap-12
           "
         >
           {/* =========================================
@@ -48,9 +52,9 @@ export default function Hero() {
               flex-col
               items-start
               gap-6
-              lg:w-[720px]
-              lg:max-w-[720px]
-              lg:shrink-0
+              lg:flex-1
+              lg:max-w-none
+              xl:max-w-[720px]
             "
           >
             {/* =========================================
@@ -293,8 +297,9 @@ export default function Hero() {
               relative
               w-full
               overflow-hidden
-              rounded-sm
-              lg:w-[511px]
+              rounded-xl
+              lg:w-[420px]
+              xl:w-[511px]
               lg:shrink-0
             "
           >
@@ -304,6 +309,7 @@ export default function Hero() {
               width={511}
               height={558}
               priority
+              sizes="(max-width: 1024px) 100vw, (max-width: 1280px) 420px, 511px"
               className="
                 block
                 h-auto

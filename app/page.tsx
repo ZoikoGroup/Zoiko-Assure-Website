@@ -2,7 +2,7 @@ import AIThatShowsItsWork from '@/components/home/AIThatShowsItsWork'
 import AssuranceChain from '@/components/home/AssuranceChain'
 import AssuranceHighlights from '@/components/home/AssuranceHighlights'
 import ComplianceMomentsSection from '@/components/home/ComplianceMomentsSection'
-import DefensibleComplianceCTA from '@/components/home/DefensibleComplianceCTA'
+
 import EvidenceBeforeExamination from '@/components/home/EvidenceBeforeExamination'
 import Hero from '@/components/home/Hero'
 import MultiJurisdictionalCompliance from '@/components/home/MultiJurisdictionalCompliance'
@@ -15,7 +15,7 @@ import React from 'react'
 
 export default function page() {
   return (
-    <main>
+    <div className="w-full overflow-x-clip">
       <Hero />
       <AssuranceHighlights />
       <RegulationChallenges />
@@ -28,7 +28,6 @@ export default function page() {
       <RegulatoryExposureCTA />
       <TrustMustBeVerifiable />
       <RegulatoryIntelligence />
-      <DefensibleComplianceCTA />
-    </main>
+    </div>
   )
 }

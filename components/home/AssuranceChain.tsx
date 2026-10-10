@@ -41,13 +41,14 @@ export default function AssuranceChain() {
           mx-auto
           w-full
           max-w-[1440px]
-          px-6
-          py-16
-          sm:px-8
-          md:px-10
-          lg:px-14
-          lg:py-20
+          px-4
+          py-10
+          sm:px-6
+          sm:py-14
+          lg:px-8
+          lg:py-16
           xl:px-20
+          xl:py-20
         "
       >
         <div className="mx-auto w-full max-w-[1280px]">
@@ -58,11 +59,13 @@ export default function AssuranceChain() {
           <div className="flex w-full flex-col items-start gap-4">
             <h2
               className="
-                text-3xl
+                text-2xl
                 font-bold
-                leading-9
+                leading-8
                 tracking-tight
                 text-sky-900
+                sm:text-3xl
+                sm:leading-9
               "
             >
               From Regulatory Source to Defensible Assurance
@@ -87,17 +90,17 @@ export default function AssuranceChain() {
 
           <div
             className="
-              mt-12
+              mt-8
               grid
               w-full
               grid-cols-1
               gap-4
-              sm:mt-14
+              sm:mt-10
               sm:grid-cols-2
-              lg:mt-16
-              lg:grid-cols-3
+              md:grid-cols-3
+              lg:mt-12
               xl:grid-cols-6
-              xl:gap-5
+              xl:gap-4
             "
           >
             {assuranceSteps.map((item) => (
@@ -188,8 +191,9 @@ export default function AssuranceChain() {
                   <div className="pt-1">
                     <p
                       className="
-                        max-w-[160px]
+                        w-full
                         text-[11px]
+                        sm:text-xs
                         font-normal
                         leading-4
                         text-cyan-950

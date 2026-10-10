@@ -116,7 +116,9 @@ function JurisdictionCard({
       className="
         relative
         flex
-        min-h-[430px]
+        h-full
+        min-h-0
+        sm:min-h-[390px]
         w-full
         flex-col
         overflow-hidden
@@ -213,13 +215,14 @@ export default function MultiJurisdictionalCompliance() {
           mx-auto
           w-full
           max-w-[1440px]
-          px-6
-          py-14
-          sm:px-8
-          md:px-10
-          lg:px-14
-          lg:py-20
+          px-4
+          py-10
+          sm:px-6
+          sm:py-14
+          lg:px-8
+          lg:py-16
           xl:px-20
+          xl:py-20
         "
       >
         <div className="mx-auto w-full max-w-[1280px]">
@@ -233,21 +236,28 @@ export default function MultiJurisdictionalCompliance() {
               w-full
               grid-cols-1
               gap-8
-              lg:grid-cols-[592px_1fr]
-              lg:items-start
+              lg:grid-cols-2
+              lg:items-center
               lg:gap-8
+              xl:grid-cols-[592px_1fr]
+              xl:gap-12
             "
           >
             {/* LEFT CONTENT */}
             <div className="flex w-full flex-col items-start">
               <h2
                 className="
+                  w-full
                   max-w-[592px]
-                  text-3xl
+                  text-2xl
                   font-bold
-                  leading-9
+                  leading-8
                   tracking-tight
                   text-sky-900
+                  sm:text-3xl
+                  sm:leading-9
+                  lg:text-4xl
+                  lg:leading-10
                 "
               >
                 Multi-Jurisdictional Compliance Starts With Applicability
@@ -255,7 +265,9 @@ export default function MultiJurisdictionalCompliance() {
 
               <p
                 className="
-                  mt-6
+                  mt-4
+                  sm:mt-6
+                  w-full
                   max-w-[592px]
                   text-base
                   font-normal
@@ -301,17 +313,20 @@ export default function MultiJurisdictionalCompliance() {
             <div
               className="
                 relative
+                h-[240px]
+                sm:h-[300px]
+                lg:h-[320px]
+                xl:h-[340px]
                 w-full
                 overflow-hidden
                 rounded-2xl
-                lg:h-[294px]
               "
             >
               <Image
                 src="/home/image.png"
                 alt="Multi-jurisdictional compliance review"
-                width={636}
-                height={294}
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 priority
                 className="
                   h-full

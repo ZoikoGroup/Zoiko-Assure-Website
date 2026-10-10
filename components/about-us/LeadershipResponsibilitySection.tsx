@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const leadershipItems = [
   {
     icon: "/images/about-us/icon7.png",
@@ -57,13 +59,16 @@ export default function LeadershipResponsibilitySection() {
           max-w-[1440px]
           flex-col
           items-start
-          gap-10
-          px-6
-          py-16
-          sm:px-8
-          sm:py-20
-          lg:px-20
-          lg:py-20
+          gap-8
+          sm:gap-10
+          px-4
+          py-10
+          sm:px-6
+          sm:py-14
+          lg:px-8
+          lg:py-16
+          xl:px-20
+          xl:py-20
         "
       >
         {/* =====================================================
@@ -114,9 +119,11 @@ export default function LeadershipResponsibilitySection() {
             grid
             w-full
             grid-cols-1
-            gap-6
+            gap-5
             sm:grid-cols-2
-            lg:grid-cols-4
+            lg:grid-cols-2
+            xl:grid-cols-4
+            lg:gap-6
           "
         >
           {firstRow.map((item) => (
@@ -137,11 +144,13 @@ export default function LeadershipResponsibilitySection() {
             grid
             w-full
             grid-cols-1
-            gap-6
+            gap-5
             sm:grid-cols-2
-            lg:w-[75%]
-            lg:self-center
             lg:grid-cols-3
+            lg:gap-6
+            w-full
+            lg:max-w-5xl
+            lg:self-center
           "
         >
           {secondRow.map((item) => (
@@ -234,9 +243,11 @@ function LeadershipCard({
       >
         {/* Icon */}
         <div className="flex h-8 w-8 shrink-0 items-center justify-center">
-          <img
+          <Image
             src={icon}
             alt=""
+            width={32}
+            height={32}
             className="h-8 w-8 object-contain"
           />
         </div>
