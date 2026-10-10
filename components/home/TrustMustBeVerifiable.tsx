@@ -35,12 +35,14 @@ export default function TrustMustBeVerifiable() {
           flex-col
           items-start
           justify-start
-          px-5
-          py-14
-          sm:px-8
-          md:px-10
-          lg:px-20
-          lg:py-20
+          px-4
+          py-10
+          sm:px-6
+          sm:py-14
+          lg:px-8
+          lg:py-16
+          xl:px-20
+          xl:py-20
         "
       >
         <div className="flex w-full flex-col items-start justify-center">
@@ -63,7 +65,7 @@ export default function TrustMustBeVerifiable() {
             </div>
 
             {/* Trust items */}
-            <div className="mt-10 w-full sm:mt-12">
+            <div className="mt-8 sm:mt-10 lg:mt-12 w-full">
               <div
                 className="
                   grid
@@ -72,7 +74,8 @@ export default function TrustMustBeVerifiable() {
                   gap-6
                   sm:grid-cols-2
                   lg:grid-cols-4
-                  lg:gap-0
+                  lg:gap-4
+                  xl:gap-6
                 "
               >
                 {trustItems.map((item) => (
@@ -86,7 +89,8 @@ export default function TrustMustBeVerifiable() {
                       items-center
                       justify-start
                       rounded-xl
-                      p-6
+                      p-5
+                      sm:p-6
                     "
                   >
                     {/* Icon + title */}
@@ -119,7 +123,6 @@ export default function TrustMustBeVerifiable() {
                       <p
                         className="
                           w-full
-                          max-w-[240px]
                           text-center
                           text-xs
                           font-normal

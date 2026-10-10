@@ -32,17 +32,17 @@ export default function AssuranceHighlights() {
         className="
           mx-auto
           flex
-          min-h-[288px]
           w-full
           max-w-[1440px]
           items-center
-          px-6
-          py-14
-          sm:px-8
-          lg:px-12
-          lg:py-16
+          px-4
+          py-10
+          sm:px-6
+          sm:py-12
+          lg:px-8
+          lg:py-14
           xl:px-20
-          xl:py-20
+          xl:py-16
         "
       >
         <div
@@ -50,10 +50,11 @@ export default function AssuranceHighlights() {
             grid
             w-full
             grid-cols-1
-            gap-12
+            gap-8
             sm:grid-cols-2
             lg:grid-cols-4
-            lg:gap-8
+            lg:gap-6
+            xl:gap-8
           "
         >
           {highlights.map((item) => (

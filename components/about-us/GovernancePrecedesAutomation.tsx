@@ -38,15 +38,21 @@ export default function GovernancePrecedesAutomation() {
           flex
           w-full
           max-w-[1440px]
+          flex-col
           items-start
-          gap-10
-          px-6
-          py-16
-          sm:px-8
-          sm:py-20
-          lg:gap-20
-          lg:px-20
-          lg:py-20
+          gap-8
+          sm:gap-10
+          px-4
+          py-10
+          sm:px-6
+          sm:py-14
+          lg:flex-row
+          lg:gap-16
+          lg:px-8
+          lg:py-16
+          xl:gap-20
+          xl:px-20
+          xl:py-20
         "
       >
         {/* ===================================================

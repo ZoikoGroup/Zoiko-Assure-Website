@@ -65,13 +65,16 @@ export default function GovernedCapabilitySection() {
           max-w-[1440px]
           flex-col
           items-start
-          gap-10
-          px-6
-          py-16
-          sm:px-8
-          sm:py-20
-          lg:px-20
-          lg:py-20
+          gap-8
+          sm:gap-10
+          px-4
+          py-10
+          sm:px-6
+          sm:py-14
+          lg:px-8
+          lg:py-16
+          xl:px-20
+          xl:py-20
         "
       >
         {/* =========================================
@@ -119,13 +122,16 @@ export default function GovernedCapabilitySection() {
         ========================================== */}
         <div
           className="
-            flex
+            grid
             w-full
-            flex-col
+            grid-cols-2
             gap-3
-            lg:flex-row
-            lg:items-center
-            lg:gap-4
+            sm:grid-cols-3
+            md:grid-cols-5
+            xl:flex
+            xl:flex-row
+            xl:items-center
+            xl:gap-4
           "
         >
           {flow.map((item, index) => (
@@ -135,15 +141,17 @@ export default function GovernedCapabilitySection() {
                 flex
                 w-full
                 items-center
-                gap-4
-                lg:flex-1
+                gap-2
+                xl:gap-4
+                xl:flex-1
               "
             >
               {/* Flow box */}
               <div
                 className={`
                   flex
-                  min-h-[64px]
+                  min-h-[58px]
+                  sm:min-h-[64px]
                   w-full
                   flex-1
                   items-center
@@ -151,8 +159,10 @@ export default function GovernedCapabilitySection() {
                   rounded-lg
                   border
                   border-zinc-200
-                  px-3
-                  py-5
+                  px-2.5
+                  py-4
+                  sm:px-3
+                  sm:py-5
                   ${
                     item.label === "Accountable decision"
                       ? "bg-sky-900"
@@ -165,11 +175,11 @@ export default function GovernedCapabilitySection() {
                 <span
                   className={`
                     text-center
-                    text-sm
+                    text-xs
                     font-semibold
-                    leading-5
-                    sm:text-base
-                    sm:leading-6
+                    leading-4
+                    sm:text-sm
+                    sm:leading-5
                     ${
                       item.label === "Accountable decision"
                         ? "text-white"
@@ -191,7 +201,7 @@ export default function GovernedCapabilitySection() {
                     font-normal
                     leading-none
                     text-amber-600
-                    lg:block
+                    xl:block
                   "
                   aria-hidden="true"
                 >
@@ -205,15 +215,17 @@ export default function GovernedCapabilitySection() {
         {/* =========================================
             GOVERNANCE PRINCIPLES
         ========================================== */}
-        <div className="flex w-full flex-col gap-8">
+        <div className="flex w-full flex-col gap-6 sm:gap-8">
           {/* Row 1 */}
           <div
             className="
               grid
               w-full
               grid-cols-1
-              gap-8
+              gap-6
+              sm:grid-cols-2
               lg:grid-cols-3
+              lg:gap-8
             "
           >
             {principles.slice(0, 3).map((principle) => (
@@ -231,8 +243,10 @@ export default function GovernedCapabilitySection() {
               grid
               w-full
               grid-cols-1
-              gap-8
+              gap-6
+              sm:grid-cols-2
               lg:grid-cols-3
+              lg:gap-8
             "
           >
             {principles.slice(3, 6).map((principle) => (

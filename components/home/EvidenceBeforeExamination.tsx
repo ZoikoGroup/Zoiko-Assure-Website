@@ -232,13 +232,14 @@ export default function EvidenceBeforeExamination() {
           mx-auto
           w-full
           max-w-[1440px]
-          px-6
-          py-16
-          sm:px-8
-          md:px-10
-          lg:px-14
-          lg:py-20
+          px-4
+          py-10
+          sm:px-6
+          sm:py-14
+          lg:px-8
+          lg:py-16
           xl:px-20
+          xl:py-20
         "
       >
         <div className="mx-auto w-full max-w-[1280px]">
@@ -249,11 +250,13 @@ export default function EvidenceBeforeExamination() {
           <div className="flex w-full flex-col items-start">
             <h2
               className="
-                text-3xl
+                text-2xl
                 font-bold
-                leading-9
+                leading-8
                 tracking-tight
                 text-sky-900
+                sm:text-3xl
+                sm:leading-9
               "
             >
               Evidence Before the Examination
@@ -279,12 +282,15 @@ export default function EvidenceBeforeExamination() {
 
           <div
             className="
-              mt-12
+              mt-8
+              sm:mt-10
+              lg:mt-12
               grid
               w-full
               grid-cols-1
-              gap-6
-              lg:grid-cols-2
+              gap-5
+              md:grid-cols-2
+              lg:gap-6
             "
           >
             <ControlCard />
