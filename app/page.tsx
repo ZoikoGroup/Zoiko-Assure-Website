@@ -13,11 +13,7 @@ import RegulatoryIntelligence from '@/components/home/RegulatoryIntelligence'
 import TrustMustBeVerifiable from '@/components/home/TrustMustBeVerifiable'
 import React from 'react'
 
-export const metadata: Metadata = {
-  title: "ZoikoAssure | AI Compliance Intelligence & Continuous Assurance Platform",
-  description:
-    "ZoikoAssure is an AI-powered compliance intelligence platform enabling regulatory monitoring, governance visibility, and continuous assurance across global compliance frameworks.",
-};
+
 
 export default function page() {
   return (
