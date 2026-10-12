@@ -9,13 +9,16 @@ export default function AssuranceEngineeredSection() {
           max-w-[1440px]
           flex-col
           items-start
-          gap-7
-          px-6
-          py-16
-          sm:px-10
-          sm:py-20
-          lg:px-20
-          lg:py-24
+          gap-6
+          px-4
+          py-10
+          sm:gap-7
+          sm:px-6
+          sm:py-14
+          lg:px-8
+          lg:py-16
+          xl:px-20
+          xl:py-20
         "
       >
         {/* Heading */}
@@ -23,12 +26,14 @@ export default function AssuranceEngineeredSection() {
           className="
             m-0
             w-full
-            text-3xl
+            text-2xl
             font-bold
             leading-tight
             tracking-[-0.02em]
-            sm:text-4xl
-            sm:leading-[1.1]
+            sm:text-3xl
+            sm:leading-tight
+            md:text-4xl
+            md:leading-[1.1]
             lg:text-5xl
             lg:leading-[52.8px]
           "

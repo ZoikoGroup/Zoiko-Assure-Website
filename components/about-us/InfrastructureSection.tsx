@@ -1,24 +1,29 @@
+import Image from "next/image";
+
 export default function InfrastructureSection() {
   return (
     <section className="w-full overflow-hidden bg-slate-50">
       <div
         className="
           mx-auto
-          flex
+          grid
           w-full
           max-w-[1440px]
-          flex-col
-          items-center
-          gap-10
-          px-6
-          py-16
-          sm:px-8
-          sm:py-20
-          lg:flex-row
+          grid-cols-1
+          gap-8
+          sm:gap-10
+          px-4
+          py-10
+          sm:px-6
+          sm:py-14
+          lg:grid-cols-2
           lg:items-center
-          lg:gap-16
-          lg:px-20
-          lg:py-20
+          lg:gap-10
+          lg:px-8
+          lg:py-16
+          xl:gap-16
+          xl:px-20
+          xl:py-20
         "
       >
         {/* =========================================
@@ -27,26 +32,23 @@ export default function InfrastructureSection() {
         <div
           className="
             relative
+            h-[260px]
+            sm:h-[340px]
+            lg:h-[420px]
             w-full
             overflow-hidden
-            rounded-3xl
-            lg:w-[560px]
-            lg:shrink-0
+            rounded-2xl
+            sm:rounded-3xl
           "
         >
-          <img
+          <Image
             src="/images/about-us/image1.png"
             alt="Team working on continuous regulatory assurance"
+            fill
+            sizes="(max-width: 1024px) 100vw, 50vw"
             className="
-              block
-              h-auto
-              min-h-[280px]
-              w-full
               object-cover
               object-center
-              sm:min-h-[360px]
-              lg:h-[448px]
-              lg:min-h-0
             "
           />
         </div>
@@ -61,9 +63,8 @@ export default function InfrastructureSection() {
             flex-col
             items-start
             justify-center
-            gap-8
-            lg:w-[580px]
-            lg:shrink-0
+            gap-6
+            sm:gap-8
           "
         >
           {/* =========================================
@@ -75,7 +76,8 @@ export default function InfrastructureSection() {
               w-full
               flex-col
               items-start
-              gap-6
+              gap-4
+              sm:gap-6
             "
           >
             {/* Main Heading */}
@@ -123,7 +125,8 @@ export default function InfrastructureSection() {
               w-full
               flex-col
               items-start
-              gap-6
+              gap-4
+              sm:gap-6
             "
           >
             {/* Description */}

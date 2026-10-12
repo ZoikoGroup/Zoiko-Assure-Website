@@ -38,19 +38,19 @@ export default function RegulatoryExposureCTA() {
           z-10
           mx-auto
           flex
-          min-h-[420px]
+          min-h-0
           w-full
           max-w-[1440px]
           items-center
           justify-center
-          px-5
-          py-16
-          sm:px-8
-          md:min-h-[460px]
-          md:px-10
-          lg:px-14
-          lg:py-20
+          px-4
+          py-10
+          sm:px-6
+          sm:py-14
+          lg:px-8
+          lg:py-16
           xl:px-20
+          xl:py-20
         "
       >
         {/* White CTA card */}
@@ -62,7 +62,7 @@ export default function RegulatoryExposureCTA() {
             border
             border-amber-600/20
             bg-white
-            p-7
+            p-6
             shadow-[0px_4px_6px_-4px_rgba(0,0,0,0.10),0px_10px_15px_-3px_rgba(0,0,0,0.10)]
             sm:p-8
             md:p-10

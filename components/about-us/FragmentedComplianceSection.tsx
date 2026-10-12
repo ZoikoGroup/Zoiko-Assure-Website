@@ -9,13 +9,16 @@ export default function FragmentedComplianceSection() {
           max-w-[1440px]
           flex-col
           items-start
-          gap-10
-          px-6
-          py-16
-          sm:px-8
-          sm:py-20
-          lg:px-20
-          lg:py-20
+          gap-8
+          sm:gap-10
+          px-4
+          py-10
+          sm:px-6
+          sm:py-14
+          lg:px-8
+          lg:py-16
+          xl:px-20
+          xl:py-20
         "
       >
         {/* =========================================
@@ -49,9 +52,11 @@ export default function FragmentedComplianceSection() {
             w-full
             flex-col
             items-start
-            gap-10
+            gap-8
+            sm:gap-10
             lg:flex-row
-            lg:gap-16
+            lg:gap-10
+            xl:gap-16
           "
         >
           {/* =========================================
@@ -64,8 +69,8 @@ export default function FragmentedComplianceSection() {
               flex-col
               items-start
               gap-6
-              lg:w-[740px]
-              lg:shrink-0
+              lg:flex-1
+              xl:max-w-[740px]
             "
           >
             {/* Paragraph 1 */}
@@ -120,12 +125,15 @@ export default function FragmentedComplianceSection() {
               w-full
               flex-col
               items-start
-              gap-7
+              gap-6
               border-l-[3px]
               border-amber-600
-              pl-6
+              pl-5
               pt-2
-              lg:flex-1
+              sm:pl-6
+              lg:w-[320px]
+              xl:w-[380px]
+              lg:shrink-0
               lg:pl-8
             "
           >

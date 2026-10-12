@@ -724,7 +724,7 @@ export default function Footer() {
           BRAND + SOCIAL
       ===================================================== */}
 
-      <section className="mx-auto w-full max-w-[1440px] px-6 pt-10 sm:px-8 md:px-12 lg:px-20 lg:pb-8">
+      <section className="mx-auto w-full max-w-[1440px] px-4 pt-10 sm:px-6 md:px-8 lg:pb-8 xl:px-20">
         <div className="flex flex-col justify-between gap-8 border-b border-neutral-700 pb-10 lg:flex-row lg:items-center">
 
           <div className="flex w-full max-w-[740px] flex-col gap-6">
@@ -813,9 +813,9 @@ export default function Footer() {
           FIRST NAVIGATION ROW
       ===================================================== */}
 
-      <section className="mx-auto w-full max-w-[1440px] px-6 pb-12 pt-2 sm:px-8 md:px-12 lg:px-20">
+      <section className="mx-auto w-full max-w-[1440px] px-4 pb-12 pt-2 sm:px-6 md:px-8 xl:px-20">
 
-        <div className="grid grid-cols-2 gap-x-7 gap-y-10 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7">
+        <div className="grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-7">
 
           <FooterColumn
             title="Platform"
@@ -860,7 +860,7 @@ export default function Footer() {
             SECOND NAVIGATION ROW
         =================================================== */}
 
-        <div className="grid grid-cols-2 gap-x-7 gap-y-10 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7">
+        <div className="grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-7">
 
           <FooterColumn
             title="Trust Center"
@@ -963,7 +963,7 @@ export default function Footer() {
           backgroundImage: "url('/footer/bg2.png')",
         }}
       >
-        <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-10 px-6 py-10 sm:px-8 md:grid-cols-2 md:px-12 lg:grid-cols-4 lg:px-20">
+        <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-10 px-4 py-10 sm:px-6 md:grid-cols-2 md:px-8 lg:grid-cols-4 xl:px-20">
 
           <div>
             <h3 className="text-xl font-medium text-white">
@@ -1039,7 +1039,7 @@ export default function Footer() {
 
       <section className="w-full bg-[#071C33]">
 
-        <div className="mx-auto w-full max-w-[1440px] px-6 py-8 sm:px-8 md:px-12 lg:px-20">
+        <div className="mx-auto w-full max-w-[1440px] px-4 py-8 sm:px-6 md:px-8 xl:px-20">
 
           <div className="flex flex-col gap-3">
 

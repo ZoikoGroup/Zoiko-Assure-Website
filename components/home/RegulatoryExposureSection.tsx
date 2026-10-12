@@ -131,29 +131,33 @@ export default function RegulatoryExposureSection() {
           mx-auto
           w-full
           max-w-[1440px]
-          px-5
-          py-14
-          sm:px-8
-          md:px-10
-          lg:px-14
-          lg:py-20
+          px-4
+          py-10
+          sm:px-6
+          sm:py-14
+          lg:px-8
+          lg:py-16
           xl:px-20
+          xl:py-20
         "
       >
         {/* =====================================================
             SECTION HEADING
         ====================================================== */}
 
-        <div className="mb-12 w-full">
+        <div className="mb-8 sm:mb-10 lg:mb-12 w-full">
           <div className="max-w-[760px]">
             <h2
               className="
-                text-3xl
+                text-2xl
                 font-bold
-                leading-9
+                leading-8
                 tracking-tight
                 text-sky-900
-                sm:text-4xl
+                sm:text-3xl
+                sm:leading-9
+                lg:text-4xl
+                lg:leading-10
               "
             >
               A Board-Defensible View of Regulatory Exposure.
@@ -161,7 +165,8 @@ export default function RegulatoryExposureSection() {
 
             <p
               className="
-                mt-4
+                mt-3
+                sm:mt-4
                 max-w-[860px]
                 text-base
                 font-normal
@@ -279,13 +284,15 @@ export default function RegulatoryExposureSection() {
               DESKTOP TABLE
           ==================================================== */}
 
-          <div className="hidden w-full lg:block">
+          <div className="hidden w-full overflow-x-auto lg:block">
+            <div className="min-w-[820px] w-full">
             {/* Header */}
             <div
               className="
                 grid
                 grid-cols-[1.35fr_1.15fr_1fr_1.65fr_.8fr]
-                gap-6
+                gap-4
+                xl:gap-6
                 bg-gray-100
                 px-6
                 py-4
@@ -365,6 +372,7 @@ export default function RegulatoryExposureSection() {
                 </div>
               </div>
             ))}
+            </div>
           </div>
 
           {/* ===================================================

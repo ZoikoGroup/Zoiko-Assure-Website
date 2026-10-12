@@ -1,50 +1,36 @@
+import Image from "next/image";
+
 export default function KnowDemonstrateDefend() {
   return (
     <section className="w-full overflow-hidden bg-neutral-50">
       <div
         className="
           mx-auto
-          flex
+          grid
           w-full
           max-w-[1440px]
-          flex-col
-          items-center
-          gap-10
-          px-6
-          py-16
-          sm:px-8
-          sm:py-20
-          lg:flex-row
+          grid-cols-1
+          gap-8
+          sm:gap-10
+          px-4
+          py-10
+          sm:px-6
+          sm:py-14
+          lg:grid-cols-2
           lg:items-center
-          lg:gap-16
-          lg:px-20
-          lg:py-20
+          lg:gap-10
+          lg:px-8
+          lg:py-16
+          xl:gap-16
+          xl:px-20
+          xl:py-20
         "
       >
         {/* =========================================
             LEFT CONTENT
         ========================================== */}
-        <div
-          className="
-            flex
-            w-full
-            flex-col
-            items-start
-            justify-center
-            gap-8
-            lg:w-[580px]
-            lg:shrink-0
-          "
-        >
-          <div
-            className="
-              flex
-              w-full
-              flex-col
-              items-start
-              gap-6
-            "
-          >
+        <div className="flex w-full flex-col items-start justify-center gap-6 sm:gap-8">
+          <div className="flex w-full flex-col items-start gap-4 sm:gap-6">
             {/* Main Heading */}
             <h2
               className="
@@ -68,12 +54,14 @@ export default function KnowDemonstrateDefend() {
               className="
                 m-0
                 w-full
-                text-2xl
+                text-xl
                 font-semibold
-                leading-8
+                leading-7
                 text-sky-900
-                sm:text-3xl
-                sm:leading-9
+                sm:text-2xl
+                sm:leading-8
+                lg:text-3xl
+                lg:leading-9
               "
             >
               A world in which every regulated organization can know what
@@ -111,25 +99,23 @@ export default function KnowDemonstrateDefend() {
         <div
           className="
             relative
+            h-[260px]
+            sm:h-[340px]
+            lg:h-[395px]
             w-full
             overflow-hidden
-            rounded-3xl
-            lg:flex-1
+            rounded-2xl
+            sm:rounded-3xl
           "
         >
-          <img
+          <Image
             src="/images/about-us/image.png"
             alt="Regulatory assurance team reviewing compliance information"
+            fill
+            sizes="(max-width: 1024px) 100vw, 50vw"
             className="
-              block
-              h-auto
-              min-h-[280px]
-              w-full
               object-cover
               object-center
-              sm:min-h-[340px]
-              lg:h-[395px]
-              lg:min-h-0
             "
           />
         </div>

@@ -216,7 +216,7 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-[9999] w-full border-b border-zinc-200 bg-white">
       {/* HEADER BAR */}
-      <div className="mx-auto flex h-20 w-full max-w-[1440px] items-center justify-between gap-4 px-5 sm:px-8 lg:px-12 xl:px-20">
+      <div className="mx-auto flex h-20 w-full max-w-[1440px] items-center justify-between gap-2 px-5 sm:px-8 lg:px-6 xl:gap-4 xl:px-20">
         {/* LOGO */}
         <Link
           href="/"
@@ -230,7 +230,7 @@ export default function Header() {
             width={172}
             height={50}
             priority
-            className="h-auto w-[145px] object-contain sm:w-[160px] lg:w-[172px]"
+            className="h-auto w-[145px] object-contain sm:w-[155px] lg:w-[160px] xl:w-[172px]"
           />
         </Link>
 
@@ -239,7 +239,7 @@ export default function Header() {
           aria-label="Main navigation"
           className="hidden h-full flex-1 items-center justify-center lg:flex"
         >
-          <div className="flex h-full items-center gap-1 xl:gap-2">
+          <div className="flex h-full items-center gap-0.5 xl:gap-2">
             {navItems.map((item) => {
               const isOpen = openMenu === item.label;
 
@@ -259,7 +259,7 @@ export default function Header() {
                     onClick={closeMenu}
                     aria-expanded={isOpen}
                     aria-haspopup="true"
-                    className={`relative flex h-11 items-center justify-center gap-1.5 whitespace-nowrap rounded-md px-2 text-sm font-medium transition-colors duration-200 xl:px-2.5 ${
+                    className={`relative flex h-11 items-center justify-center gap-1 whitespace-nowrap rounded-md px-1.5 text-xs font-medium transition-colors duration-200 xl:gap-1.5 xl:px-2.5 xl:text-sm ${
                       isOpen
                         ? "text-[#064B7B]"
                         : "text-cyan-950 hover:text-amber-600"
@@ -329,11 +329,11 @@ export default function Header() {
         </nav>
 
         {/* DESKTOP ACTIONS */}
-        <div className="hidden shrink-0 items-center gap-4 lg:flex xl:gap-6">
+        <div className="hidden shrink-0 items-center gap-3 lg:flex xl:gap-6">
           <Link
             href="/sign-in"
             onClick={closeMenu}
-            className="whitespace-nowrap text-sm font-medium text-cyan-950 transition-colors hover:text-amber-600"
+            className="whitespace-nowrap text-xs font-medium text-cyan-950 transition-colors hover:text-amber-600 xl:text-sm"
           >
             Sign In
           </Link>
@@ -341,7 +341,7 @@ export default function Header() {
           <Link
             href="/request-demo"
             onClick={closeMenu}
-            className="flex h-10 items-center gap-2 whitespace-nowrap rounded-lg bg-amber-600 px-3 text-sm font-semibold text-white transition-colors hover:bg-amber-700 xl:gap-3 xl:px-4"
+            className="flex h-9 items-center gap-1.5 whitespace-nowrap rounded-lg bg-amber-600 px-3 text-xs font-semibold text-white transition-colors hover:bg-amber-700 xl:h-10 xl:gap-3 xl:px-4 xl:text-sm"
           >
             <span>Request A Demo</span>
             <ArrowUpRight />

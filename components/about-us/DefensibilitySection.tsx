@@ -48,13 +48,16 @@ export default function DefensibilitySection() {
           max-w-[1440px]
           flex-col
           items-start
-          gap-10
-          px-6
-          py-16
-          sm:px-8
-          sm:py-20
-          lg:px-20
-          lg:py-20
+          gap-8
+          sm:gap-10
+          px-4
+          py-10
+          sm:px-6
+          sm:py-14
+          lg:px-8
+          lg:py-16
+          xl:px-20
+          xl:py-20
         "
       >
         {/* =========================================
@@ -95,7 +98,8 @@ export default function DefensibilitySection() {
                   grid-cols-1
                   gap-0
                   lg:grid-cols-2
-                  lg:gap-16
+                  lg:gap-10
+                  xl:gap-16
                 "
               >
                 {row.map((principle) => (

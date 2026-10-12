@@ -9,13 +9,16 @@ export default function JurisdictionSection() {
           max-w-[1440px]
           flex-col
           items-start
-          gap-10
-          px-6
-          py-16
-          sm:px-8
-          sm:py-20
-          lg:px-20
-          lg:py-20
+          gap-8
+          sm:gap-10
+          px-4
+          py-10
+          sm:px-6
+          sm:py-14
+          lg:px-8
+          lg:py-16
+          xl:px-20
+          xl:py-20
         "
       >
         {/* =========================================
@@ -49,10 +52,12 @@ export default function JurisdictionSection() {
             w-full
             flex-col
             items-start
-            gap-10
+            gap-8
+            sm:gap-10
             lg:flex-row
             lg:items-center
-            lg:gap-16
+            lg:gap-10
+            xl:gap-16
           "
         >
           {/* =========================================
@@ -65,8 +70,8 @@ export default function JurisdictionSection() {
               flex-col
               items-start
               gap-6
-              lg:w-[680px]
-              lg:shrink-0
+              lg:flex-1
+              xl:max-w-[680px]
             "
           >
             {/* Paragraph 1 */}
@@ -125,9 +130,11 @@ export default function JurisdictionSection() {
               border
               border-zinc-200
               bg-slate-50
-              p-6
+              p-5
               sm:p-7
-              lg:flex-1
+              lg:w-[400px]
+              xl:w-[480px]
+              lg:shrink-0
             "
           >
             {/* Label */}

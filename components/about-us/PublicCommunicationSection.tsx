@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function PublicCommunicationSection() {
   return (
     <section className="w-full overflow-hidden bg-neutral-50">
@@ -9,25 +11,28 @@ export default function PublicCommunicationSection() {
           max-w-[1440px]
           flex-col
           items-start
-          gap-10
-          px-6
-          py-16
-          sm:px-8
-          sm:py-20
-          lg:px-20
-          lg:py-20
+          gap-8
+          px-4
+          py-10
+          sm:gap-10
+          sm:px-6
+          sm:py-14
+          lg:px-8
+          lg:py-16
+          xl:px-20
+          xl:py-20
         "
       >
         <div
           className="
-            flex
+            grid
             w-full
-            flex-col
-            items-start
+            grid-cols-1
+            items-center
             gap-8
-            lg:flex-row
-            lg:items-center
-            lg:gap-12
+            lg:grid-cols-2
+            lg:gap-10
+            xl:gap-14
           "
         >
           {/* =====================================================
@@ -35,24 +40,23 @@ export default function PublicCommunicationSection() {
           ====================================================== */}
           <div
             className="
+              relative
               w-full
+              aspect-[4/3]
+              sm:aspect-[16/10]
+              lg:aspect-auto
+              lg:h-[440px]
+              xl:h-[482px]
               overflow-hidden
               rounded-xl
-              lg:w-[560px]
-              lg:h-[482px]
-              lg:shrink-0
             "
           >
-            <img
+            <Image
               src="/images/about-us/image2.png"
               alt="Professional team discussing regulatory assurance"
-              className="
-                block
-                h-auto
-                w-full
-                object-cover
-                lg:h-full
-              "
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover"
             />
           </div>
 
@@ -66,7 +70,6 @@ export default function PublicCommunicationSection() {
               flex-col
               items-start
               gap-6
-              lg:w-[672px]
             "
           >
             {/* Heading */}

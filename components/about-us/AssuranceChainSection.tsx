@@ -67,13 +67,16 @@ export default function AssuranceChainSection() {
           max-w-[1440px]
           flex-col
           items-start
-          gap-10
-          px-6
-          py-16
-          sm:px-8
-          sm:py-20
-          lg:px-20
-          lg:py-20
+          gap-8
+          sm:gap-10
+          px-4
+          py-10
+          sm:px-6
+          sm:py-14
+          lg:px-8
+          lg:py-16
+          xl:px-20
+          xl:py-20
         "
       >
         {/* =========================================
@@ -120,13 +123,16 @@ export default function AssuranceChainSection() {
         ========================================== */}
         <div
           className="
-            flex
+            grid
             w-full
-            flex-col
-            gap-4
-            lg:flex-row
-            lg:items-center
-            lg:gap-3
+            grid-cols-2
+            gap-3
+            sm:grid-cols-3
+            sm:gap-4
+            xl:flex
+            xl:flex-row
+            xl:items-center
+            xl:gap-3
           "
         >
           {stages.map((stage, index) => (
@@ -136,26 +142,30 @@ export default function AssuranceChainSection() {
                 flex
                 w-full
                 items-center
-                gap-3
-                lg:flex-1
+                gap-2
+                xl:gap-3
+                xl:flex-1
               "
             >
               {/* Stage flow box */}
               <div
                 className="
                   flex
-                  min-h-[126px]
+                  min-h-[110px]
+                  sm:min-h-[126px]
                   w-full
                   flex-1
                   flex-col
                   items-center
                   justify-center
-                  gap-3.5
+                  gap-2.5
+                  sm:gap-3.5
                   rounded-lg
                   border
                   border-amber-600
                   px-2
-                  py-5
+                  py-4
+                  sm:py-5
                 "
               >
                 <Image
@@ -170,12 +180,12 @@ export default function AssuranceChainSection() {
                   className="
                     w-full
                     text-center
-                    text-sm
+                    text-xs
                     font-semibold
-                    leading-5
+                    leading-4
                     text-sky-900
-                    sm:text-base
-                    sm:leading-6
+                    sm:text-sm
+                    sm:leading-5
                   "
                 >
                   {stage.title}
@@ -190,7 +200,7 @@ export default function AssuranceChainSection() {
                     shrink-0
                     items-center
                     justify-center
-                    lg:flex
+                    xl:flex
                   "
                   aria-hidden="true"
                 >

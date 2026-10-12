@@ -18,13 +18,16 @@ export default function EvidenceLineageSection() {
           max-w-[1440px]
           flex-col
           items-start
-          gap-10
-          px-6
-          py-16
-          sm:px-8
-          sm:py-20
-          lg:px-20
-          lg:py-20
+          gap-8
+          sm:gap-10
+          px-4
+          py-10
+          sm:px-6
+          sm:py-14
+          lg:px-8
+          lg:py-16
+          xl:px-20
+          xl:py-20
         "
       >
         {/* =====================================================
@@ -58,10 +61,12 @@ export default function EvidenceLineageSection() {
             w-full
             flex-col
             items-start
-            gap-8
+            gap-6
+            sm:gap-8
             lg:flex-row
             lg:items-start
-            lg:gap-16
+            lg:gap-10
+            xl:gap-16
           "
         >
           {/* Left paragraph */}
@@ -72,7 +77,8 @@ export default function EvidenceLineageSection() {
               flex-col
               items-start
               gap-6
-              lg:w-[480px]
+              lg:w-[400px]
+              xl:w-[480px]
               lg:shrink-0
             "
           >
@@ -243,7 +249,7 @@ export default function EvidenceLineageSection() {
             QUESTIONS
         ====================================================== */}
         <div className="flex w-full flex-col gap-4">
-          {/* Desktop: 3 columns / Mobile: 1 column */}
+          {/* Desktop: 3 columns / Tablet: 2 columns / Mobile: 1 column */}
           <div
             className="
               grid
@@ -251,6 +257,7 @@ export default function EvidenceLineageSection() {
               grid-cols-1
               gap-x-6
               gap-y-4
+              sm:grid-cols-2
               lg:grid-cols-3
             "
           >

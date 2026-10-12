@@ -9,13 +9,16 @@ export default function ClearOwnershipSection() {
           max-w-[1440px]
           flex-col
           items-start
-          gap-10
-          px-6
-          py-16
-          sm:px-8
-          sm:py-20
-          lg:px-20
-          lg:py-20
+          gap-8
+          px-4
+          py-10
+          sm:gap-10
+          sm:px-6
+          sm:py-14
+          lg:px-8
+          lg:py-16
+          xl:px-20
+          xl:py-20
         "
       >
         {/* =====================================================
@@ -26,12 +29,14 @@ export default function ClearOwnershipSection() {
             className="
               m-0
               w-full
-              text-3xl
+              text-2xl
               font-bold
-              leading-9
+              leading-8
               text-sky-900
-              sm:text-4xl
-              sm:leading-10
+              sm:text-3xl
+              sm:leading-9
+              lg:text-4xl
+              lg:leading-10
             "
           >
             Clear ownership of consequential decisions.
@@ -49,7 +54,9 @@ export default function ClearOwnershipSection() {
             items-start
             gap-8
             lg:flex-row
-            lg:gap-16
+            lg:items-start
+            lg:gap-10
+            xl:gap-16
           "
         >
           {/* ===================================================
@@ -62,8 +69,8 @@ export default function ClearOwnershipSection() {
               flex-col
               items-start
               gap-6
-              lg:w-[760px]
-              lg:shrink-0
+              lg:flex-1
+              xl:max-w-[760px]
             "
           >
             <p
@@ -118,19 +125,23 @@ export default function ClearOwnershipSection() {
               bg-white
               p-6
               sm:p-8
-              lg:flex-1
+              lg:w-[340px]
+              lg:shrink-0
+              xl:w-[420px]
             "
           >
             <h3
               className="
                 m-0
                 w-full
-                text-2xl
+                text-xl
                 font-semibold
-                leading-8
+                leading-7
                 text-sky-900
-                sm:text-3xl
-                sm:leading-9
+                sm:text-2xl
+                sm:leading-8
+                lg:text-3xl
+                lg:leading-9
               "
             >
               Institutional credibility is prioritized over marketing
