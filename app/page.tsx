@@ -1,8 +1,8 @@
+import type { Metadata } from "next";
 import AIThatShowsItsWork from '@/components/home/AIThatShowsItsWork'
 import AssuranceChain from '@/components/home/AssuranceChain'
 import AssuranceHighlights from '@/components/home/AssuranceHighlights'
 import ComplianceMomentsSection from '@/components/home/ComplianceMomentsSection'
-
 import EvidenceBeforeExamination from '@/components/home/EvidenceBeforeExamination'
 import Hero from '@/components/home/Hero'
 import MultiJurisdictionalCompliance from '@/components/home/MultiJurisdictionalCompliance'
@@ -12,6 +12,12 @@ import RegulatoryExposureSection from '@/components/home/RegulatoryExposureSecti
 import RegulatoryIntelligence from '@/components/home/RegulatoryIntelligence'
 import TrustMustBeVerifiable from '@/components/home/TrustMustBeVerifiable'
 import React from 'react'
+
+export const metadata: Metadata = {
+  title: "ZoikoAssure | AI Compliance Intelligence & Continuous Assurance Platform",
+  description:
+    "ZoikoAssure is an AI-powered compliance intelligence platform enabling regulatory monitoring, governance visibility, and continuous assurance across global compliance frameworks.",
+};
 
 export default function page() {
   return (
