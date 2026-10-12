@@ -1,8 +1,8 @@
+import type { Metadata } from "next";
 import AIThatShowsItsWork from '@/components/home/AIThatShowsItsWork'
 import AssuranceChain from '@/components/home/AssuranceChain'
 import AssuranceHighlights from '@/components/home/AssuranceHighlights'
 import ComplianceMomentsSection from '@/components/home/ComplianceMomentsSection'
-
 import EvidenceBeforeExamination from '@/components/home/EvidenceBeforeExamination'
 import Hero from '@/components/home/Hero'
 import MultiJurisdictionalCompliance from '@/components/home/MultiJurisdictionalCompliance'
@@ -12,6 +12,8 @@ import RegulatoryExposureSection from '@/components/home/RegulatoryExposureSecti
 import RegulatoryIntelligence from '@/components/home/RegulatoryIntelligence'
 import TrustMustBeVerifiable from '@/components/home/TrustMustBeVerifiable'
 import React from 'react'
+
+
 
 export default function page() {
   return (

@@ -5,9 +5,10 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
-  title: "ZoikoAssure",
+  title:
+    "ZoikoAssure | AI Compliance Intelligence & Continuous Assurance Platform",
   description:
-    "Global regulatory intelligence and continuous assurance.",
+    "ZoikoAssure is an AI-powered compliance intelligence platform enabling regulatory monitoring, governance visibility, and continuous assurance across global compliance frameworks.",
 };
 
 export default function RootLayout({
