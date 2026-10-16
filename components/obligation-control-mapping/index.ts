@@ -1,0 +1,16 @@
+export { default as Hero } from "./Hero";
+export { default as KeyPillarsFloating } from "./KeyPillarsFloating";
+export { default as RegulationsOperateSection } from "./RegulationsOperateSection";
+export { default as AssuranceChainSection } from "./AssuranceChainSection";
+export { default as ApplicabilityDecisionSection } from "./ApplicabilityDecisionSection";
+export { default as ObligationDecompositionSection } from "./ObligationDecompositionSection";
+export { default as ControlMappingSection } from "./ControlMappingSection";
+export { default as VisibleGapsSection } from "./VisibleGapsSection";
+export { default as RegulatoryChangeSection } from "./RegulatoryChangeSection";
+export { default as ExpectationVsEvidenceSection } from "./ExpectationVsEvidenceSection";
+export { default as ControlToProofSection } from "./ControlToProofSection";
+export { default as AccountableOwnershipSection } from "./AccountableOwnershipSection";
+export { default as RoleResponsibilitiesSection } from "./RoleResponsibilitiesSection";
+export { default as IntegrationsSection } from "./IntegrationsSection";
+export { default as ScrutinyTrustSection } from "./ScrutinyTrustSection";
+export { default as FaqSection } from "./FaqSection";
