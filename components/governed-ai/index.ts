@@ -1,0 +1,12 @@
+export { default as Hero } from "./Hero";
+export { default as KeyPillarsFloating } from "./KeyPillarsFloating";
+export { default as WhyUngovernedAINotEnoughSection } from "./WhyUngovernedAINotEnoughSection";
+export { default as AIAssistsGovernanceOwnsSection } from "./AIAssistsGovernanceOwnsSection";
+export { default as InspectSourceSection } from "./InspectSourceSection";
+export { default as SourceGroundingSection } from "./SourceGroundingSection";
+export { default as UncertaintyAndHumanReviewSection } from "./UncertaintyAndHumanReviewSection";
+export { default as PolicyScopeAndDecisionProvenanceSection } from "./PolicyScopeAndDecisionProvenanceSection";
+export { default as ModelChangeAndSecurityBoundariesSection } from "./ModelChangeAndSecurityBoundariesSection";
+export { default as TieCapabilitySection } from "./TieCapabilitySection";
+export { default as RoleOutcomesSection } from "./RoleOutcomesSection";
+export { default as FaqSection } from "./FaqSection";

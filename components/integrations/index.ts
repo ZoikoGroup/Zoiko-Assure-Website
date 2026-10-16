@@ -1,0 +1,12 @@
+export { default as Hero } from "./Hero";
+export { default as ConnectEvidenceSection } from "./ConnectEvidenceSection";
+export { default as OperationalSystemsSection } from "./OperationalSystemsSection";
+export { default as WhyGovernanceMattersSection } from "./WhyGovernanceMattersSection";
+export { default as SeeStatusSection } from "./SeeStatusSection";
+export { default as SourceSystemsSection } from "./SourceSystemsSection";
+export { default as ConnectionLifecycleSection } from "./ConnectionLifecycleSection";
+export { default as EvidenceAndControlSection } from "./EvidenceAndControlSection";
+export { default as FailuresAndFreshnessSection } from "./FailuresAndFreshnessSection";
+export { default as SecurityAndJurisdictionSection } from "./SecurityAndJurisdictionSection";
+export { default as EvaluationAndGovernedAISection } from "./EvaluationAndGovernedAISection";
+export { default as FaqSection } from "./FaqSection";
