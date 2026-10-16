@@ -671,15 +671,15 @@ export default function Footer() {
       >
         <div className="mx-auto flex w-full max-w-[1440px] flex-col justify-between gap-8 px-6 py-12 sm:px-8 md:px-12 lg:flex-row lg:items-center lg:gap-16 lg:px-20 lg:py-14">
 
-          <div className="w-full max-w-[690px]">
+          <div className="w-full max-w-[760px]">
             <h2 className="text-3xl font-semibold leading-10 text-white sm:text-4xl">
-              Make Compliance Defensible Before You Need to Defend It.
+              <span className="sm:whitespace-nowrap">Make Compliance Defensible Before You</span>
+              <br />
+              Need to Defend It.
             </h2>
 
             <p className="mt-5 text-base font-normal leading-6 text-slate-300">
-              See how ZoikoAssure connects regulatory intelligence,
-              applicability, controls, evidence and continuous assurance
-              across jurisdictions.
+              See how ZoikoAssure connects regulatory intelligence, applicability, controls, evidence and<br className="hidden sm:inline" /> continuous assurance across jurisdictions.
             </p>
           </div>
 

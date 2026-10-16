@@ -24,7 +24,7 @@ const platformColumns = [
         description:
           "Determine what applies by jurisdiction, entity, activity, product, data and effective period.",
         icon: "/images/platformmegamenu/list-filter.png",
-        href: "/platform/applicability-engine",
+        href: "/applicability-engine",
       },
     ],
   },
@@ -36,8 +36,9 @@ const platformColumns = [
         description:
           "Translate applicable requirements into governed controls and accountability.",
         icon: "/images/platformmegamenu/workflow.png",
-        href: "/platform/obligation-control-mapping",
+        href: "/obligation-control-mapping",
       },
+
       {
         title: "Continuous Assurance",
         description:

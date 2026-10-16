@@ -7,6 +7,30 @@ const nextConfig: NextConfig = {
   },
   cacheComponents: true,
   partialPrefetching: true,
+  async redirects() {
+    return [
+      {
+        source: "/obligation_control_mapping",
+        destination: "/obligation-control-mapping",
+        permanent: false,
+      },
+      {
+        source: "/platform/obligation_control_mapping",
+        destination: "/obligation-control-mapping",
+        permanent: false,
+      },
+      {
+        source: "/platform/obligation-control-mapping",
+        destination: "/obligation-control-mapping",
+        permanent: false,
+      },
+      {
+        source: "/platform/applicability-engine",
+        destination: "/applicability-engine",
+        permanent: false,
+      },
+    ];
+  },
   turbopack: {
     rules: {
       "*.css": {
@@ -16,5 +40,6 @@ const nextConfig: NextConfig = {
     },
   },
 };
+
 
 export default nextConfig;
