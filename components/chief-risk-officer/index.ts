@@ -1,0 +1,13 @@
+export { default as Hero } from "./Hero";
+export { default as KeyPillarsFloating } from "./KeyPillarsFloating";
+export { default as WhyConnectedAssuranceSection } from "./WhyConnectedAssuranceSection";
+export { default as OperatingModelSection } from "./OperatingModelSection";
+export { default as CommandOversightSection } from "./CommandOversightSection";
+export { default as JurisdictionDeltaSection } from "./JurisdictionDeltaSection";
+export { default as ObligationsAssuranceSection } from "./ObligationsAssuranceSection";
+export { default as EmergingRiskSection } from "./EmergingRiskSection";
+export { default as BoardBriefingSection } from "./BoardBriefingSection";
+export { default as EnterpriseDataSection } from "./EnterpriseDataSection";
+export { default as ExecutiveEvaluationSection } from "./ExecutiveEvaluationSection";
+export { default as SecurityTrustSection } from "./SecurityTrustSection";
+export { default as FaqSection } from "./FaqSection";
