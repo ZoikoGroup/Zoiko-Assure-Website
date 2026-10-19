@@ -1,0 +1,12 @@
+export { default as Hero } from "./Hero";
+export { default as KeyPillarsFloating } from "./KeyPillarsFloating";
+export { default as WhyBoardOversightSection } from "./WhyBoardOversightSection";
+export { default as TraceabilityChainSection } from "./TraceabilityChainSection";
+export { default as ExecutiveExposureSection } from "./ExecutiveExposureSection";
+export { default as MaterialityAssuranceSection } from "./MaterialityAssuranceSection";
+export { default as AccountabilityBoardSection } from "./AccountabilityBoardSection";
+export { default as ExceptionsJurisdictionSection } from "./ExceptionsJurisdictionSection";
+export { default as ChangeToImpactSection } from "./ChangeToImpactSection";
+export { default as CollaborationScenarioSection } from "./CollaborationScenarioSection";
+export { default as TrustPrivacySection } from "./TrustPrivacySection";
+export { default as FaqSection } from "./FaqSection";
