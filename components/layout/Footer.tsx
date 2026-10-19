@@ -703,13 +703,6 @@ export default function Footer() {
 
             <div className="flex flex-wrap gap-x-8 gap-y-3">
               <Link
-                href="/platform"
-                className="text-sm font-normal text-slate-300 transition-colors hover:text-white"
-              >
-                Explore the Platform →
-              </Link>
-
-              <Link
                 href="/trust-center"
                 className="text-sm font-normal text-slate-300 transition-colors hover:text-white"
               >
