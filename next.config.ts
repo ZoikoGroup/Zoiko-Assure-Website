@@ -29,6 +29,36 @@ const nextConfig: NextConfig = {
         destination: "/applicability-engine",
         permanent: false,
       },
+      {
+        source: "/solutions/general-counsel",
+        destination: "/general-counsel",
+        permanent: false,
+      },
+      {
+        source: "/roles/general-counsel",
+        destination: "/general-counsel",
+        permanent: false,
+      },
+      {
+        source: "/solutions/chief-compliance-officer",
+        destination: "/chief-compliance-officer",
+        permanent: false,
+      },
+      {
+        source: "/roles/chief-compliance-officer",
+        destination: "/chief-compliance-officer",
+        permanent: false,
+      },
+      {
+        source: "/solutions/chief-risk-officer",
+        destination: "/chief-risk-officer",
+        permanent: false,
+      },
+      {
+        source: "/roles/chief-risk-officer",
+        destination: "/chief-risk-officer",
+        permanent: false,
+      },
     ];
   },
   turbopack: {
