@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 type FooterItem = {
   label: string;
@@ -655,7 +658,54 @@ function SocialIcon({
    FOOTER
 ========================================================= */
 
-export default function Footer() {
+type FooterProps = {
+  customTitle?: React.ReactNode;
+  customDescription?: React.ReactNode;
+};
+
+export default function Footer({ customTitle, customDescription }: FooterProps = {}) {
+  const pathname = usePathname();
+
+  let ctaTitle: React.ReactNode = customTitle || (
+    <>
+      <span className="sm:whitespace-nowrap">Make Compliance Defensible Before You</span>
+      <br />
+      Need to Defend It.
+    </>
+  );
+
+  let ctaDescription: React.ReactNode = customDescription || (
+    <>
+      See how ZoikoAssure connects regulatory intelligence, applicability, controls, evidence and<br className="hidden sm:inline" /> continuous assurance across jurisdictions.
+    </>
+  );
+
+  if (!customTitle && pathname?.includes("regulatory-examination")) {
+    ctaTitle = (
+      <>
+        Prepare your examination response with
+        <br className="hidden sm:inline" /> greater traceability.
+      </>
+    );
+    ctaDescription = (
+      <>
+        See how authoritative sources, scoped controls, evidence records and accountable review can
+        <br className="hidden lg:inline" /> be connected for your organization.
+      </>
+    );
+  } else if (!customTitle && pathname?.includes("regulatory-change")) {
+    ctaTitle = (
+      <>
+        Know which regulatory changes need action—and what can be proven.
+      </>
+    );
+    ctaDescription = (
+      <>
+        Explore how source-linked regulatory changes can be assessed against the organization’s scope, translated into owned action, and reviewed through operating evidence.
+      </>
+    );
+  }
+
   return (
     <footer className="w-full bg-[#071C33] font-sans text-white">
 
@@ -671,15 +721,13 @@ export default function Footer() {
       >
         <div className="mx-auto flex w-full max-w-[1440px] flex-col justify-between gap-8 px-6 py-12 sm:px-8 md:px-12 lg:flex-row lg:items-center lg:gap-16 lg:px-20 lg:py-14">
 
-          <div className="w-full max-w-[760px]">
-            <h2 className="text-3xl font-semibold leading-10 text-white sm:text-4xl">
-              <span className="sm:whitespace-nowrap">Make Compliance Defensible Before You</span>
-              <br />
-              Need to Defend It.
+          <div className="w-full max-w-[690px]">
+            <h2 className="text-3xl font-semibold leading-[1.2] text-white sm:text-[34px]">
+              {ctaTitle}
             </h2>
 
-            <p className="mt-5 text-base font-normal leading-6 text-slate-300">
-              See how ZoikoAssure connects regulatory intelligence, applicability, controls, evidence and<br className="hidden sm:inline" /> continuous assurance across jurisdictions.
+            <p className="mt-4 text-[15px] font-normal leading-[1.65] text-[#CFD9E4] sm:mt-5">
+              {ctaDescription}
             </p>
           </div>
 
@@ -688,14 +736,14 @@ export default function Footer() {
             <div className="flex flex-wrap gap-3">
               <Link
                 href="/request-demo"
-                className="flex h-12 items-center justify-center rounded-lg bg-amber-600 px-5 text-sm font-semibold text-white outline outline-1 outline-amber-600 transition-colors duration-200 hover:bg-amber-500"
+                className="flex h-12 items-center justify-center rounded-lg bg-[#D58324] px-5 text-sm font-semibold text-white outline outline-1 outline-[#D58324] transition-colors duration-200 hover:bg-[#c2731c]"
               >
                 Request a Demo
               </Link>
 
               <Link
                 href="/regulatory-exposure"
-                className="flex h-12 items-center justify-center rounded-lg bg-[#071C33] px-5 text-sm font-semibold text-white outline outline-1 outline-slate-400 transition-colors duration-200 hover:bg-white/5"
+                className="flex h-12 items-center justify-center rounded-lg bg-[#071C33] px-5 text-sm font-semibold text-white outline outline-1 outline-[#7890A7] transition-colors duration-200 hover:bg-white/5"
               >
                 Assess Your Regulatory Exposure
               </Link>
@@ -704,7 +752,7 @@ export default function Footer() {
             <div className="flex flex-wrap gap-x-8 gap-y-3">
               <Link
                 href="/trust-center"
-                className="text-sm font-normal text-slate-300 transition-colors hover:text-white"
+                className="text-sm font-normal text-[#CFD9E4] transition-colors hover:text-white"
               >
                 Visit the Trust Center →
               </Link>
