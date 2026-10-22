@@ -17,7 +17,7 @@ const companyColumns = [
         title: "About ZoikoAssure",
         description:
           "Learn about our mission, values and the story behind the platform.",
-        href: "/company/about-us",
+        href: "/about-us",
         icon: "/images/CompanyMegaMenu/building-2.png",
       },
       {

@@ -17,21 +17,21 @@ const solutionColumns = [
         description:
           "Regulatory exposure, assurance posture, exceptions and emerging risk.",
         icon: "/images/SolutionMegaMenu/chart-no-axes-combined.png",
-        href: "/solutions/chief-risk-officer",
+        href: "/chief-risk-officer",
       },
       {
         title: "General Counsel",
         description:
           "Applicability, legal provenance, jurisdictional change and defensible decisions.",
         icon: "/images/SolutionMegaMenu/scale.png",
-        href: "/solutions/general-counsel",
+        href: "/general-counsel",
       },
       {
         title: "Chief Compliance Officer",
         description:
           "Obligations, controls, evidence, remediation and examination readiness.",
         icon: "/images/SolutionMegaMenu/clipboard-check.png",
-        href: "/solutions/chief-compliance-officer",
+        href: "/chief-compliance-officer",
       },
       {
         title: "CFO & Audit Committee",
@@ -50,7 +50,7 @@ const solutionColumns = [
         description:
           "Move from change detection to applicability and operational impact.",
         icon: "/images/SolutionMegaMenu/refresh-cw.png",
-        href: "/solutions/regulatory-change",
+        href: "/regulatory-change",
       },
       {
         title: "New Market / Jurisdiction",
@@ -64,14 +64,14 @@ const solutionColumns = [
         description:
           "Connect AI obligations to controls, evidence and accountable review.",
         icon: "/images/SolutionMegaMenu/brain-circuit.png",
-        href: "/solutions/ai-governance",
+        href: "/ai-governance",
       },
       {
         title: "Regulatory Examination",
         description:
           "Assemble source-linked evidence and decision provenance.",
         icon: "/images/SolutionMegaMenu/file-search.png",
-        href: "/solutions/regulatory-examination",
+        href: "/regulatory-examination",
       },
       {
         title: "M&A & Transformation",
