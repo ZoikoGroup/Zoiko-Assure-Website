@@ -91,7 +91,7 @@ const assuranceItems: FooterItem[] = [
 const solutionsItems: FooterItem[] = [
   {
     label: "Regulatory Change",
-    href: "/solutions/regulatory-change",
+    href: "/regulatory-change",
   },
   {
     label: "New Market & Jurisdiction",
@@ -99,11 +99,11 @@ const solutionsItems: FooterItem[] = [
   },
   {
     label: "AI Governance",
-    href: "/solutions/ai-governance",
+    href: "/ai-governance",
   },
   {
     label: "Regulatory Examination",
-    href: "/solutions/regulatory-examination",
+    href: "/regulatory-examination",
   },
   {
     label: "M&A & Transformation",
@@ -126,11 +126,11 @@ const roleItems: FooterItem[] = [
   },
   {
     label: "General Counsel",
-    href: "/roles/general-counsel",
+    href: "/general-counsel",
   },
   {
     label: "Chief Compliance Officer",
-    href: "/roles/chief-compliance-officer",
+    href: "/chief-compliance-officer",
   },
   {
     label: "CFO",
@@ -157,15 +157,15 @@ const roleItems: FooterItem[] = [
 const regulatoryIntelligenceItems: FooterItem[] = [
   {
     label: "Regulatory Changes",
-    href: "/regulatory-intelligence/regulatory-changes",
+    href: "/regulatory-change",
   },
   {
     label: "Obligations",
-    href: "/regulatory-intelligence/obligations",
+    href: "/obligation-control-mapping",
   },
   {
     label: "Enforcement & Guidance",
-    href: "/regulatory-intelligence/enforcement-guidance",
+    href: "/enforcement-guidance",
   },
   {
     label: "Regulatory Sources",
@@ -223,7 +223,7 @@ const jurisdictionItems: FooterItem[] = [
 const frameworkItems: FooterItem[] = [
   {
     label: "AI Governance",
-    href: "/frameworks/ai-governance",
+    href: "/ai-governance",
   },
   {
     label: "Data Protection",
@@ -293,7 +293,7 @@ const aiGovernanceItems: FooterItem[] = [
   },
   {
     label: "Governed AI",
-    href: "/ai-governance/governed-ai",
+    href: "/governed-ai",
   },
   {
     label: "AI Decision Provenance",
@@ -313,7 +313,7 @@ const aiGovernanceItems: FooterItem[] = [
   },
   {
     label: "AI Governance Methodology",
-    href: "/ai-governance/methodology",
+    href: "/ai-governance",
   },
 ];
 

@@ -16,20 +16,20 @@ const columns = [
       {
         title: "Regulatory Changes",
         description: "Current and emerging change, source-linked and dated.",
-        href: "/regulatory-intelligence/regulatory-changes",
+        href: "/regulatory-change",
         icon: "refresh-cw",
       },
       {
         title: "Obligations",
         description: "Structured regulatory requirements and provenance.",
-        href: "/regulatory-intelligence/obligations",
+        href: "/obligation-control-mapping",
         icon: "list-checks",
       },
       {
         title: "Enforcement & Guidance",
         description:
           "Relevant supervisory actions, interpretations and guidance.",
-        href: "/regulatory-intelligence/enforcement-guidance",
+        href: "/enforcement-guidance",
         icon: "scale",
       },
     ],
@@ -53,7 +53,7 @@ const columns = [
       {
         title: "Frameworks",
         description: "Recognized regulatory and governance frameworks.",
-        href: "/regulatory-intelligence/frameworks",
+        href: "/frameworks",
         icon: "panels-top-left",
       },
     ],
