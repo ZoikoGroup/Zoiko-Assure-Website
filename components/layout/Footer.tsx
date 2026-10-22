@@ -95,7 +95,7 @@ const solutionsItems: FooterItem[] = [
   },
   {
     label: "New Market & Jurisdiction",
-    href: "/solutions/new-market-jurisdiction",
+    href: "/new-market-jurisdiction",
   },
   {
     label: "AI Governance",
