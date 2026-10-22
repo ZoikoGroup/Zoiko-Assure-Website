@@ -78,7 +78,7 @@ const solutionColumns = [
         description:
           "Identify inherited obligations, control gaps and exceptions.",
         icon: "/images/SolutionMegaMenu/git-merge.png",
-        href: "/solutions/mergers-acquisitions",
+        href: "/transformation",
       },
     ],
   },

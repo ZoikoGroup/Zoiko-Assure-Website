@@ -69,6 +69,41 @@ const nextConfig: NextConfig = {
         destination: "/chief-risk-officer",
         permanent: false,
       },
+      {
+        source: "/solutions/ai-governance",
+        destination: "/ai-governance",
+        permanent: false,
+      },
+      {
+        source: "/solutions/mergers-acquisitions",
+        destination: "/transformation",
+        permanent: false,
+      },
+      {
+        source: "/solutions/ma-transformation",
+        destination: "/transformation",
+        permanent: false,
+      },
+      {
+        source: "/solutions/transformation",
+        destination: "/transformation",
+        permanent: false,
+      },
+      {
+        source: "/mergers-acquisitions",
+        destination: "/transformation",
+        permanent: false,
+      },
+      {
+        source: "/m-and-a-transformation",
+        destination: "/transformation",
+        permanent: false,
+      },
+      {
+        source: "/ma-transformation",
+        destination: "/transformation",
+        permanent: false,
+      },
     ];
   },
   turbopack: {
