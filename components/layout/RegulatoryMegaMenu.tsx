@@ -16,13 +16,13 @@ const columns = [
       {
         title: "Regulatory Changes",
         description: "Current and emerging change, source-linked and dated.",
-        href: "/regulatory-change",
+        href: "/regulatory-changes",
         icon: "refresh-cw",
       },
       {
         title: "Obligations",
         description: "Structured regulatory requirements and provenance.",
-        href: "/obligation-control-mapping",
+        href: "/obligations",
         icon: "list-checks",
       },
       {
@@ -40,14 +40,14 @@ const columns = [
       {
         title: "Jurisdictions",
         description: "Regulatory intelligence organized geographically.",
-        href: "/regulatory-intelligence/jurisdictions",
+        href: "/jurisdictions",
         icon: "globe",
       },
       {
         title: "Regulatory Library",
         description:
           "Search/browse authoritative intelligence and explainers.",
-        href: "/regulatory-intelligence/regulatory-library",
+        href: "/regulatory-library",
         icon: "library",
       },
       {
@@ -64,7 +64,7 @@ const columns = [
       {
         title: "Regulatory Sources",
         description: "Source estate and authority model.",
-        href: "/regulatory-intelligence/regulatory-sources",
+        href: "/regulatory-sources",
         icon: "files",
       },
       {
@@ -221,7 +221,7 @@ function RegulatoryFeatureCard({
         </p>
 
         <Link
-          href="/regulatory-intelligence/regulatory-sources"
+          href="/regulatory-sources"
           onClick={onLinkClick}
           className="group/link mt-3 inline-flex items-center gap-1.5 text-[11.5px] font-medium leading-5 text-[#064B7B] transition-colors duration-200 hover:text-[#E87516] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E87516]"
         >

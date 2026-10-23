@@ -39,7 +39,7 @@ export default function SourceAuthoritySection() {
             </p>
             <div className="mt-6 flex flex-wrap items-center gap-4">
               <Link
-                href="/regulatory-intelligence/regulatory-sources"
+                href="/regulatory-sources"
                 className="inline-flex items-center justify-center rounded-[4px] border border-[#B66C18] px-6 py-3 text-[16px] font-semibold leading-[25.6px] text-[#B66C18] transition-colors duration-200 hover:bg-[#B66C18]/5"
               >
                 Explore Regulatory Sources
