@@ -43,7 +43,7 @@ export default function JurisdictionAndInheritedObligationsSection() {
 
             <div className="mt-8">
               <Link
-                href="/regulatory-intelligence/jurisdictions"
+                href="/jurisdictions"
                 className="inline-flex items-center justify-center rounded-[4px] border border-[#D97637] px-6 py-3 text-[16px] font-semibold leading-[25.6px] text-[#D97637] transition-colors duration-200 hover:bg-[#D97637]/10"
               >
                 Compare Contexts

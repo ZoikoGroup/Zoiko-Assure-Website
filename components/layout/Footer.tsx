@@ -157,7 +157,7 @@ const roleItems: FooterItem[] = [
 const regulatoryIntelligenceItems: FooterItem[] = [
   {
     label: "Regulatory Changes",
-    href: "/regulatory-change",
+    href: "/regulatory-changes",
   },
   {
     label: "Obligations",
@@ -169,11 +169,11 @@ const regulatoryIntelligenceItems: FooterItem[] = [
   },
   {
     label: "Regulatory Sources",
-    href: "/regulatory-intelligence/regulatory-sources",
+    href: "/regulatory-sources",
   },
   {
     label: "Regulatory Library",
-    href: "/regulatory-intelligence/regulatory-library",
+    href: "/regulatory-library",
   },
   {
     label: "Methodology",
@@ -680,6 +680,19 @@ export default function Footer({ customTitle, customDescription }: FooterProps =
     </>
   );
 
+  const bandWithOverlay: React.CSSProperties = {
+    backgroundColor: "#071C33",
+    backgroundImage:
+      "linear-gradient(rgba(7,28,51,0.62), rgba(7,28,51,0.62)), url('/images/jurisdictions/conversion-band-bg.webp')",
+    backgroundSize: "auto, auto 100%",
+    backgroundPosition: "center, center",
+    backgroundRepeat: "no-repeat, no-repeat",
+  };
+
+  let ctaBackground: React.CSSProperties = {
+    backgroundImage: "url('/footer/bg1.png')",
+  };
+
   if (!customTitle && pathname?.includes("regulatory-examination")) {
     ctaTitle = (
       <>
@@ -693,6 +706,71 @@ export default function Footer({ customTitle, customDescription }: FooterProps =
         <br className="hidden lg:inline" /> be connected for your organization.
       </>
     );
+  } else if (!customTitle && pathname?.startsWith("/obligations")) {
+    ctaTitle = <>Connect regulatory requirements to accountable assurance.</>;
+    ctaDescription = (
+      <>
+        See how ZoikoAssure can connect source-grounded obligations with
+        contextual applicability, governed controls and evidence—where the
+        capabilities are implemented and available.
+      </>
+    );
+    ctaBackground = bandWithOverlay;
+  } else if (!customTitle && pathname?.startsWith("/jurisdictions")) {
+    ctaTitle = (
+      <>
+        Understand the regulatory landscape. Examine what applies to your
+        organization.
+      </>
+    );
+    ctaDescription = (
+      <>
+        Explore verified geographic sources, then evaluate obligations, controls
+        and evidence with accountable review.
+      </>
+    );
+    ctaBackground = {
+      backgroundColor: "#071C33",
+      backgroundImage:
+        "linear-gradient(rgba(7,28,51,0.62), rgba(7,28,51,0.62)), url('/images/jurisdictions/conversion-band-bg.webp')",
+      backgroundSize: "auto, auto 100%",
+      backgroundPosition: "center, center",
+      backgroundRepeat: "no-repeat, no-repeat",
+    };
+  } else if (!customTitle && pathname?.startsWith("/regulatory-sources")) {
+    ctaTitle = (
+      <>Connect regulatory intelligence to defensible operational decisions.</>
+    );
+    ctaDescription = (
+      <>
+        See how source-backed supervisory developments can inform contextual
+        applicability, obligations, controls and evidence governance—without
+        removing accountable human review.
+      </>
+    );
+    ctaBackground = bandWithOverlay;
+  } else if (!customTitle && pathname?.startsWith("/regulatory-library")) {
+    ctaTitle = (
+      <>Connect what the regulation says to what your organization can prove.</>
+    );
+    ctaDescription = (
+      <>
+        See how ZoikoAssure connects reviewed regulatory sources to contextual
+        applicability, obligations, controls, evidence and defensible
+        assurance—while preserving accountable review.
+      </>
+    );
+    ctaBackground = bandWithOverlay;
+  } else if (!customTitle && pathname?.startsWith("/regulatory-changes")) {
+    ctaTitle = <>Move from a regulatory headline to an accountable next step.</>;
+    ctaDescription = (
+      <>
+        See how verified regulatory developments can connect to contextual
+        review, owned controls and evidence-backed assurance across the
+        ZoikoAssure operating model.
+      </>
+    );
+    ctaBackground = bandWithOverlay;
   } else if (!customTitle && pathname?.includes("regulatory-change")) {
     ctaTitle = (
       <>
@@ -715,9 +793,7 @@ export default function Footer({ customTitle, customDescription }: FooterProps =
 
       <section
         className="border-b border-white/10 bg-[#071C33] bg-cover bg-center"
-        style={{
-          backgroundImage: "url('/footer/bg1.png')",
-        }}
+        style={ctaBackground}
       >
         <div className="mx-auto flex w-full max-w-[1440px] flex-col justify-between gap-8 px-6 py-12 sm:px-8 md:px-12 lg:flex-row lg:items-center lg:gap-16 lg:px-20 lg:py-14">
 
@@ -777,7 +853,7 @@ export default function Footer({ customTitle, customDescription }: FooterProps =
                   src="/logos/logo.png"
                   alt="ZoikoAssure"
                   width={172}
-                  height={50}
+                  height={51}
                   priority
                   className="h-12 w-auto object-contain"
                 />

@@ -131,16 +131,16 @@ const solutionMobileLinks = [
 ];
 
 const regulatoryMobileLinks = [
-  ["Regulatory Changes", "/regulatory-intelligence/regulatory-changes"],
-  ["Obligations", "/regulatory-intelligence/obligations"],
+  ["Regulatory Changes", "/regulatory-changes"],
+  ["Obligations", "/obligations"],
   [
     "Enforcement & Guidance",
     "/regulatory-intelligence/enforcement-guidance",
   ],
-  ["Jurisdictions", "/regulatory-intelligence/jurisdictions"],
-  ["Regulatory Library", "/regulatory-intelligence/regulatory-library"],
+  ["Jurisdictions", "/jurisdictions"],
+  ["Regulatory Library", "/regulatory-library"],
   ["Frameworks", "/regulatory-intelligence/frameworks"],
-  ["Regulatory Sources", "/regulatory-intelligence/regulatory-sources"],
+  ["Regulatory Sources", "/regulatory-sources"],
   ["Methodology", "/regulatory-intelligence/methodology"],
 ];
 
@@ -228,7 +228,7 @@ export default function Header() {
             src="/logos/logo.png"
             alt="Zoiko Assure"
             width={172}
-            height={50}
+            height={51}
             priority
             className="h-auto w-[145px] object-contain sm:w-[155px] lg:w-[160px] xl:w-[172px]"
           />
