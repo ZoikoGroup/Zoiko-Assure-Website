@@ -127,7 +127,7 @@ const solutionMobileLinks = [
   ["New Market / Jurisdiction", "/solutions/new-market-jurisdiction"],
   ["AI Governance", "/solutions/ai-governance"],
   ["Regulatory Examination", "/solutions/regulatory-examination"],
-  ["M&A & Transformation", "/solutions/mergers-acquisitions"],
+  ["M&A & Transformation", "/transformation"],
 ];
 
 const regulatoryMobileLinks = [
