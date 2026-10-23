@@ -57,7 +57,7 @@ const solutionColumns = [
         description:
           "Understand regulatory requirements before expansion.",
         icon: "/images/SolutionMegaMenu/globe.png",
-        href: "/solutions/new-market-jurisdiction",
+        href: "/new-market-jurisdiction",
       },
       {
         title: "AI Governance",

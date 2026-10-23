@@ -30,6 +30,16 @@ const nextConfig: NextConfig = {
         permanent: false,
       },
       {
+        source: "/regulatory_examination",
+        destination: "/regulatory-examination",
+        permanent: false,
+      },
+      {
+        source: "/regulatory_change",
+        destination: "/regulatory-change",
+        permanent: false,
+      },
+      {
         source: "/solutions/general-counsel",
         destination: "/general-counsel",
         permanent: false,
