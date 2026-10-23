@@ -69,6 +69,11 @@ const nextConfig: NextConfig = {
         destination: "/chief-risk-officer",
         permanent: false,
       },
+      {
+        source: "/solutions/ai-governance",
+        destination: "/ai-governance",
+        permanent: false,
+      },
     ];
   },
   turbopack: {
