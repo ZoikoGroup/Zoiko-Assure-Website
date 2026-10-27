@@ -1,0 +1,9 @@
+export { default as Hero } from "./Hero";
+export { default as KeyPillarsFloating } from "./KeyPillarsFloating";
+export { default as EnterpriseSaaSAndPrivateCloudSection } from "./EnterpriseSaaSAndPrivateCloudSection";
+export { default as HybridAndAirGappedSection } from "./HybridAndAirGappedSection";
+export { default as DataResidencyAndTransferSection } from "./DataResidencyAndTransferSection";
+export { default as RecoveryArchitectureSection } from "./RecoveryArchitectureSection";
+export { default as ExternalDependencySection } from "./ExternalDependencySection";
+export { default as ScopeSourceDateSection } from "./ScopeSourceDateSection";
+export { default as FaqSection } from "./FaqSection";
