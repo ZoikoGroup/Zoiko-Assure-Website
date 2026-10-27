@@ -1,0 +1,10 @@
+export { default as Hero } from "./Hero";
+export { default as KeyPillarsFloating } from "./KeyPillarsFloating";
+export { default as PrivacyContextSection } from "./PrivacyContextSection";
+export { default as AccountabilityAndIntakeSection } from "./AccountabilityAndIntakeSection";
+export { default as RetentionAndRequestsSection } from "./RetentionAndRequestsSection";
+export { default as WebsiteTechnologiesAndGeographySection } from "./WebsiteTechnologiesAndGeographySection";
+export { default as ThirdPartyAndGovernedAiSection } from "./ThirdPartyAndGovernedAiSection";
+export { default as PrivacyProtectionAndDisclosuresSection } from "./PrivacyProtectionAndDisclosuresSection";
+export { default as EvaluatePrivacyResponsibilitiesSection } from "./EvaluatePrivacyResponsibilitiesSection";
+export { default as FaqSection } from "./FaqSection";
