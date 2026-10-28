@@ -1,0 +1,10 @@
+export { default as Hero } from "./Hero";
+export { default as KeyPillarsFloating } from "./KeyPillarsFloating";
+export { default as DataScopeClassificationSection } from "./DataScopeClassificationSection";
+export { default as ProvenanceTimeTrackingSection } from "./ProvenanceTimeTrackingSection";
+export { default as DataLifecycleAccessSection } from "./DataLifecycleAccessSection";
+export { default as DataRetentionTransfersSection } from "./DataRetentionTransfersSection";
+export { default as IntegrationAiReviewSection } from "./IntegrationAiReviewSection";
+export { default as ExceptionsEvidenceSection } from "./ExceptionsEvidenceSection";
+export { default as AccountabilityMapSection } from "./AccountabilityMapSection";
+export { default as FaqSection } from "./FaqSection";

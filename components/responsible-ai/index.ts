@@ -1,0 +1,16 @@
+export { default as Hero } from "./Hero";
+export { default as KeyPillarsFloating } from "./KeyPillarsFloating";
+export { default as WhyAiNeedsGovernanceSection } from "./WhyAiNeedsGovernanceSection";
+export { default as SourceGroundingSection } from "./SourceGroundingSection";
+export { default as UncertaintyAbstentionSection } from "./UncertaintyAbstentionSection";
+export { default as ModelEvaluationSection } from "./ModelEvaluationSection";
+export { default as HumanAccountabilitySection } from "./HumanAccountabilitySection";
+export { default as PolicyPermissionsSection } from "./PolicyPermissionsSection";
+export { default as DataProtectionPrivacySection } from "./DataProtectionPrivacySection";
+export { default as ChangeGovernanceSection } from "./ChangeGovernanceSection";
+export { default as IncidentManagementSection } from "./IncidentManagementSection";
+export { default as EvidenceAuditabilitySection } from "./EvidenceAuditabilitySection";
+export { default as ThirdPartyDeploymentSection } from "./ThirdPartyDeploymentSection";
+export { default as ProcurementEvaluationSection } from "./ProcurementEvaluationSection";
+export { default as AccountabilityMapSection } from "./AccountabilityMapSection";
+export { default as FaqSection } from "./FaqSection";

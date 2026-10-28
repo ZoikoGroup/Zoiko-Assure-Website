@@ -693,6 +693,15 @@ export default function Footer({ customTitle, customDescription }: FooterProps =
     backgroundImage: "url('/footer/bg1.png')",
   };
 
+  let ctaSecondaryButton = {
+    label: "Assess Your Regulatory Exposure",
+    href: "/regulatory-exposure",
+  };
+  let ctaLink = {
+    label: "Visit the Trust Center →",
+    href: "/trust-center",
+  };
+
   if (!customTitle && pathname?.includes("regulatory-examination")) {
     ctaTitle = (
       <>
@@ -782,6 +791,44 @@ export default function Footer({ customTitle, customDescription }: FooterProps =
         Explore how source-linked regulatory changes can be assessed against the organization’s scope, translated into owned action, and reviewed through operating evidence.
       </>
     );
+  } else if (!customTitle && pathname?.includes("responsible-ai")) {
+    ctaTitle = <>Final Conversion and Next Steps</>;
+    ctaDescription = (
+      <>
+        See how accountable AI assistance fits regulatory assurance. Request a Demo to discuss your
+        <br className="hidden lg:inline" /> use case, source requirements, review model and evidence expectations with the ZoikoAssure
+        <br className="hidden lg:inline" /> team.
+      </>
+    );
+    ctaSecondaryButton = {
+      label: "Explore Governed AI",
+      href: "/governed-ai",
+    };
+    ctaLink = {
+      label: "Explore AI Governance",
+      href: "/ai-governance",
+    };
+  } else if (!customTitle && pathname?.includes("reliability")) {
+    ctaTitle = (
+      <>
+        Evaluate Reliability Against Your Actual
+        <br className="hidden sm:inline" /> Operating Requirements.
+      </>
+    );
+    ctaDescription = (
+      <>
+        Information is scope-dependent and reviewed before publication. Consult official notices for
+        <br className="hidden lg:inline" /> governing terms.
+      </>
+    );
+    ctaSecondaryButton = {
+      label: "Explore Security",
+      href: "/security",
+    };
+    ctaLink = {
+      label: "Review Deployment & Residency",
+      href: "/deployment-residency",
+    };
   }
 
   return (
@@ -818,19 +865,19 @@ export default function Footer({ customTitle, customDescription }: FooterProps =
               </Link>
 
               <Link
-                href="/regulatory-exposure"
+                href={ctaSecondaryButton.href}
                 className="flex h-12 items-center justify-center rounded-lg bg-[#071C33] px-5 text-sm font-semibold text-white outline outline-1 outline-[#7890A7] transition-colors duration-200 hover:bg-white/5"
               >
-                Assess Your Regulatory Exposure
+                {ctaSecondaryButton.label}
               </Link>
             </div>
 
             <div className="flex flex-wrap gap-x-8 gap-y-3">
               <Link
-                href="/trust-center"
+                href={ctaLink.href}
                 className="text-sm font-normal text-[#CFD9E4] transition-colors hover:text-white"
               >
-                Visit the Trust Center →
+                {ctaLink.label}
               </Link>
             </div>
           </div>
