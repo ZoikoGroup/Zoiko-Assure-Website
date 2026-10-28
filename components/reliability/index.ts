@@ -1,0 +1,9 @@
+export { default as Hero } from "./Hero";
+export { default as KeyPillarsFloating } from "./KeyPillarsFloating";
+export { default as ServiceScopeOwnershipSection } from "./ServiceScopeOwnershipSection";
+export { default as AvailabilityContinuitySection } from "./AvailabilityContinuitySection";
+export { default as RecoveryChangeGovernanceSection } from "./RecoveryChangeGovernanceSection";
+export { default as DetectionIncidentLifecycleSection } from "./DetectionIncidentLifecycleSection";
+export { default as OperatingEnvironmentBoundariesSection } from "./OperatingEnvironmentBoundariesSection";
+export { default as CustomerSupportEvaluationSection } from "./CustomerSupportEvaluationSection";
+export { default as FaqSection } from "./FaqSection";
