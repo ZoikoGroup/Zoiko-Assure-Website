@@ -661,10 +661,25 @@ function SocialIcon({
 type FooterProps = {
   customTitle?: React.ReactNode;
   customDescription?: React.ReactNode;
+  hideCta?: boolean;
 };
 
-export default function Footer({ customTitle, customDescription }: FooterProps = {}) {
+export default function Footer({ customTitle, customDescription, hideCta }: FooterProps = {}) {
   const pathname = usePathname();
+
+  const isExecutiveBriefings =
+    pathname?.includes("executive-briefings") ||
+    pathname?.includes("executive%20briefings") ||
+    pathname?.includes("executive briefings") ||
+    pathname?.includes("executive_briefings") ||
+    pathname?.includes("executive-briefing");
+
+  const isFrameworkGuides =
+    pathname?.includes("framework-guides") ||
+    pathname?.includes("framework%20guides") ||
+    pathname?.includes("framework guides");
+
+  const shouldHideCta = Boolean(hideCta || isExecutiveBriefings || isFrameworkGuides);
 
   let ctaTitle: React.ReactNode = customTitle || (
     <>
@@ -697,12 +712,28 @@ export default function Footer({ customTitle, customDescription }: FooterProps =
     label: "Assess Your Regulatory Exposure",
     href: "/regulatory-exposure",
   };
-  let ctaLink = {
+  let ctaLink: { label: string; href: string } | null = {
     label: "Visit the Trust Center →",
     href: "/trust-center",
   };
 
-  if (!customTitle && pathname?.includes("regulatory-examination")) {
+  if (!customTitle && (pathname?.includes("framework-guide") || pathname?.includes("framework_guide") || pathname?.includes("framework guide") || pathname?.includes("framework%20guide"))) {
+    ctaTitle = <>Explore How Framework Questions Become Governed Assurance.</>;
+    ctaDescription = (
+      <>
+        Continue the enterprise evaluation without coercive conversion. Request a Demo to see how ZoikoAssure operationalizes framework adoption.
+      </>
+    );
+    ctaBackground = {
+      backgroundColor: "#071C33",
+      backgroundImage:
+        "linear-gradient(rgba(7,28,51,0.62), rgba(7,28,51,0.62)), url('/framework-guides/conversion-bg.png')",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+    };
+    ctaLink = null;
+  } else if (!customTitle && pathname?.includes("regulatory-examination")) {
     ctaTitle = (
       <>
         Prepare your examination response with
@@ -838,51 +869,55 @@ export default function Footer({ customTitle, customDescription }: FooterProps =
           CTA
       ===================================================== */}
 
-      <section
-        className="border-b border-white/10 bg-[#071C33] bg-cover bg-center"
-        style={ctaBackground}
-      >
-        <div className="mx-auto flex w-full max-w-[1440px] flex-col justify-between gap-8 px-6 py-12 sm:px-8 md:px-12 lg:flex-row lg:items-center lg:gap-16 lg:px-20 lg:py-14">
+      {!shouldHideCta && (
+        <section
+          className="border-b border-white/10 bg-[#071C33] bg-cover bg-center"
+          style={ctaBackground}
+        >
+          <div className="mx-auto flex w-full max-w-[1440px] flex-col justify-between gap-8 px-6 py-12 sm:px-8 md:px-12 lg:flex-row lg:items-center lg:gap-16 lg:px-20 lg:py-14">
 
-          <div className="w-full max-w-[690px]">
-            <h2 className="text-3xl font-semibold leading-[1.2] text-white sm:text-[34px]">
-              {ctaTitle}
-            </h2>
+            <div className="w-full max-w-[690px]">
+              <h2 className="text-3xl font-semibold leading-[1.2] text-white sm:text-[34px]">
+                {ctaTitle}
+              </h2>
 
-            <p className="mt-4 text-[15px] font-normal leading-[1.65] text-[#CFD9E4] sm:mt-5">
-              {ctaDescription}
-            </p>
-          </div>
-
-          <div className="flex w-full flex-col gap-6 lg:flex-1">
-
-            <div className="flex flex-wrap gap-3">
-              <Link
-                href="/request-demo"
-                className="flex h-12 items-center justify-center rounded-lg bg-[#D58324] px-5 text-sm font-semibold text-white outline outline-1 outline-[#D58324] transition-colors duration-200 hover:bg-[#c2731c]"
-              >
-                Request a Demo
-              </Link>
-
-              <Link
-                href={ctaSecondaryButton.href}
-                className="flex h-12 items-center justify-center rounded-lg bg-[#071C33] px-5 text-sm font-semibold text-white outline outline-1 outline-[#7890A7] transition-colors duration-200 hover:bg-white/5"
-              >
-                {ctaSecondaryButton.label}
-              </Link>
+              <p className="mt-4 text-[15px] font-normal leading-[1.65] text-[#CFD9E4] sm:mt-5">
+                {ctaDescription}
+              </p>
             </div>
 
-            <div className="flex flex-wrap gap-x-8 gap-y-3">
-              <Link
-                href={ctaLink.href}
-                className="text-sm font-normal text-[#CFD9E4] transition-colors hover:text-white"
-              >
-                {ctaLink.label}
-              </Link>
+            <div className="flex w-full flex-col gap-6 lg:flex-1">
+
+              <div className="flex flex-wrap gap-3">
+                <Link
+                  href="/request-demo"
+                  className="flex h-12 items-center justify-center rounded-lg bg-[#D58324] px-5 text-sm font-semibold text-white outline outline-1 outline-[#D58324] transition-colors duration-200 hover:bg-[#c2731c]"
+                >
+                  Request a Demo
+                </Link>
+
+                <Link
+                  href={ctaSecondaryButton.href}
+                  className="flex h-12 items-center justify-center rounded-lg bg-[#071C33] px-5 text-sm font-semibold text-white outline outline-1 outline-[#7890A7] transition-colors duration-200 hover:bg-white/5"
+                >
+                  {ctaSecondaryButton.label}
+                </Link>
+              </div>
+
+              {ctaLink?.label && (
+                <div className="flex flex-wrap gap-x-8 gap-y-3">
+                  <Link
+                    href={ctaLink.href}
+                    className="text-sm font-normal text-[#CFD9E4] transition-colors hover:text-white"
+                  >
+                    {ctaLink.label}
+                  </Link>
+                </div>
+              )}
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* =====================================================
           BRAND + SOCIAL
