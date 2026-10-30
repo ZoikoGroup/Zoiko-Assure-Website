@@ -18,7 +18,7 @@ const columns = [
         description:
           "Security architecture, access governance, encryption, monitoring and controls.",
         icon: "shield-check",
-        href: "/trust-center/security",
+        href: "/security",
       },
       {
         title: "Privacy",
@@ -219,7 +219,7 @@ function TrustCenterFeatureCard({
         </p>
 
         <Link
-          href="/trust-center/security"
+          href="/security"
           onClick={onLinkClick}
           className="group/link mt-3 inline-flex items-center gap-1.5 text-[11.5px] font-medium leading-5 text-[#064B7B] transition-colors duration-200 hover:text-[#E87516] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E87516]"
         >

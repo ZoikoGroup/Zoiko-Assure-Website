@@ -145,7 +145,7 @@ const regulatoryMobileLinks = [
 ];
 
 const trustCenterMobileLinks = [
-  ["Security", "/trust-center/security"],
+  ["Security", "/security"],
   ["Privacy", "/trust-center/privacy"],
   ["Accessibility", "/trust-center/accessibility"],
   ["Responsible AI", "/trust-center/responsible-ai"],
@@ -162,7 +162,7 @@ const resourcesMobileLinks = [
   ["Insights", "/resources/insights"],
   ["Research", "/resources/research"],
   ["FAQs", "/resources/faqs"],
-  ["Documentation", "/resources/documentation"],
+  ["Documentation", "/documentation"],
 ];
 
 const companyMobileLinks = [

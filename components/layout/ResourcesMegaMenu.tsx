@@ -72,7 +72,7 @@ const columns = [
         description:
           "Product and technical documentation for public access.",
         icon: "files",
-        href: "/resources/documentation",
+        href: "/documentation",
       },
     ],
   },

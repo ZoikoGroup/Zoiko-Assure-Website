@@ -262,7 +262,7 @@ const trustCenterItems: FooterItem[] = [
   },
   {
     label: "Security",
-    href: "/trust-center/security",
+    href: "/security",
   },
   {
     label: "Privacy",
