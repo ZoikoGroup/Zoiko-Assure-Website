@@ -860,14 +860,96 @@ export default function Footer({ customTitle, customDescription, hideCta }: Foot
       label: "Review Deployment & Residency",
       href: "/deployment-residency",
     };
+  } else if (!customTitle && (pathname?.includes("careers") || pathname?.includes("career"))) {
+    ctaTitle = (
+      <>
+        <span className="block sm:whitespace-nowrap">
+          Explore the mission. Review approved openings
+        </span>
+        <span className="block">when available.</span>
+      </>
+    );
+    ctaDescription = (
+      <>
+        Apply only through verified channels. Meaningful work starts with accountable systems—and honest information about the opportunity.
+      </>
+    );
+    ctaSecondaryButton = {
+      label: "Explore Our Work",
+      href: "/platform",
+    };
+    ctaLink = null;
+    ctaBackground = {
+      backgroundColor: "#071C33",
+      backgroundImage:
+        "linear-gradient(rgba(7,28,51,0.62), rgba(7,28,51,0.62)), url('/images/about-zoiko-assure/conversion-band-bg.png')",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+    };
+  } else if (
+    !customTitle &&
+    (pathname?.includes("contact") ||
+      pathname?.includes("research-contact") ||
+      decodeURIComponent(pathname || "").includes("contact"))
+  ) {
+    ctaTitle = <>Ready to Explore ZoikoAssure?</>;
+    ctaDescription = (
+      <>
+        Speak with our team about regulatory intelligence, applicability and evidence-backed assurance.
+      </>
+    );
+    ctaSecondaryButton = {
+      label: "Explore the Platform",
+      href: "/platform",
+    };
+    ctaLink = null;
+    ctaBackground = {
+      backgroundColor: "#071C33",
+      backgroundImage:
+        "linear-gradient(rgba(7,28,51,0.62), rgba(7,28,51,0.62)), url('/images/about-zoiko-assure/conversion-band-bg.png')",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+    };
+  } else if (
+    !customTitle &&
+    (pathname?.includes("about") ||
+      decodeURIComponent(pathname || "").includes("about"))
+  ) {
+    ctaTitle = (
+      <>
+        <span className="block">See how regulatory intelligence becomes</span>
+        <span className="block">defensible assurance.</span>
+      </>
+    );
+    ctaDescription = (
+      <>
+        Explore the platform to understand the assurance chain, or visit the Trust Center for security and procurement due diligence.
+      </>
+    );
+    ctaSecondaryButton = {
+      label: "Explore Platform",
+      href: "/platform",
+    };
+    ctaLink = null;
+    ctaBackground = {
+      backgroundColor: "#071C33",
+      backgroundImage:
+        "linear-gradient(rgba(7,28,51,0.62), rgba(7,28,51,0.62)), url('/images/about-zoiko-assure/conversion-band-bg.png')",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+    };
   }
+
 
   return (
     <footer className="w-full bg-[#071C33] font-sans text-white">
 
-      {/* =====================================================
-          CTA
-      ===================================================== */}
+
+
+      {/* ===================================================== CTA ===================================================== */}
 
       {!shouldHideCta && (
         <section
@@ -876,7 +958,7 @@ export default function Footer({ customTitle, customDescription, hideCta }: Foot
         >
           <div className="mx-auto flex w-full max-w-[1440px] flex-col justify-between gap-8 px-6 py-12 sm:px-8 md:px-12 lg:flex-row lg:items-center lg:gap-16 lg:px-20 lg:py-14">
 
-            <div className="w-full max-w-[690px]">
+            <div className="w-full max-w-[760px] lg:max-w-[800px] xl:max-w-[840px]">
               <h2 className="text-3xl font-semibold leading-[1.2] text-white sm:text-[34px]">
                 {ctaTitle}
               </h2>

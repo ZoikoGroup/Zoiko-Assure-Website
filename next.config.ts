@@ -10,6 +10,36 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        source: "/about",
+        destination: "/about-zoiko-assure",
+        permanent: false,
+      },
+      {
+        source: "/about-us",
+        destination: "/about-zoiko-assure",
+        permanent: false,
+      },
+      {
+        source: "/company/about-us",
+        destination: "/about-zoiko-assure",
+        permanent: false,
+      },
+      {
+        source: "/contact",
+        destination: "/research-contact",
+        permanent: false,
+      },
+      {
+        source: "/company/contact",
+        destination: "/research-contact",
+        permanent: false,
+      },
+      {
+        source: "/company/careers",
+        destination: "/careers",
+        permanent: false,
+      },
+      {
         source: "/obligation_control_mapping",
         destination: "/obligation-control-mapping",
         permanent: false,
