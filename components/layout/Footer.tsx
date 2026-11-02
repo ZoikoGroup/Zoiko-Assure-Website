@@ -708,7 +708,7 @@ export default function Footer({ customTitle, customDescription, hideCta }: Foot
     backgroundImage: "url('/footer/bg1.png')",
   };
 
-  let ctaSecondaryButton = {
+  let ctaSecondaryButton: { label: string; href: string } | null = {
     label: "Assess Your Regulatory Exposure",
     href: "/regulatory-exposure",
   };
@@ -732,6 +732,16 @@ export default function Footer({ customTitle, customDescription, hideCta }: Foot
       backgroundPosition: "center",
       backgroundRepeat: "no-repeat",
     };
+    ctaLink = null;
+  } else if (!customTitle && pathname?.includes("audit-readiness")) {
+    ctaTitle = <>Make the evidence trail easier to review.</>;
+    ctaDescription = (
+      <>
+        Use the canonical demo form to discuss your specific scope and audit
+        preparation requirements with our enterprise team.
+      </>
+    );
+    ctaSecondaryButton = null;
     ctaLink = null;
   } else if (!customTitle && pathname?.includes("regulatory-examination")) {
     ctaTitle = (
@@ -978,12 +988,14 @@ export default function Footer({ customTitle, customDescription, hideCta }: Foot
                   Request a Demo
                 </Link>
 
-                <Link
-                  href={ctaSecondaryButton.href}
-                  className="flex h-12 items-center justify-center rounded-lg bg-[#071C33] px-5 text-sm font-semibold text-white outline outline-1 outline-[#7890A7] transition-colors duration-200 hover:bg-white/5"
-                >
-                  {ctaSecondaryButton.label}
-                </Link>
+                {ctaSecondaryButton && (
+                  <Link
+                    href={ctaSecondaryButton.href}
+                    className="flex h-12 items-center justify-center rounded-lg bg-[#071C33] px-5 text-sm font-semibold text-white outline outline-1 outline-[#7890A7] transition-colors duration-200 hover:bg-white/5"
+                  >
+                    {ctaSecondaryButton.label}
+                  </Link>
+                )}
               </div>
 
               {ctaLink?.label && (

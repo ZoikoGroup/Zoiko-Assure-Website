@@ -216,7 +216,7 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-[9999] w-full border-b border-zinc-200 bg-white">
       {/* HEADER BAR */}
-      <div className="mx-auto flex h-20 w-full max-w-[1440px] items-center justify-between gap-2 px-5 sm:px-8 lg:px-6 xl:gap-4 xl:px-20">
+      <div className="mx-auto flex h-20 w-full max-w-[1440px] items-center justify-between gap-2 px-5 sm:px-8 lg:px-6 xl:gap-4 xl:px-10 min-[1360px]:px-20">
         {/* LOGO */}
         <Link
           href="/"
