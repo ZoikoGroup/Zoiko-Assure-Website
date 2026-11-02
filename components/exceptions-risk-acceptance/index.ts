@@ -1,0 +1,10 @@
+export { default as Hero } from "./Hero";
+export { default as KeyPillarsFloating } from "./KeyPillarsFloating";
+export { default as WhyGapsRequireDecisionSection } from "./WhyGapsRequireDecisionSection";
+export { default as TaxonomyAndIntakeSection } from "./TaxonomyAndIntakeSection";
+export { default as ExposureAndTreatmentSection } from "./ExposureAndTreatmentSection";
+export { default as DecisionRightsAndWorkflowSection } from "./DecisionRightsAndWorkflowSection";
+export { default as TimeLimitsAndDistinctionsSection } from "./TimeLimitsAndDistinctionsSection";
+export { default as RegisterAndEscalationSection } from "./RegisterAndEscalationSection";
+export { default as AuditHistoryAndBuyerRolesSection } from "./AuditHistoryAndBuyerRolesSection";
+export { default as GovernedAiAndFaqSection } from "./GovernedAiAndFaqSection";
