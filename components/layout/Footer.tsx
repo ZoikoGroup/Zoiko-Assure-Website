@@ -743,6 +743,65 @@ export default function Footer({ customTitle, customDescription, hideCta }: Foot
     );
     ctaSecondaryButton = null;
     ctaLink = null;
+  } else if (!customTitle && pathname?.includes("evidence-management")) {
+    ctaTitle = <>Make Evidence Readiness an Accountable Process.</>;
+    ctaDescription = (
+      <>
+        Evaluate how governed control ownership, operating expectations, review
+        workflows and evidence lineage could fit your organization’s
+        requirements.
+      </>
+    );
+    ctaBackground = {
+      backgroundColor: "#071C33",
+      backgroundImage: "url('/evidence-management/conversion-band.webp')",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+    };
+    ctaSecondaryButton = null;
+    ctaLink = null;
+  } else if (!customTitle && pathname?.includes("footer-regulatory-applicability")) {
+    ctaTitle = <>Turn Applicable Requirements Into Governed Work.</>;
+    ctaDescription = (
+      <>
+        Explore how source-grounded applicability decisions can inform
+        obligation ownership, controls and evidence requirements, with clear
+        review and approval boundaries.
+      </>
+    );
+    ctaBackground = {
+      backgroundColor: "#071C33",
+      backgroundImage: "url('/footer-regulatory-applicability/conversion-band.webp')",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+    };
+    ctaSecondaryButton = {
+      label: "Explore Applicability Engine",
+      href: "/platform/applicability-engine",
+    };
+    ctaLink = null;
+  } else if (!customTitle && pathname?.includes("how-zoikoassure-works")) {
+    ctaTitle = <>See How the Assurance Chain Fits Your Organization.</>;
+    ctaDescription = (
+      <>
+        Evaluate how source-grounded intelligence and accountable review
+        connect to operational assurance securely and transparently.
+      </>
+    );
+    ctaBackground = {
+      backgroundColor: "#071C33",
+      backgroundImage: "url('/how-zoikoAssure-works/conversion-band.webp')",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+    };
+    ctaSecondaryButton = {
+      label: "Explore Platform Overview",
+      href: "/platform",
+    };
+    ctaLink = null;
   } else if (!customTitle && pathname?.includes("regulatory-examination")) {
     ctaTitle = (
       <>

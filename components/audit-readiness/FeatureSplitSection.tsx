@@ -10,7 +10,8 @@ export type FeatureSplitSectionProps = {
   id?: string;
   blocks: [FeatureBlock, FeatureBlock];
   cta: { label: string; href: string };
-  image: { src: string; alt: string };
+  /** `aspect` is a Tailwind aspect class; defaults to 4:3. */
+  image: { src: string; alt: string; aspect?: string };
   /** Puts the image on the left and uses the grey background. */
   reversed?: boolean;
 };
@@ -52,7 +53,7 @@ export default function FeatureSplitSection({
           </div>
 
           <div className={`flex w-full items-center justify-center ${reversed ? "lg:order-1" : ""}`}>
-            <div className="relative aspect-[4/3] w-full max-w-[608px] overflow-hidden rounded-lg shadow-lg">
+            <div className={`relative ${image.aspect ?? "aspect-[4/3]"} w-full max-w-[608px] overflow-hidden rounded-lg shadow-lg`}>
               <Image
                 src={image.src}
                 alt={image.alt}
