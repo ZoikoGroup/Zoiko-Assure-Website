@@ -1,51 +1,41 @@
-export default function KeyPillarsFloating() {
-  const pillars = [
-    {
-      title: "Source Authority",
-      description:
-        "Know which authority and version support the requirement.",
-    },
-    {
-      title: "Contextual Applicability",
-      description:
-        "See the jurisdiction, entity, activity, facts and time behind a result.",
-    },
-    {
-      title: "Uncertainty Owned",
-      description:
-        "Preserve UNCERTAIN until an authorized reviewer resolves the facts.",
-    },
-    {
-      title: "Evidence Lineage",
-      description:
-        "Trace legal decisions into controls and independent operating evidence.",
-    },
-    {
-      title: "Accountable Review",
-      description:
-        "Record the reviewer and the basis for a consequential conclusion.",
-    },
-  ];
+"use client";
 
+const pillars = [
+  {
+    title: "Start With the Source",
+    description:
+      "Understand the authority, citation, jurisdiction, version and dates behind a regulatory requirement.",
+  },
+  {
+    title: "Test the Relevant Context",
+    description:
+      "Applicability depends on the entity, activity, product, data, customer type and effective period.",
+  },
+  {
+    title: "Preserve Accountable Judgment",
+    description:
+      "Show the reasoning, unresolved questions and review ownership behind consequential determinations.",
+  },
+];
+
+export default function KeyPillarsFloating() {
   return (
-    <div className="relative z-10 w-full -mt-[30px]">
-      <div className="mx-auto w-full max-w-[1280px] px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
-          {pillars.map((pillar, idx) => (
-            <div
-              key={idx}
-              className="flex min-h-[160px] flex-col justify-start rounded-[8px] border-t-4 border-t-[#D9E2EC] border-x border-b border-[#D9E2EC] bg-white p-6 shadow-[0px_2px_4px_0px_rgba(0,0,0,0.02)] transition-shadow duration-200 hover:shadow-md"
-            >
-              <h4 className="text-[16px] font-semibold leading-[19.2px] text-[#0A2540]">
-                {pillar.title}
-              </h4>
-              <p className="mt-4 text-[14px] font-normal leading-[22.4px] text-[#5F6B7A]">
-                {pillar.description}
-              </p>
-            </div>
-          ))}
-        </div>
+    <section className="relative z-10 mx-auto -mt-10 sm:-mt-12 md:-mt-14 w-full max-w-[1280px] px-4 sm:px-6 md:px-8">
+      <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
+        {pillars.map((pillar) => (
+          <div
+            key={pillar.title}
+            className="flex flex-col justify-start rounded-xl border border-[#E2E8F0] bg-white p-6 sm:p-7 shadow-[0_4px_16px_rgba(15,23,42,0.04)] transition-shadow duration-200 hover:shadow-md"
+          >
+            <h4 className="text-[17px] font-bold leading-tight text-[#0A2540]">
+              {pillar.title}
+            </h4>
+            <p className="mt-3 text-[13.5px] sm:text-[14px] font-normal leading-[22px] text-[#5A6E85]">
+              {pillar.description}
+            </p>
+          </div>
+        ))}
       </div>
-    </div>
+    </section>
   );
 }

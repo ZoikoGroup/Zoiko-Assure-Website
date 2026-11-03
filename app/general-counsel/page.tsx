@@ -2,22 +2,18 @@ import type { Metadata } from "next";
 import {
   Hero,
   KeyPillarsFloating,
-  WhyConnectedLegalAssuranceSection,
-  SixStageModelSection,
-  ProductUiShowcaseSection,
-  SourceAuthoritySection,
-  JurisdictionComparisonSection,
-  DecisionProvenanceSection,
-  EvidenceAssuranceSection,
-  StakeholderCollaborationSection,
-  TrustPrivacySection,
-  FaqSection,
+  LegalConfidenceAndContextSection,
+  JurisdictionAnswersAndDecisionReviewSection,
+  DefensibleAssuranceAndControlMappingSection,
+  AcceptedRiskAndAiAssistanceSection,
+  OperationalAccountabilityAndTrustSection,
+  GeneralCounselFaqSection,
 } from "@/components/general-counsel";
 
 export const metadata: Metadata = {
   title: "General Counsel | ZoikoAssure",
   description:
-    "Make regulatory decisions traceable to their sources. ZoikoAssure helps General Counsel connect authoritative regulatory sources to jurisdiction-specific applicability, governed obligations, operational controls, evidence and accountable assurance review.",
+    "Know Why a Requirement Applies. Preserve the Basis for Every Decision. Regulatory decisions depend on authoritative sources, organizational facts and effective dates.",
 };
 
 export default function GeneralCounselPage() {
@@ -25,16 +21,12 @@ export default function GeneralCounselPage() {
     <div className="w-full overflow-x-clip bg-white">
       <Hero />
       <KeyPillarsFloating />
-      <WhyConnectedLegalAssuranceSection />
-      <SixStageModelSection />
-      <ProductUiShowcaseSection />
-      <SourceAuthoritySection />
-      <JurisdictionComparisonSection />
-      <DecisionProvenanceSection />
-      <EvidenceAssuranceSection />
-      <StakeholderCollaborationSection />
-      <TrustPrivacySection />
-      <FaqSection />
+      <LegalConfidenceAndContextSection />
+      <JurisdictionAnswersAndDecisionReviewSection />
+      <DefensibleAssuranceAndControlMappingSection />
+      <AcceptedRiskAndAiAssistanceSection />
+      <OperationalAccountabilityAndTrustSection />
+      <GeneralCounselFaqSection />
     </div>
   );
 }
