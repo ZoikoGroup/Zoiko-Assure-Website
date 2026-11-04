@@ -48,7 +48,7 @@ export default function Hero() {
             <div className="w-full max-w-[500px] rounded-2xl bg-white p-3.5 sm:p-4 shadow-[0_20px_40px_rgba(0,0,0,0.5)]">
               <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl">
                 <Image
-                  src="/General-Counsel/gc1.jpg"
+                  src="/General-Counsel/gc1.png"
                   alt="Legal counsel team discussing regulatory applicability and decision basis"
                   fill
                   priority

@@ -12,7 +12,7 @@ export default function AcceptedRiskAndAiAssistanceSection() {
           <div className="flex w-full items-center justify-center">
             <div className="relative aspect-[4/3] w-full max-w-[560px] overflow-hidden rounded-2xl shadow-[0_12px_32px_rgba(15,23,42,0.12)]">
               <Image
-                src="/General-Counsel/gc5.jpg"
+                src="/General-Counsel/gc5.png"
                 alt="Two legal professionals reviewing and signing document at conference desk"
                 fill
                 sizes="(max-width: 1024px) 100vw, 560px"
