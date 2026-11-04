@@ -1,59 +1,41 @@
+"use client";
+
+const pillars = [
+  {
+    title: "What changed?",
+    description:
+      "Follow source-backed regulatory change into affected scope and obligations.",
+  },
+  {
+    title: "What is evidenced?",
+    description:
+      "Distinguish assigned controls, operating evidence and the assurance conclusion.",
+  },
+  {
+    title: "What still needs a decision?",
+    description:
+      "See unresolved scope, missing proof and separately governed risk acceptance.",
+  },
+];
+
 export default function KeyPillarsFloating() {
   return (
-    <div className="relative z-10 w-full -mt-[30px]">
-      <div className="mx-auto w-full max-w-[1280px] px-8">
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5">
-          {/* Pillar 1 */}
-          <div className="flex min-h-[178px] flex-col justify-start rounded-[8px] border-t-4 border-t-[#D9E2EC] border-x border-b border-[#D9E2EC] bg-white p-6 shadow-[0px_2px_4px_0px_rgba(0,0,0,0.02)] transition-shadow duration-200 hover:shadow-md">
-            <h4 className="text-[16px] font-semibold leading-[19.2px] text-[#0A2540]">
-              Source Authority
+    <section className="relative z-10 mx-auto -mt-10 sm:-mt-12 md:-mt-14 w-full max-w-[1280px] px-4 sm:px-6 md:px-8">
+      <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
+        {pillars.map((pillar) => (
+          <div
+            key={pillar.title}
+            className="flex flex-col justify-start rounded-xl border border-[#E2E8F0] bg-white p-6 sm:p-7 shadow-[0_4px_16px_rgba(15,23,42,0.04)] transition-shadow duration-200 hover:shadow-md"
+          >
+            <h4 className="text-[17px] font-bold leading-tight text-[#0A2540]">
+              {pillar.title}
             </h4>
-            <p className="mt-4 max-w-[174px] text-[14px] font-normal leading-[22.4px] text-[#5F6B7A]">
-              Every material<br />requirement starts with a<br />traceable regulatory<br />source.
+            <p className="mt-3 text-[13.5px] sm:text-[14px] font-normal leading-[22px] text-[#5A6E85]">
+              {pillar.description}
             </p>
           </div>
-
-          {/* Pillar 2 */}
-          <div className="flex min-h-[178px] flex-col justify-start rounded-[8px] border-t-4 border-t-[#D9E2EC] border-x border-b border-[#D9E2EC] bg-white p-6 shadow-[0px_2px_4px_0px_rgba(0,0,0,0.02)] transition-shadow duration-200 hover:shadow-md">
-            <h4 className="text-[16px] font-semibold leading-[19.2px] text-[#0A2540]">
-              Contextual Scope
-            </h4>
-            <p className="mt-4 max-w-[174px] text-[14px] font-normal leading-[22.4px] text-[#5F6B7A]">
-              Applicability depends on<br />jurisdiction, legal entity,<br />activity and effective<br />period.
-            </p>
-          </div>
-
-          {/* Pillar 3 */}
-          <div className="flex min-h-[178px] flex-col justify-start rounded-[8px] border-t-4 border-t-[#D9E2EC] border-x border-b border-[#D9E2EC] bg-white p-6 shadow-[0px_2px_4px_0px_rgba(0,0,0,0.02)] transition-shadow duration-200 hover:shadow-md">
-            <h4 className="text-[16px] font-semibold leading-[19.2px] text-[#0A2540]">
-              Evidence-Backed
-            </h4>
-            <p className="mt-4 max-w-[174px] text-[14px] font-normal leading-[22.4px] text-[#5F6B7A]">
-              Mapped controls and<br />operating proof are<br />evaluated separately.
-            </p>
-          </div>
-
-          {/* Pillar 4 */}
-          <div className="flex min-h-[178px] flex-col justify-start rounded-[8px] border-t-4 border-t-[#D9E2EC] border-x border-b border-[#D9E2EC] bg-white p-6 shadow-[0px_2px_4px_0px_rgba(0,0,0,0.02)] transition-shadow duration-200 hover:shadow-md">
-            <h4 className="text-[16px] font-semibold leading-[19.2px] text-[#0A2540]">
-              Human Accountability
-            </h4>
-            <p className="mt-4 max-w-[174px] text-[14px] font-normal leading-[22.4px] text-[#5F6B7A]">
-              UNCERTAIN decisions,<br />exceptions and approvals<br />retain accountable<br />owners.
-            </p>
-          </div>
-
-          {/* Pillar 5 */}
-          <div className="flex min-h-[178px] flex-col justify-start rounded-[8px] border-t-4 border-t-[#D9E2EC] border-x border-b border-[#D9E2EC] bg-white p-6 shadow-[0px_2px_4px_0px_rgba(0,0,0,0.02)] transition-shadow duration-200 hover:shadow-md">
-            <h4 className="text-[16px] font-semibold leading-[19.2px] text-[#0A2540]">
-              Time-Aware Truth
-            </h4>
-            <p className="mt-4 max-w-[174px] text-[14px] font-normal leading-[22.4px] text-[#5F6B7A]">
-              Legal effective time and<br />evidence observed time<br />are shown distinctly.
-            </p>
-          </div>
-        </div>
+        ))}
       </div>
-    </div>
+    </section>
   );
 }
