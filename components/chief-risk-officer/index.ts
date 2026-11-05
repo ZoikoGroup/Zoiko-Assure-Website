@@ -1,5 +1,12 @@
 export { default as Hero } from "./Hero";
 export { default as KeyPillarsFloating } from "./KeyPillarsFloating";
+export { default as DefensibleAssuranceAndExposureSection } from "./DefensibleAssuranceAndExposureSection";
+export { default as MappedControlAndRiskAcceptanceSection } from "./MappedControlAndRiskAcceptanceSection";
+export { default as EmergingRisksAndAiAccountabilitySection } from "./EmergingRisksAndAiAccountabilitySection";
+export { default as ExecutiveBasisAndConnectedDecisionsSection } from "./ExecutiveBasisAndConnectedDecisionsSection";
+export { default as ChiefRiskOfficerFaqSection } from "./ChiefRiskOfficerFaqSection";
+
+// Existing legacy sections preserved
 export { default as WhyConnectedAssuranceSection } from "./WhyConnectedAssuranceSection";
 export { default as OperatingModelSection } from "./OperatingModelSection";
 export { default as CommandOversightSection } from "./CommandOversightSection";

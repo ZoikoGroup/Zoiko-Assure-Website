@@ -2,22 +2,20 @@ import type { Metadata } from "next";
 import {
   Hero,
   KeyPillarsFloating,
-  WhyComplianceProofBreaksDownSection,
-  SixStageModelSection,
-  ExecutiveComplianceViewSection,
-  ControlsAssuranceValidationSection,
-  RemediationExaminationPrepSection,
-  RegulatoryChangeJurisdictionSection,
-  GovernedAiCollaborationSection,
-  RegulatoryScenarioWalkthroughSection,
-  TrustPrivacySection,
-  FaqSection,
+  DefensibleAssuranceAndMappingSection,
+  MappedControlAndEvidenceSection,
+  AssuranceStateAndGapsSection,
+  AcceptedRiskAndChangingRequirementsSection,
+  ExaminationPrepAndAiAssistanceSection,
+  OperatingModelAndTrustSection,
+  ChiefComplianceOfficerFaqSection,
+  ObligationToProofCtaSection,
 } from "@/components/chief-compliance-officer";
 
 export const metadata: Metadata = {
   title: "Chief Compliance Officer | ZoikoAssure",
   description:
-    "Make every obligation traceable to action and evidence. ZoikoAssure connects regulatory applicability and obligations to accountable controls, governed evidence, and continuous assurance.",
+    "Know What Applies. Show What Is Controlled. Prove What Still Needs Work. Connect authoritative regulatory sources and applicability decisions to governed obligations, controls, evidence and assurance.",
 };
 
 export default function ChiefComplianceOfficerPage() {
@@ -25,16 +23,14 @@ export default function ChiefComplianceOfficerPage() {
     <div className="w-full overflow-x-clip bg-white">
       <Hero />
       <KeyPillarsFloating />
-      <WhyComplianceProofBreaksDownSection />
-      <SixStageModelSection />
-      <ExecutiveComplianceViewSection />
-      <ControlsAssuranceValidationSection />
-      <RemediationExaminationPrepSection />
-      <RegulatoryChangeJurisdictionSection />
-      <GovernedAiCollaborationSection />
-      <RegulatoryScenarioWalkthroughSection />
-      <TrustPrivacySection />
-      <FaqSection />
+      <DefensibleAssuranceAndMappingSection />
+      <MappedControlAndEvidenceSection />
+      <AssuranceStateAndGapsSection />
+      <AcceptedRiskAndChangingRequirementsSection />
+      <ExaminationPrepAndAiAssistanceSection />
+      <OperatingModelAndTrustSection />
+      <ChiefComplianceOfficerFaqSection />
+      <ObligationToProofCtaSection />
     </div>
   );
 }
