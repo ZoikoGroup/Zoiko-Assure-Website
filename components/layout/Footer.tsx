@@ -142,7 +142,7 @@ const roleItems: FooterItem[] = [
   },
   {
     label: "Internal Audit",
-    href: "/roles/internal-audit",
+    href: "/internal-audit",
   },
   {
     label: "Compliance Operations",
@@ -150,7 +150,7 @@ const roleItems: FooterItem[] = [
   },
   {
     label: "Risk & Governance Teams",
-    href: "/roles/risk-governance-teams",
+    href: "/risk-governance-teams",
   },
 ];
 
@@ -161,7 +161,7 @@ const regulatoryIntelligenceItems: FooterItem[] = [
   },
   {
     label: "Obligations",
-    href: "/obligation-control-mapping",
+    href: "/regulatory-intelligence/obligations",
   },
   {
     label: "Enforcement & Guidance",
@@ -761,6 +761,52 @@ export default function Footer({ customTitle, customDescription, hideCta }: Foot
     };
     ctaSecondaryButton = null;
     ctaLink = null;
+  } else if (!customTitle && pathname?.startsWith("/regulatory-intelligence/obligations")) {
+    ctaTitle = <>Make Obligations Defensible Before Scrutiny</>;
+    ctaDescription = null;
+    ctaBackground = {
+      backgroundColor: "#071C33",
+      backgroundImage: "url('/obligations/conversion-band.webp')",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+    };
+    ctaSecondaryButton = null;
+    ctaLink = null;
+  } else if (!customTitle && pathname?.includes("internal-audit")) {
+    ctaTitle = <>Make Evidence Readiness Visible Before Review Begins.</>;
+    ctaDescription = (
+      <>
+        See how the ZoikoAssure assurance chain may support your team’s
+        evidence and regulatory governance questions.
+      </>
+    );
+    ctaBackground = {
+      backgroundColor: "#071C33",
+      backgroundImage: "url('/internal-audit/conversion-band.webp')",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+    };
+    ctaSecondaryButton = null;
+    ctaLink = null;
+  } else if (!customTitle && pathname?.includes("risk-governance-teams")) {
+    ctaTitle = <>Bring Obligation-to-Proof Into Your Compliance Program.</>;
+    ctaDescription = (
+      <>
+        See how ZoikoAssure connects regulatory context, operational ownership,
+        evidence and human review across the assurance lifecycle.
+      </>
+    );
+    ctaBackground = {
+      backgroundColor: "#071C33",
+      backgroundImage: "url('/risk-governance-teams/conversion-band.webp')",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+    };
+    ctaSecondaryButton = null;
+    ctaLink = null;
   } else if (!customTitle && pathname?.includes("footer-regulatory-applicability")) {
     ctaTitle = <>Turn Applicable Requirements Into Governed Work.</>;
     ctaDescription = (
@@ -1032,9 +1078,11 @@ export default function Footer({ customTitle, customDescription, hideCta }: Foot
                 {ctaTitle}
               </h2>
 
-              <p className="mt-4 text-[15px] font-normal leading-[1.65] text-[#CFD9E4] sm:mt-5">
-                {ctaDescription}
-              </p>
+              {ctaDescription && (
+                <p className="mt-4 text-[15px] font-normal leading-[1.65] text-[#CFD9E4] sm:mt-5">
+                  {ctaDescription}
+                </p>
+              )}
             </div>
 
             <div className="flex w-full flex-col gap-6 lg:flex-1">
