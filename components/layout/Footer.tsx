@@ -181,7 +181,7 @@ const regulatoryIntelligenceItems: FooterItem[] = [
   },
   {
     label: "Explore Regulatory Intelligence →",
-    href: "/regulatory-intelligence",
+    href: "/explore-regulatory-intelligence",
   },
 ];
 
@@ -773,6 +773,49 @@ export default function Footer({ customTitle, customDescription, hideCta }: Foot
     };
     ctaSecondaryButton = null;
     ctaLink = null;
+  } else if (!customTitle && pathname?.startsWith("/explore-regulatory-intelligence")) {
+    ctaTitle = <>Explore defensible regulatory assurance for your organization.</>;
+    ctaDescription = (
+      <>
+        ZoikoAssure provides technology and regulatory intelligence to support
+        compliance and assurance processes. Outputs do not constitute legal
+        advice or an independent determination of regulatory compliance.
+        Organizations remain responsible for their obligations, controls,
+        professional advice and decisions.
+      </>
+    );
+    ctaBackground = {
+      backgroundColor: "#071C33",
+      backgroundImage: "url('/explore-regulatory-intelligence/conversion-band.webp')",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+    };
+    ctaSecondaryButton = null;
+    ctaLink = null;
+  } else if (!customTitle && pathname?.startsWith("/regulatory-library")) {
+    ctaTitle = (
+      <>
+        See how source-linked regulatory intelligence can inform governed
+        compliance workflows.
+      </>
+    );
+    ctaDescription = (
+      <>
+        ZoikoAssure provides technology and regulatory intelligence to support
+        compliance and assurance processes. Platform outputs do not constitute
+        legal advice or an independent determination of regulatory compliance.
+      </>
+    );
+    ctaBackground = {
+      backgroundColor: "#071C33",
+      backgroundImage: "url('/regulatory-library/conversion-band.webp')",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+    };
+    ctaSecondaryButton = null;
+    ctaLink = null;
   } else if (!customTitle && pathname?.includes("internal-audit")) {
     ctaTitle = <>Make Evidence Readiness Visible Before Review Begins.</>;
     ctaDescription = (
@@ -901,18 +944,6 @@ export default function Footer({ customTitle, customDescription, hideCta }: Foot
         See how source-backed supervisory developments can inform contextual
         applicability, obligations, controls and evidence governance—without
         removing accountable human review.
-      </>
-    );
-    ctaBackground = bandWithOverlay;
-  } else if (!customTitle && pathname?.startsWith("/regulatory-library")) {
-    ctaTitle = (
-      <>Connect what the regulation says to what your organization can prove.</>
-    );
-    ctaDescription = (
-      <>
-        See how ZoikoAssure connects reviewed regulatory sources to contextual
-        applicability, obligations, controls, evidence and defensible
-        assurance—while preserving accountable review.
       </>
     );
     ctaBackground = bandWithOverlay;
