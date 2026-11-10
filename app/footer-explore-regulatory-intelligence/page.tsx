@@ -4,7 +4,7 @@ import {
   ExploreIntentCards,
   Destinations,
   FaqSection,
-} from "@/components/explore-regulatory-intelligence";
+} from "@/components/footer-explore-regulatory-intelligence";
 import SplitFeatureSection from "@/components/shared/SplitFeatureSection";
 
 export const metadata: Metadata = {
@@ -13,9 +13,9 @@ export const metadata: Metadata = {
     "Find the information you need to understand regulatory change, review obligations and inspect their authoritative sources.",
 };
 
-const IMG = "/explore-regulatory-intelligence";
+const IMG = "/footer-explore-regulatory-intelligence";
 
-export default function ExploreRegulatoryIntelligencePage() {
+export default function FooterExploreRegulatoryIntelligencePage() {
   return (
     <div className="w-full overflow-x-clip bg-white">
       <Hero />

@@ -17,7 +17,7 @@ const navItems = [
   { label: "Solutions", href: "/solutions", dropdown: true },
   {
     label: "Regulatory Intelligence",
-    href: "/explore-regulatory-intelligence",
+    href: "/regulatory-intelligence",
     dropdown: true,
   },
   { label: "Trust Center", href: "/trust-center", dropdown: true },

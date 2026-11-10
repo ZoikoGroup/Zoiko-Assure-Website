@@ -44,7 +44,7 @@ export default function Hero() {
           <div className="flex w-full items-center justify-center lg:justify-end">
             <div className="w-full max-w-[507px] rounded-lg bg-white p-3 sm:p-4 shadow-[0_20px_25px_-5px_rgba(0,0,0,0.5)]">
               <Image
-                src="/explore-regulatory-intelligence/eri1.webp"
+                src="/footer-explore-regulatory-intelligence/eri1.webp"
                 alt="Executive team reviewing an AI-assisted regulatory compliance overview"
                 width={475}
                 height={348}

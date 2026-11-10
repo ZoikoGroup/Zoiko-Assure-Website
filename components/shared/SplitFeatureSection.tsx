@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-type Block = { title: string; description: string };
+type Block = { title: string; description: React.ReactNode };
 
 type SplitFeatureSectionProps = {
   blocks: Block[];

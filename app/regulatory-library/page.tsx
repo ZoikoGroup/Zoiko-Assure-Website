@@ -1,91 +1,159 @@
 import type { Metadata } from "next";
 import {
-  Hero,
-  CuratedTopics,
-  FaqSection,
-} from "@/components/regulatory-intelligence-library";
-import SplitFeatureSection from "@/components/shared/SplitFeatureSection";
+  LibraryHero,
+  LibraryTrustCards,
+  TrustPrivacyProcurement,
+  LibraryFAQs,
+} from "@/components/regulatory-library";
+import { JurisdictionFeatureSection } from "@/components/jurisdictions";
 
 export const metadata: Metadata = {
   title: "Regulatory Library | Regulatory Intelligence | ZoikoAssure",
   description:
-    "Explore source-linked regulatory material by jurisdiction, authority and topic—with clear versions, dates and the limits of human interpretation.",
+    "Browse verified, source-linked regulatory intelligence by topic, jurisdiction and record type, with citations, versions and review context.",
 };
 
-const IMG = "/regulatory-library";
+const IMG = "/images/regulatory-library";
 
-const sections: React.ComponentProps<typeof SplitFeatureSection>[] = [
-  {
-    muted: true,
-    blocks: [
-      {
-        title: "Finding a record does not establish whether it applies to a particular organization.",
-        description:
-          "Applicability depends on jurisdiction, entity, activity and effective period. Check the official publisher for later amendments or corrections.",
-      },
-      {
-        title: "From Authoritative Requirement to Defensible Assurance",
-        description:
-          "Follow the sequence: Regulatory Source → Applicability → Obligation → Control → Evidence → Assurance. Each phase connects logic without obscuring the prior basis.",
-      },
-    ],
-    cta: { label: "Explore How ZoikoAssure Works", href: "/how-zoikoassure-works" },
-    image: {
-      src: `${IMG}/rl2.webp`,
-      alt: "Professional reviewing documents on a laptop to analyze applicability facts",
-    },
-  },
-  {
-    imageLeft: true,
-    blocks: [
-      {
-        title: "Effective Time Is Not Observed Time",
-        description:
-          "Separate publication, legal effective period, discovery, decision and evidence-as-of timestamps. This record reflects the identified source version and dates.",
-      },
-      {
-        title: "Original Language and Content Rights",
-        description:
-          "Full-text access is governed by source licenses. Use the official source link where permitted. Machine translations are explicitly labeled as non-authoritative.",
-      },
-    ],
-    cta: { label: "Review Source Methodology", href: "/regulatory-intelligence/methodology" },
-    image: {
-      src: `${IMG}/rl3.webp`,
-      alt: "Analyst mapping decision outcomes and scenarios on a growth chart",
-    },
-  },
-  {
-    muted: true,
-    blocks: [
-      {
-        title: "AI Assistance With Sources—and Human Accountability.",
-        description:
-          "Source-grounded analysis can help legal and compliance teams review relevant material. Outputs remain qualified, reviewable and subject to accountable human judgment.",
-      },
-      {
-        title: "Human Interpretation Boundary",
-        description:
-          "ZoikoAssure explainer records are not legal advice. Do not infer organization-specific applicability without professional review.",
-      },
-    ],
-    cta: { label: "Explore Responsible AI", href: "/trust-center/responsible-ai" },
-    image: {
-      src: `${IMG}/rl4.webp`,
-      alt: "Human and robotic hand shaking, representing AI assistance with human accountability",
-    },
-  },
-];
-
-export default function RegulatoryIntelligenceLibraryPage() {
+export default function RegulatoryLibraryPage() {
   return (
-    <div className="w-full overflow-x-clip bg-white">
-      <Hero />
-      <CuratedTopics />
-      {sections.map((section) => (
-        <SplitFeatureSection key={section.blocks[0].title} {...section} />
-      ))}
-      <FaqSection />
-    </div>
+    <>
+      <LibraryHero />
+      <LibraryTrustCards />
+
+      <div id="library-browse-directory">
+        <JurisdictionFeatureSection
+          primary={{
+            title: "Library Browse Directory",
+            description:
+              "Explore curated groups: Regulatory Changes, Obligations, Enforcement & Guidance, Frameworks, and Regulatory Guides. Only verified, published records are shown.",
+          }}
+          secondary={{
+            title: "Featured Reviewed Records",
+            description:
+              "Recent regulatory developments with verified sources, including plain-language summaries and key limitations. Read what changed according to the source.",
+          }}
+          cta={{ label: "Browse Curated Categories", href: "#" }}
+          image={{
+            src: `${IMG}/library-browse-featured-records-ui.webp`,
+            alt: "Library browse directory and featured reviewed records",
+            height: 357,
+          }}
+        />
+      </div>
+
+      <JurisdictionFeatureSection
+        muted
+        imageLeft
+        primary={{
+          title: "Record Types and Legal Status",
+          description:
+            "Differentiate binding laws, guidance, enforcement actions, and explanatory content. Explicit source class and draft/final/amended/superseded status.",
+        }}
+        secondary={{
+          title: "Source-linked Record Detail",
+          description:
+            "Canonical ID, content type, approved title, original language, issuer, jurisdiction. Review the official source URL, citation/pinpoint, and legal dates.",
+        }}
+        cta={{ label: "View Record Detail Anatomy", href: "#" }}
+        image={{
+          src: `${IMG}/source-linked-record-detail-interface.webp`,
+          alt: "Source-linked record detail interface",
+          height: 456,
+        }}
+      />
+
+      <JurisdictionFeatureSection
+        primary={{
+          title: "Search and Faceted Results",
+          description:
+            "Conditional index interface with unambiguous filters for Jurisdiction, Content type, Issuer, Legal status, and Dates. Accessible clear controls and stable sorting.",
+        }}
+        secondary={{
+          title: "Version / Effective-Time Timeline",
+          description:
+            "Expose updated, amended, superseded and future-effective relationships. Distinct labels for Issued, Published, Effective-from, Observed, and Reviewed timestamps.",
+        }}
+        cta={{ label: "Explore Search & Timelines", href: "#" }}
+        image={{
+          src: `${IMG}/faceted-search-timeline-viewer.webp`,
+          alt: "Faceted search and timeline viewer",
+          height: 456,
+        }}
+      />
+
+      <JurisdictionFeatureSection
+        muted
+        imageLeft
+        primary={{
+          title: "Jurisdiction and Topic Exploration",
+          description:
+            "Connect to authoritative geography and topic taxonomy. Country, supranational, subnational and region grouping as separate dimensions.",
+        }}
+        secondary={{
+          title: "Authorities and Methodology",
+          description:
+            "Show source verification, translations, corrections and limits. Read the published methodology and correction route with accountable reviewers.",
+        }}
+        cta={{
+          label: "Read Methodology",
+          href: "/regulatory-intelligence/methodology",
+        }}
+        image={{
+          src: `${IMG}/methodology-authorities-explainer.webp`,
+          alt: "Methodology and authorities explainer",
+          height: 456,
+        }}
+      />
+
+      <JurisdictionFeatureSection
+        primary={{
+          title: "Regulatory Changes and Obligations",
+          description:
+            "Cross-link source-derived objects without pretending compliance. Distinguish between a detected change and an applicable change for a specific entity.",
+        }}
+        secondary={{
+          title: "Explanatory Guides and Definitions",
+          description: (
+            <>
+              Provide distinct editorial content and answer-first snippets.
+              Short first
+              <br className="hidden lg:block" /> paragraph explains issuer,
+              content class, jurisdiction, date and significance.
+            </>
+          ),
+        }}
+        cta={{ label: "View Linked Guides", href: "/regulatory-changes" }}
+        image={{
+          src: `${IMG}/changes-explanatory-guides-ui.webp`,
+          alt: "Regulatory changes and explanatory guides interface",
+          height: 456,
+        }}
+      />
+
+      <JurisdictionFeatureSection
+        muted
+        imageLeft
+        primary={{
+          title: "Governed AI and Human Review",
+          description:
+            "Explain source-grounded assistance and escalation restrictions. AI summaries require citations, uncertainty, and human-accountable review.",
+        }}
+        secondary={{
+          title: "Research Scenarios",
+          description:
+            "Role-relevant discovery stories with clear data boundaries for General Counsel, CCO, CRO, Regulatory Analysts, and Internal Audit.",
+        }}
+        cta={{ label: "Explore Use Cases", href: "#" }}
+        image={{
+          src: `${IMG}/governed-ai-review-research-paths.webp`,
+          alt: "Governed AI review and research paths",
+          height: 456,
+        }}
+      />
+
+      <TrustPrivacyProcurement />
+      <LibraryFAQs />
+    </>
   );
 }

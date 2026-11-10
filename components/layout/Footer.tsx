@@ -161,7 +161,7 @@ const regulatoryIntelligenceItems: FooterItem[] = [
   },
   {
     label: "Obligations",
-    href: "/regulatory-intelligence/obligations",
+    href: "/footer-obligations",
   },
   {
     label: "Enforcement & Guidance",
@@ -169,11 +169,11 @@ const regulatoryIntelligenceItems: FooterItem[] = [
   },
   {
     label: "Regulatory Sources",
-    href: "/regulatory-sources",
+    href: "/footer-regulatory-sources",
   },
   {
     label: "Regulatory Library",
-    href: "/regulatory-library",
+    href: "/footer-regulatory-library",
   },
   {
     label: "Methodology",
@@ -181,7 +181,7 @@ const regulatoryIntelligenceItems: FooterItem[] = [
   },
   {
     label: "Explore Regulatory Intelligence →",
-    href: "/explore-regulatory-intelligence",
+    href: "/footer-explore-regulatory-intelligence",
   },
 ];
 
@@ -761,19 +761,19 @@ export default function Footer({ customTitle, customDescription, hideCta }: Foot
     };
     ctaSecondaryButton = null;
     ctaLink = null;
-  } else if (!customTitle && pathname?.startsWith("/regulatory-intelligence/obligations")) {
+  } else if (!customTitle && pathname?.startsWith("/footer-obligations")) {
     ctaTitle = <>Make Obligations Defensible Before Scrutiny</>;
     ctaDescription = null;
     ctaBackground = {
       backgroundColor: "#071C33",
-      backgroundImage: "url('/obligations/conversion-band.webp')",
+      backgroundImage: "url('/footer-obligations/conversion-band.webp')",
       backgroundSize: "cover",
       backgroundPosition: "center",
       backgroundRepeat: "no-repeat",
     };
     ctaSecondaryButton = null;
     ctaLink = null;
-  } else if (!customTitle && pathname?.startsWith("/explore-regulatory-intelligence")) {
+  } else if (!customTitle && pathname?.startsWith("/footer-explore-regulatory-intelligence")) {
     ctaTitle = <>Explore defensible regulatory assurance for your organization.</>;
     ctaDescription = (
       <>
@@ -786,14 +786,14 @@ export default function Footer({ customTitle, customDescription, hideCta }: Foot
     );
     ctaBackground = {
       backgroundColor: "#071C33",
-      backgroundImage: "url('/explore-regulatory-intelligence/conversion-band.webp')",
+      backgroundImage: "url('/footer-explore-regulatory-intelligence/conversion-band.webp')",
       backgroundSize: "cover",
       backgroundPosition: "center",
       backgroundRepeat: "no-repeat",
     };
     ctaSecondaryButton = null;
     ctaLink = null;
-  } else if (!customTitle && pathname?.startsWith("/regulatory-library")) {
+  } else if (!customTitle && pathname?.startsWith("/footer-regulatory-library")) {
     ctaTitle = (
       <>
         See how source-linked regulatory intelligence can inform governed
@@ -809,13 +809,25 @@ export default function Footer({ customTitle, customDescription, hideCta }: Foot
     );
     ctaBackground = {
       backgroundColor: "#071C33",
-      backgroundImage: "url('/regulatory-library/conversion-band.webp')",
+      backgroundImage: "url('/footer-regulatory-library/conversion-band.webp')",
       backgroundSize: "cover",
       backgroundPosition: "center",
       backgroundRepeat: "no-repeat",
     };
     ctaSecondaryButton = null;
     ctaLink = null;
+  } else if (!customTitle && pathname?.startsWith("/regulatory-library")) {
+    ctaTitle = (
+      <>Connect what the regulation says to what your organization can prove.</>
+    );
+    ctaDescription = (
+      <>
+        See how ZoikoAssure connects reviewed regulatory sources to contextual
+        applicability, obligations, controls, evidence and defensible
+        assurance—while preserving accountable review.
+      </>
+    );
+    ctaBackground = bandWithOverlay;
   } else if (!customTitle && pathname?.includes("internal-audit")) {
     ctaTitle = <>Make Evidence Readiness Visible Before Review Begins.</>;
     ctaDescription = (
@@ -914,6 +926,40 @@ export default function Footer({ customTitle, customDescription, hideCta }: Foot
       </>
     );
     ctaBackground = bandWithOverlay;
+  } else if (!customTitle && pathname?.startsWith("/jurisdictions/united-states")) {
+    ctaTitle = <>Evaluate U.S. regulatory intelligence with your team.</>;
+    ctaDescription = (
+      <>
+        See how source context, obligation mapping and evidence governance could
+        support your operating model, subject to confirmed product capabilities.
+      </>
+    );
+    ctaBackground = {
+      backgroundColor: "#071C33",
+      backgroundImage: "url('/footer-united-states-regulatory-exposure/conversion-band.webp')",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+    };
+    ctaSecondaryButton = null;
+    ctaLink = null;
+  } else if (!customTitle && pathname?.startsWith("/jurisdictions/canada")) {
+    ctaTitle = <>Make Canadian regulatory exposure more traceable.</>;
+    ctaDescription = (
+      <>
+        Explore how ZoikoAssure is designed to connect sourced requirements with
+        accountable review and governed evidence.
+      </>
+    );
+    ctaBackground = {
+      backgroundColor: "#071C33",
+      backgroundImage: "url('/canada/conversion-band.webp')",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+    };
+    ctaSecondaryButton = null;
+    ctaLink = null;
   } else if (!customTitle && pathname?.startsWith("/jurisdictions")) {
     ctaTitle = (
       <>
@@ -947,6 +993,23 @@ export default function Footer({ customTitle, customDescription, hideCta }: Foot
       </>
     );
     ctaBackground = bandWithOverlay;
+  } else if (!customTitle && pathname?.startsWith("/footer-regulatory-sources")) {
+    ctaTitle = <>Make Regulatory Intelligence Traceable</>;
+    ctaDescription = (
+      <>
+        See how ZoikoAssure is designed to connect source context with
+        applicability, obligations, controls and evidence-backed review.
+      </>
+    );
+    ctaBackground = {
+      backgroundColor: "#071C33",
+      backgroundImage: "url('/footer-regulatory-sources/conversion-band.webp')",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+    };
+    ctaSecondaryButton = null;
+    ctaLink = null;
   } else if (!customTitle && pathname?.startsWith("/regulatory-changes")) {
     ctaTitle = <>Move from a regulatory headline to an accountable next step.</>;
     ctaDescription = (

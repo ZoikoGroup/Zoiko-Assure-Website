@@ -11,7 +11,7 @@ const destinations = [
     title: "Obligations",
     description: "Explore structured obligations and their source and time context.",
     cta: "Explore Obligations",
-    href: "/regulatory-intelligence/obligations",
+    href: "/footer-obligations",
   },
   {
     title: "Enforcement & Guidance",
@@ -31,7 +31,7 @@ const destinations = [
     description:
       "Browse or search approved records where the live library capability is verified.",
     cta: "Explore Regulatory Library",
-    href: "/regulatory-library",
+    href: "/footer-regulatory-library",
   },
   {
     title: "Methodology",

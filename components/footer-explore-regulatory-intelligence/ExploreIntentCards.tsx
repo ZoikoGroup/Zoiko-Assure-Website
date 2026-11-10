@@ -9,7 +9,7 @@ const intents = [
   {
     title: "Understand an obligation",
     description: "Inspect structured requirements and what still needs contextual review.",
-    href: "/regulatory-intelligence/obligations",
+    href: "/footer-obligations",
   },
   {
     title: "Verify authority",
