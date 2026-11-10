@@ -43,7 +43,7 @@ export default function Hero() {
 
           <div className="flex w-full items-center justify-center lg:justify-end">
             <Image
-              src="/obligations/ob1.webp"
+              src="/footer-obligations/ob1.webp"
               alt="Team reviewing regulatory documents to understand their obligations"
               width={547}
               height={420}

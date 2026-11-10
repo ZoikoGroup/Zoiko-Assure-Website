@@ -3,7 +3,7 @@ import {
   Hero,
   KeyPillarsFloating,
   FaqSection,
-} from "@/components/regulatory-intelligence-obligations";
+} from "@/components/footer-obligations";
 import SplitFeatureSection from "@/components/shared/SplitFeatureSection";
 
 export const metadata: Metadata = {
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     "Understand what regulatory sources require—and how those requirements can be traced through applicability, controls, evidence and accountable assurance.",
 };
 
-const IMG = "/obligations";
+const IMG = "/footer-obligations";
 
 const sections: React.ComponentProps<typeof SplitFeatureSection>[] = [
   {
@@ -94,7 +94,7 @@ const sections: React.ComponentProps<typeof SplitFeatureSection>[] = [
   },
 ];
 
-export default function RegulatoryIntelligenceObligationsPage() {
+export default function FooterObligationsPage() {
   return (
     <div className="w-full overflow-x-clip bg-white">
       <Hero />
