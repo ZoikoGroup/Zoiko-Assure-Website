@@ -177,7 +177,7 @@ const regulatoryIntelligenceItems: FooterItem[] = [
   },
   {
     label: "Methodology",
-    href: "/regulatory-intelligence/methodology",
+    href: "/footer-methodology",
   },
   {
     label: "Explore Regulatory Intelligence →",
@@ -216,7 +216,7 @@ const jurisdictionItems: FooterItem[] = [
   },
   {
     label: "Explore All Jurisdictions →",
-    href: "/jurisdictions",
+    href: "/jurisdictions/explore-all-jurisdictions",
   },
 ];
 
