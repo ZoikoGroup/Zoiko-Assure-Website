@@ -235,7 +235,7 @@ const frameworkItems: FooterItem[] = [
   },
   {
     label: "Operational Resilience",
-    href: "/frameworks/operational-resilience",
+    href: "/frameworks-operational-resilience",
   },
   {
     label: "Financial Regulation",
@@ -251,7 +251,7 @@ const frameworkItems: FooterItem[] = [
   },
   {
     label: "View All Frameworks →",
-    href: "/frameworks",
+    href: "/frameworks-view-all-frameworks",
   },
 ];
 
@@ -960,6 +960,46 @@ export default function Footer({ customTitle, customDescription, hideCta }: Foot
     };
     ctaSecondaryButton = null;
     ctaLink = null;
+  } else if (!customTitle && pathname?.startsWith("/jurisdictions/united-kingdom")) {
+    ctaTitle = <>Evaluate UK regulatory exposure with a governed method.</>;
+    ctaDescription = (
+      <>
+        Review scope, sources, application, obligation lineage and evidence
+        expectations in a Product-led conversation.
+      </>
+    );
+    ctaBackground = {
+      backgroundColor: "#071C33",
+      backgroundImage: "url('/jurisdictions-united-kingdom-regulatory-exposure/conversion-band.webp')",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+    };
+    ctaSecondaryButton = null;
+    ctaLink = null;
+  } else if (!customTitle && pathname?.startsWith("/jurisdictions/singapore")) {
+    ctaTitle = (
+      <>
+        See how a source-grounded review can connect regulatory change to
+        accountable controls and evidence.
+      </>
+    );
+    ctaDescription = (
+      <>
+        Talk through your jurisdictions, regulated activities and evidence needs
+        with the ZoikoAssure team. Platform capabilities and jurisdiction
+        availability are confirmed during evaluation.
+      </>
+    );
+    ctaBackground = {
+      backgroundColor: "#071C33",
+      backgroundImage: "url('/jurisdictions-singapore-regulatory-exposure/conversion-band.webp')",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+    };
+    ctaSecondaryButton = null;
+    ctaLink = null;
   } else if (!customTitle && pathname?.startsWith("/jurisdictions")) {
     ctaTitle = (
       <>
@@ -993,6 +1033,42 @@ export default function Footer({ customTitle, customDescription, hideCta }: Foot
       </>
     );
     ctaBackground = bandWithOverlay;
+  } else if (!customTitle && pathname?.startsWith("/frameworks-view-all-frameworks")) {
+    ctaTitle = <>Discuss your governance and compliance priorities.</>;
+    ctaDescription = (
+      <>
+        ZoikoAssure supports regulatory intelligence and assurance processes.
+        Platform outputs are not legal advice or an independent determination
+        of compliance.
+      </>
+    );
+    ctaBackground = {
+      backgroundColor: "#071C33",
+      backgroundImage: "url('/frameworks-view-all-frameworks/conversion-band.webp')",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+    };
+    ctaSecondaryButton = null;
+    ctaLink = null;
+  } else if (!customTitle && pathname?.startsWith("/frameworks-operational-resilience")) {
+    ctaTitle = <>Turn a resilience question into a governed decision.</>;
+    ctaDescription = (
+      <>
+        See how Zoiko Assure is designed to connect source-grounded obligations,
+        controls, evidence and accountable review. Available functionality
+        requires validation during demonstration.
+      </>
+    );
+    ctaBackground = {
+      backgroundColor: "#071C33",
+      backgroundImage: "url('/frameworks-operational-resilience/conversion-band.webp')",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+    };
+    ctaSecondaryButton = null;
+    ctaLink = null;
   } else if (!customTitle && pathname?.startsWith("/footer-regulatory-sources")) {
     ctaTitle = <>Make Regulatory Intelligence Traceable</>;
     ctaDescription = (
