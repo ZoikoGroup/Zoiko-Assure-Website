@@ -231,7 +231,7 @@ const frameworkItems: FooterItem[] = [
   },
   {
     label: "Cybersecurity",
-    href: "/frameworks/cybersecurity",
+    href: "/cybersecurity-frameworks",
   },
   {
     label: "Operational Resilience",
@@ -247,7 +247,7 @@ const frameworkItems: FooterItem[] = [
   },
   {
     label: "Compliance Management",
-    href: "/frameworks/compliance-management",
+    href: "/compliance-management",
   },
   {
     label: "View All Frameworks →",
