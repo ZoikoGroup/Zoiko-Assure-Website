@@ -227,7 +227,7 @@ const frameworkItems: FooterItem[] = [
   },
   {
     label: "Data Protection",
-    href: "/frameworks/data-protection",
+    href: "/frameworks-data-protection",
   },
   {
     label: "Cybersecurity",
@@ -239,11 +239,11 @@ const frameworkItems: FooterItem[] = [
   },
   {
     label: "Financial Regulation",
-    href: "/frameworks/financial-regulation",
+    href: "/frameworks-financial-regulation",
   },
   {
     label: "Enterprise Risk",
-    href: "/frameworks/enterprise-risk",
+    href: "/frameworks-enterprise-risk",
   },
   {
     label: "Compliance Management",
@@ -1045,6 +1045,53 @@ export default function Footer({ customTitle, customDescription, hideCta }: Foot
     ctaBackground = {
       backgroundColor: "#071C33",
       backgroundImage: "url('/frameworks-view-all-frameworks/conversion-band.webp')",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+    };
+    ctaSecondaryButton = null;
+    ctaLink = null;
+  } else if (!customTitle && pathname?.startsWith("/frameworks-data-protection")) {
+    ctaTitle = <>Make privacy governance explainable and evidence-ready.</>;
+    ctaDescription = (
+      <>
+        ZoikoAssure supports regulatory intelligence and assurance processes. Outputs, including
+        AI-assisted analyses, do not constitute legal advice or an independent determination of
+        legal compliance.
+      </>
+    );
+    ctaBackground = {
+      backgroundColor: "#071C33",
+      backgroundImage: "url('/frameworks-data-protection/conversion-band.webp')",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+    };
+    ctaSecondaryButton = null;
+    ctaLink = null;
+  } else if (!customTitle && pathname?.startsWith("/frameworks-enterprise-risk")) {
+    ctaTitle = <>Discuss enterprise-risk governance and evidence needs with our team.</>;
+    ctaDescription = (
+      <>
+        No affiliation with COSO, ISO or The IIA is implied. Do not submit confidential risk
+        registers or board materials through this public page.
+      </>
+    );
+    ctaBackground = {
+      backgroundColor: "#071C33",
+      backgroundImage: "url('/frameworks-enterprise-risk/conversion-band.webp')",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+    };
+    ctaSecondaryButton = null;
+    ctaLink = null;
+  } else if (!customTitle && pathname?.startsWith("/frameworks-financial-regulation")) {
+    ctaTitle = <>Discuss your regulated perimeter and evidence-governance needs.</>;
+    ctaDescription = <>No affiliation with regulators or standards bodies is implied.</>;
+    ctaBackground = {
+      backgroundColor: "#071C33",
+      backgroundImage: "url('/frameworks-financial-regulation/conversion-band.webp')",
       backgroundSize: "cover",
       backgroundPosition: "center",
       backgroundRepeat: "no-repeat",
