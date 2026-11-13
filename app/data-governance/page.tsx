@@ -1,1 +1,1 @@
-export { default, metadata } from "../trust-center/data-governance/page";
+export { default, metadata } from "../ai-data-governance-data-governance/page";
