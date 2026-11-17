@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { ZOIKO_TECH_URL } from "@/components/company-zoiko-tech/links";
 
 type FooterItem = {
   label: string;
@@ -406,7 +407,7 @@ const companyItems: FooterItem[] = [
   },
   {
     label: "Zoiko Tech",
-    href: "/company/zoiko-tech",
+    href: "/company-zoiko-tech",
   },
   {
     label: "ZoikoAssure",
@@ -708,6 +709,10 @@ export default function Footer({ customTitle, customDescription, hideCta }: Foot
     backgroundImage: "url('/footer/bg1.png')",
   };
 
+  let ctaPrimaryButton: { label: string; href: string; external?: boolean } = {
+    label: "Request a Demo",
+    href: "/request-demo",
+  };
   let ctaSecondaryButton: { label: string; href: string } | null = {
     label: "Assess Your Regulatory Exposure",
     href: "/regulatory-exposure",
@@ -716,6 +721,8 @@ export default function Footer({ customTitle, customDescription, hideCta }: Foot
     label: "Visit the Trust Center →",
     href: "/trust-center",
   };
+  /** Compact right-hand action group with the text link centred and underlined below. */
+  let ctaCompactActions = false;
 
   if (!customTitle && (pathname?.includes("framework-guide") || pathname?.includes("framework_guide") || pathname?.includes("framework guide") || pathname?.includes("framework%20guide"))) {
     ctaTitle = <>Explore How Framework Questions Become Governed Assurance.</>;
@@ -1068,6 +1075,23 @@ export default function Footer({ customTitle, customDescription, hideCta }: Foot
     };
     ctaSecondaryButton = null;
     ctaLink = null;
+  } else if (
+    !customTitle &&
+    (pathname?.startsWith("/company-zoiko-tech") || pathname?.startsWith("/company/zoiko-tech"))
+  ) {
+    ctaTitle = <>The Technology Company Behind ZoikoAssure</>;
+    ctaDescription = null;
+    ctaBackground = {
+      backgroundColor: "#071C33",
+      backgroundImage: "url('/company-zoiko-tech/conversion-band.webp')",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+    };
+    ctaPrimaryButton = { label: "Explore Zoiko Tech", href: ZOIKO_TECH_URL, external: true };
+    ctaSecondaryButton = { label: "About ZoikoAssure", href: "/about-zoiko-assure" };
+    ctaLink = { label: "Visit the Trust Center", href: "/trust-center" };
+    ctaCompactActions = true;
   } else if (!customTitle && pathname?.startsWith("/ai-data-governance-governed-ai")) {
     ctaTitle = <>Keep AI-supported compliance work reviewable.</>;
     ctaDescription = (
@@ -1377,10 +1401,24 @@ export default function Footer({ customTitle, customDescription, hideCta }: Foot
           className="border-b border-white/10 bg-[#071C33] bg-cover bg-center"
           style={ctaBackground}
         >
-          <div className="mx-auto flex w-full max-w-[1440px] flex-col justify-between gap-8 px-6 py-12 sm:px-8 md:px-12 lg:flex-row lg:items-center lg:gap-16 lg:px-20 lg:py-14">
+          <div
+            className={`mx-auto flex w-full max-w-[1440px] flex-col justify-between gap-8 px-6 py-12 sm:px-8 md:px-12 lg:flex-row lg:items-center lg:gap-16 lg:px-20 lg:py-14 ${
+              ctaCompactActions ? "xl:pr-[159px]" : ""
+            }`}
+          >
 
-            <div className="w-full max-w-[760px] lg:max-w-[800px] xl:max-w-[840px]">
-              <h2 className="text-3xl font-semibold leading-[1.2] text-white sm:text-[34px]">
+            <div
+              className={
+                ctaCompactActions
+                  ? "w-full lg:flex-1"
+                  : "w-full max-w-[760px] lg:max-w-[800px] xl:max-w-[840px]"
+              }
+            >
+              <h2
+                className={`text-3xl font-semibold leading-[1.2] text-white sm:text-[34px] ${
+                  ctaCompactActions ? "max-w-[600px]" : ""
+                }`}
+              >
                 {ctaTitle}
               </h2>
 
@@ -1391,14 +1429,24 @@ export default function Footer({ customTitle, customDescription, hideCta }: Foot
               )}
             </div>
 
-            <div className="flex w-full flex-col gap-6 lg:flex-1">
+            <div
+              className={
+                ctaCompactActions
+                  ? "flex w-full flex-col items-start gap-5 sm:w-auto lg:flex-none lg:items-center"
+                  : "flex w-full flex-col gap-6 lg:flex-1"
+              }
+            >
 
               <div className="flex flex-wrap gap-3">
                 <Link
-                  href="/request-demo"
-                  className="flex h-12 items-center justify-center rounded-lg bg-[#D58324] px-5 text-sm font-semibold text-white outline outline-1 outline-[#D58324] transition-colors duration-200 hover:bg-[#c2731c]"
+                  href={ctaPrimaryButton.href}
+                  {...(ctaPrimaryButton.external
+                    ? { target: "_blank", rel: "noopener noreferrer" }
+                    : {})}
+                  className="flex h-12 items-center justify-center gap-1.5 rounded-lg bg-[#D58324] px-5 text-sm font-semibold text-white outline outline-1 outline-[#D58324] transition-colors duration-200 hover:bg-[#c2731c]"
                 >
-                  Request a Demo
+                  {ctaPrimaryButton.label}
+                  {ctaPrimaryButton.external && <span aria-hidden="true">↗</span>}
                 </Link>
 
                 {ctaSecondaryButton && (
@@ -1415,7 +1463,11 @@ export default function Footer({ customTitle, customDescription, hideCta }: Foot
                 <div className="flex flex-wrap gap-x-8 gap-y-3">
                   <Link
                     href={ctaLink.href}
-                    className="text-sm font-normal text-[#CFD9E4] transition-colors hover:text-white"
+                    className={
+                      ctaCompactActions
+                        ? "text-[15px] font-normal text-white underline underline-offset-4 transition-colors hover:text-[#CFD9E4]"
+                        : "text-sm font-normal text-[#CFD9E4] transition-colors hover:text-white"
+                    }
                   >
                     {ctaLink.label}
                   </Link>
