@@ -223,7 +223,7 @@ const jurisdictionItems: FooterItem[] = [
 const frameworkItems: FooterItem[] = [
   {
     label: "AI Governance",
-    href: "/ai-governance",
+    href: "/frameworks-ai-governance",
   },
   {
     label: "Data Protection",
@@ -293,15 +293,15 @@ const aiGovernanceItems: FooterItem[] = [
   },
   {
     label: "Governed AI",
-    href: "/governed-ai",
+    href: "/ai-data-governance-governed-ai",
   },
   {
     label: "AI Decision Provenance",
-    href: "/ai-governance/ai-decision-provenance",
+    href: "/ai-data-governance-ai-decision-provenance",
   },
   {
     label: "Human Oversight",
-    href: "/ai-governance/human-oversight",
+    href: "/ai-data-governance-human-oversight",
   },
   {
     label: "Data Governance",
@@ -313,7 +313,7 @@ const aiGovernanceItems: FooterItem[] = [
   },
   {
     label: "AI Governance Methodology",
-    href: "/ai-governance",
+    href: "/ai-data-governance-ai-governance-methodology",
   },
 ];
 
@@ -1045,6 +1045,95 @@ export default function Footer({ customTitle, customDescription, hideCta }: Foot
     ctaBackground = {
       backgroundColor: "#071C33",
       backgroundImage: "url('/frameworks-view-all-frameworks/conversion-band.webp')",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+    };
+    ctaSecondaryButton = null;
+    ctaLink = null;
+  } else if (!customTitle && pathname?.startsWith("/ai-data-governance-ai-decision-provenance")) {
+    ctaTitle = <>Make AI-assisted compliance decisions reviewable.</>;
+    ctaDescription = (
+      <>
+        ZoikoAssure supports governed workflows; platform outputs are not legal advice or
+        independent determinations of compliance. Frameworks and laws do different jobs.
+      </>
+    );
+    ctaBackground = {
+      backgroundColor: "#071C33",
+      backgroundImage: "url('/ai-data-governance-ai-decision-provenance/conversion-band.webp')",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+    };
+    ctaSecondaryButton = null;
+    ctaLink = null;
+  } else if (!customTitle && pathname?.startsWith("/ai-data-governance-governed-ai")) {
+    ctaTitle = <>Keep AI-supported compliance work reviewable.</>;
+    ctaDescription = (
+      <>
+        ZoikoAssure provides technology and regulatory intelligence to support compliance and
+        assurance. Organizations remain responsible for obligations, decisions, controls and
+        professional advice.
+      </>
+    );
+    ctaBackground = {
+      backgroundColor: "#071C33",
+      backgroundImage: "url('/ai-data-governance-governed-ai/conversion-band.webp')",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+    };
+    ctaSecondaryButton = null;
+    ctaLink = null;
+  } else if (!customTitle && pathname?.startsWith("/ai-data-governance-human-oversight")) {
+    ctaTitle = <>Build Human Accountability into Governed AI.</>;
+    ctaDescription = (
+      <>
+        ZoikoAssure supports regulatory intelligence and governance processes. Platform and
+        AI-assisted outputs do not constitute legal advice or an independent determination of
+        regulatory compliance.
+      </>
+    );
+    ctaBackground = {
+      backgroundColor: "#071C33",
+      backgroundImage: "url('/ai-data-governance-human-oversight/conversion-band.webp')",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+    };
+    ctaSecondaryButton = null;
+    ctaLink = null;
+  } else if (!customTitle && pathname?.startsWith("/ai-data-governance-ai-governance-methodology")) {
+    ctaTitle = <>Make AI-assisted compliance decisions reviewable.</>;
+    ctaDescription = (
+      <>
+        ZoikoAssure supports regulatory intelligence and governance processes. Platform and
+        AI-assisted outputs do not constitute legal advice or an independent determination of
+        regulatory compliance.
+      </>
+    );
+    ctaBackground = {
+      backgroundColor: "#071C33",
+      backgroundImage: "url('/ai-data-governance-ai-governance-methodology/conversion-band.webp')",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+    };
+    ctaSecondaryButton = null;
+    ctaLink = null;
+  } else if (!customTitle && pathname?.startsWith("/frameworks-ai-governance")) {
+    ctaTitle = <>Evaluate an evidence-led AI governance approach</>;
+    ctaDescription = (
+      <>
+        ZoikoAssure supports regulatory intelligence and governance processes. Platform and
+        AI-assisted outputs do not constitute legal advice or an independent determination of
+        regulatory compliance.
+      </>
+    );
+    ctaBackground = {
+      backgroundColor: "#071C33",
+      backgroundImage: "url('/frameworks-ai-governance/conversion-band.webp')",
       backgroundSize: "cover",
       backgroundPosition: "center",
       backgroundRepeat: "no-repeat",
