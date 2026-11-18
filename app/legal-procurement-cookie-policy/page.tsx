@@ -3,6 +3,8 @@ import {
   Hero,
   CookieCategoryCards,
   CookieRegisterAndThirdPartySection,
+  ManageChoicesAndPrivacySignalsSection,
+  CookiePolicyFaqSection,
 } from "@/components/legal-procurement-cookie-policy";
 
 export const metadata: Metadata = {
@@ -17,6 +19,8 @@ export default function CookiePolicyPage() {
       <Hero />
       <CookieCategoryCards />
       <CookieRegisterAndThirdPartySection />
+      <ManageChoicesAndPrivacySignalsSection />
+      <CookiePolicyFaqSection />
     </div>
   );
 }
