@@ -449,11 +449,11 @@ const supportItems: FooterItem[] = [
 const legalItems: FooterItem[] = [
   {
     label: "Privacy Policy",
-    href: "/privacy-notice",
+    href: "/legal-procurement-privacy-policy",
   },
   {
     label: "Terms of Use",
-    href: "/terms-of-use",
+    href: "/legal-procurement-terms-of-use",
   },
   {
     label: "Cookie Policy",
@@ -461,15 +461,15 @@ const legalItems: FooterItem[] = [
   },
   {
     label: "Cookie Settings",
-    href: "/cookie-settings",
+    href: "/legal-procurement-cookie-settings",
   },
   {
     label: "Acceptable Use Policy",
-    href: "/acceptable-use-policy",
+    href: "/legal-procurement-acceptable-use-policy",
   },
   {
     label: "Data Processing Addendum",
-    href: "/data-processing-addendum",
+    href: "/legal-procurement-data-processing-addendum",
   },
   {
     label: "Subprocessors",
@@ -481,11 +481,11 @@ const legalItems: FooterItem[] = [
   },
   {
     label: "Accessibility Statement",
-    href: "/accessibility-statement",
+    href: "/legal-procurement-accessibility-statement",
   },
   {
     label: "Legal Notices",
-    href: "/legal-notices",
+    href: "/legal-procurement-legal-notices",
   },
   {
     label: "Modern Slavery Statement",
@@ -713,10 +713,13 @@ export default function Footer({ customTitle, customDescription, hideCta }: Foot
     label: "Request a Demo",
     href: "/request-demo",
   };
-  let ctaSecondaryButton: { label: string; href: string } | null = {
+  /** `print: true` renders a button that opens the browser print dialog instead of a link. */
+  let ctaSecondaryButton: { label: string; href: string; print?: boolean } | null = {
     label: "Assess Your Regulatory Exposure",
     href: "/regulatory-exposure",
   };
+  /** Optional extra outlined button shown after the secondary button. */
+  let ctaTertiaryButton: { label: string; href: string } | null = null;
   let ctaLink: { label: string; href: string } | null = {
     label: "Visit the Trust Center →",
     href: "/trust-center",
@@ -1092,6 +1095,124 @@ export default function Footer({ customTitle, customDescription, hideCta }: Foot
     ctaSecondaryButton = { label: "About ZoikoAssure", href: "/about-zoiko-assure" };
     ctaLink = { label: "Visit the Trust Center", href: "/trust-center" };
     ctaCompactActions = true;
+  } else if (
+    !customTitle &&
+    (pathname?.startsWith("/legal-procurement-terms-of-use") ||
+      pathname?.startsWith("/legal-procurement-cookie-settings") ||
+      pathname?.startsWith("/legal-procurement-acceptable-use-policy"))
+  ) {
+    const bandImage = pathname.includes("cookie-settings")
+      ? "/legal-procurement-cookie-settings/conversion-band.webp"
+      : pathname.includes("acceptable-use-policy")
+        ? "/legal-procurement-acceptable-use-policy/conversion-band.webp"
+        : "/legal-procurement-terms-of-use/conversion-band.webp";
+    ctaTitle = <>Review Cookie Settings</>;
+    ctaDescription = (
+      <>
+        This notice does not collect personal data itself; controls must match actual execution.
+      </>
+    );
+    ctaBackground = {
+      backgroundColor: "#071C33",
+      backgroundImage: `url('${bandImage}')`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+    };
+    ctaPrimaryButton = {
+      label: "Review Cookie Settings",
+      href: "/legal-procurement-cookie-settings",
+    };
+    ctaSecondaryButton = { label: "Privacy Policy", href: "/legal-procurement-privacy-policy" };
+    ctaLink = null;
+  } else if (!customTitle && pathname?.startsWith("/legal-procurement-privacy-policy")) {
+    ctaTitle = <>Review Cookie Settings</>;
+    ctaDescription = (
+      <>
+        ZoikoAssure provides technology and regulatory intelligence to support compliance and
+        assurance processes. Platform outputs, including AI-assisted outputs and Regulatory
+        Exposure Profiles, do not constitute legal advice or an independent determination of
+        regulatory compliance. Organizations remain responsible for their regulatory obligations,
+        decisions, controls and professional advice.
+      </>
+    );
+    ctaBackground = {
+      backgroundColor: "#071C33",
+      backgroundImage: "url('/legal-procurement-privacy-policy/conversion-band.webp')",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+    };
+    ctaPrimaryButton = {
+      label: "Review Cookie Settings",
+      href: "/legal-procurement-cookie-settings",
+    };
+    ctaSecondaryButton = { label: "Terms of Use", href: "/legal-procurement-terms-of-use" };
+    ctaLink = null;
+  } else if (!customTitle && pathname?.startsWith("/legal-procurement-legal-notices")) {
+    ctaTitle = <>Notice updates and previous versions / alternative format</>;
+    ctaDescription = (
+      <>
+        ZoikoAssure provides technology and regulatory intelligence to support compliance and
+        assurance processes. Platform outputs, including AI-assisted outputs and Regulatory
+        Exposure Profiles, do not constitute legal advice or an independent determination of
+        regulatory compliance. Organizations remain responsible for their regulatory obligations,
+        decisions, controls and professional advice.
+      </>
+    );
+    ctaBackground = {
+      backgroundColor: "#071C33",
+      backgroundImage: "url('/legal-procurement-legal-notices/conversion-band.webp')",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+    };
+    ctaPrimaryButton = { label: "Version history", href: "/contact" };
+    ctaSecondaryButton = { label: "Print", href: "#", print: true };
+    ctaLink = null;
+  } else if (
+    !customTitle &&
+    pathname?.startsWith("/legal-procurement-accessibility-statement")
+  ) {
+    ctaTitle = <>Download / alternative format</>;
+    ctaDescription = (
+      <>
+        This notice does not collect personal data itself; controls must match actual execution.
+      </>
+    );
+    ctaBackground = {
+      backgroundColor: "#071C33",
+      backgroundImage: "url('/legal-procurement-accessibility-statement/conversion-band.webp')",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+    };
+    ctaPrimaryButton = { label: "Download (if verified)", href: "/contact" };
+    ctaSecondaryButton = { label: "Accessibility Support", href: "/support/accessibility" };
+    ctaLink = null;
+  } else if (
+    !customTitle &&
+    pathname?.startsWith("/legal-procurement-data-processing-addendum")
+  ) {
+    ctaTitle = <>Need an authorized document?</>;
+    ctaDescription = (
+      <>
+        Contact Legal/Procurement through verified destination only. This is an annotated design;
+        not a signed DPA. All legal copy is an owner-approval gate.
+      </>
+    );
+    ctaBackground = {
+      backgroundColor: "#071C33",
+      backgroundImage: "url('/legal-procurement-data-processing-addendum/conversion-band.webp')",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+    };
+    ctaPrimaryButton = { label: "Request a DPA copy", href: "/contact" };
+    ctaSecondaryButton = { label: "Privacy Policy", href: "/legal-procurement-privacy-policy" };
+    ctaTertiaryButton = { label: "Terms of Use", href: "/legal-procurement-terms-of-use" };
+    ctaLink = null;
+    ctaCompactActions = true;
   } else if (!customTitle && pathname?.startsWith("/ai-data-governance-governed-ai")) {
     ctaTitle = <>Keep AI-supported compliance work reviewable.</>;
     ctaDescription = (
@@ -1437,7 +1558,7 @@ export default function Footer({ customTitle, customDescription, hideCta }: Foot
               }
             >
 
-              <div className="flex flex-wrap gap-3">
+              <div className={`flex flex-wrap gap-3 ${ctaCompactActions ? "lg:flex-nowrap" : ""}`}>
                 <Link
                   href={ctaPrimaryButton.href}
                   {...(ctaPrimaryButton.external
@@ -1449,12 +1570,31 @@ export default function Footer({ customTitle, customDescription, hideCta }: Foot
                   {ctaPrimaryButton.external && <span aria-hidden="true">↗</span>}
                 </Link>
 
-                {ctaSecondaryButton && (
+                {ctaSecondaryButton?.print && (
+                  <button
+                    type="button"
+                    onClick={() => window.print()}
+                    className="flex h-12 items-center justify-center rounded-lg bg-[#071C33] px-5 text-sm font-semibold text-white outline outline-1 outline-[#7890A7] transition-colors duration-200 hover:bg-white/5"
+                  >
+                    {ctaSecondaryButton.label}
+                  </button>
+                )}
+
+                {ctaSecondaryButton && !ctaSecondaryButton.print && (
                   <Link
                     href={ctaSecondaryButton.href}
                     className="flex h-12 items-center justify-center rounded-lg bg-[#071C33] px-5 text-sm font-semibold text-white outline outline-1 outline-[#7890A7] transition-colors duration-200 hover:bg-white/5"
                   >
                     {ctaSecondaryButton.label}
+                  </Link>
+                )}
+
+                {ctaTertiaryButton && (
+                  <Link
+                    href={ctaTertiaryButton.href}
+                    className="flex h-12 items-center justify-center rounded-lg bg-[#071C33] px-5 text-sm font-semibold text-white outline outline-1 outline-[#7890A7] transition-colors duration-200 hover:bg-white/5"
+                  >
+                    {ctaTertiaryButton.label}
                   </Link>
                 )}
               </div>

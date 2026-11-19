@@ -15,6 +15,8 @@ type SplitFeatureSectionProps = {
   imageLeft?: boolean;
   /** Override the tinted background independently of `reversed`. */
   muted?: boolean;
+  /** Optional anchor id for in-page links. */
+  id?: string;
 };
 
 export default function SplitFeatureSection({
@@ -25,9 +27,11 @@ export default function SplitFeatureSection({
   reversed = false,
   imageLeft = reversed,
   muted = reversed,
+  id,
 }: SplitFeatureSectionProps) {
   return (
     <section
+      id={id}
       className={`w-full py-16 sm:py-20 lg:py-24 ${muted ? "bg-[#F1F5F9]" : "bg-white"}`}
     >
       <div className="mx-auto w-full max-w-[1280px] px-4 sm:px-6 md:px-8">
