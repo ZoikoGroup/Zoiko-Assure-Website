@@ -283,7 +283,7 @@ const trustCenterItems: FooterItem[] = [
   },
   {
     label: "Responsible Disclosure",
-    href: "/responsible-disclosure",
+    href: "/legal-procurement-responsible-disclosure",
   },
 ];
 
@@ -368,7 +368,7 @@ const developerItems: FooterItem[] = [
   },
   {
     label: "Developer Documentation",
-    href: "/developers",
+    href: "/developer-documentation-developer-documentation",
   },
   {
     label: "API Documentation",
@@ -380,7 +380,7 @@ const developerItems: FooterItem[] = [
   },
   {
     label: "Integration Security",
-    href: "/developers/security",
+    href: "/developer-documentation-integration-security",
   },
 ];
 
@@ -473,11 +473,11 @@ const legalItems: FooterItem[] = [
   },
   {
     label: "Subprocessors",
-    href: "/subprocessor-list",
+    href: "/legal-procurement-subprocessors",
   },
   {
     label: "Responsible Disclosure",
-    href: "/responsible-disclosure",
+    href: "/legal-procurement-responsible-disclosure",
   },
   {
     label: "Accessibility Statement",
@@ -1094,6 +1094,93 @@ export default function Footer({ customTitle, customDescription, hideCta }: Foot
     ctaPrimaryButton = { label: "Explore Zoiko Tech", href: ZOIKO_TECH_URL, external: true };
     ctaSecondaryButton = { label: "About ZoikoAssure", href: "/about-zoiko-assure" };
     ctaLink = { label: "Visit the Trust Center", href: "/trust-center" };
+    ctaCompactActions = true;
+  } else if (
+    !customTitle &&
+    pathname?.startsWith("/developer-documentation-developer-documentation")
+  ) {
+    ctaTitle = <>Related guidance / technical references</>;
+    ctaDescription = (
+      <>
+        API and Webhooks links only when separately verified. Submit authorized minimal feedback;
+        receipt only after acceptance.
+      </>
+    );
+    ctaBackground = {
+      backgroundColor: "#071C33",
+      backgroundImage: "url('/developer-documentation-developer-documentation/conversion-band.webp')",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+    };
+    ctaPrimaryButton = { label: "Integrations", href: "/integrations" };
+    ctaSecondaryButton = { label: "Directory", href: "/integrations/directory" };
+    ctaLink = null;
+    ctaCompactActions = true;
+  } else if (
+    !customTitle &&
+    pathname?.startsWith("/developer-documentation-integration-security")
+  ) {
+    ctaTitle = <>Request integration security information</>;
+    ctaDescription = (
+      <>
+        Request applicable security information through an authorized review channel, when
+        available. Restricted procurement evidence and private tenant permission controls require
+        separate authentication and entitlement.
+      </>
+    );
+    ctaBackground = {
+      backgroundColor: "#071C33",
+      backgroundImage: "url('/developer-documentation-integration-security/conversion-band.webp')",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+    };
+    ctaPrimaryButton = { label: "Request Security Information (Gated)", href: "/contact" };
+    ctaSecondaryButton = { label: "Visit Trust Center", href: "/trust-center" };
+    ctaLink = null;
+    ctaCompactActions = true;
+  } else if (!customTitle && pathname?.startsWith("/legal-procurement-responsible-disclosure")) {
+    ctaTitle = <>Report suspected security issues through an approved channel.</>;
+    ctaDescription = (
+      <>
+        Owner-gated public copy; same canonical link from Trust Center and Legal &amp; Procurement
+      </>
+    );
+    ctaBackground = {
+      backgroundColor: "#071C33",
+      backgroundImage: "url('/legal-procurement-responsible-disclosure/conversion-band.webp')",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+    };
+    ctaPrimaryButton = {
+      label: "Report a Security Issue (when verified)",
+      href: "/legal-procurement-responsible-disclosure#report",
+    };
+    ctaSecondaryButton = { label: "Privacy Policy", href: "/legal-procurement-privacy-policy" };
+    ctaLink = null;
+    ctaCompactActions = true;
+  } else if (!customTitle && pathname?.startsWith("/legal-procurement-subprocessors")) {
+    ctaTitle = <>Access approved agreements</>;
+    ctaDescription = (
+      <>
+        This page is informational and does not amend any signed data processing agreement.
+      </>
+    );
+    ctaBackground = {
+      backgroundColor: "#071C33",
+      backgroundImage: "url('/legal-procurement-subprocessors/conversion-band.webp')",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+    };
+    ctaPrimaryButton = {
+      label: "View Data Processing Addendum",
+      href: "/legal-procurement-data-processing-addendum",
+    };
+    ctaSecondaryButton = { label: "Privacy Policy", href: "/legal-procurement-privacy-policy" };
+    ctaLink = null;
     ctaCompactActions = true;
   } else if (
     !customTitle &&
